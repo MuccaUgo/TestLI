@@ -1,4 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-<rect width="512" height="512" rx="96" fill="#1d3557"/>
-<text x="256" y="300" font-family="-apple-system,Segoe UI,Roboto,Arial,sans-serif" font-size="200" font-weight="800" fill="#ffffff" text-anchor="middle">L&amp;I</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">Python e Pandas Trainer</title>
+  <desc id="description">Simbolo Py su fondo blu</desc>
+  <rect width="512" height="512" rx="112" fill="#0071e3"/>
+  <path d="M110 146c0-31 25-56 56-56h100c31 0 56 25 56 56v77H194c-46 0-84 38-84 84V146Z" fill="#fff" opacity=".96"/>
+  <circle cx="174" cy="145" r="14" fill="#0071e3"/>
+  <path d="M402 366c0 31-25 56-56 56H246c-31 0-56-25-56-56v-77h128c46 0 84-38 84-84v161Z" fill="#dceeff"/>
+  <circle cx="338" cy="367" r="14" fill="#0071e3"/>
+  <text x="256" y="274" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="76" font-weight="800" fill="#0b376b" text-anchor="middle">Py</text>
 </svg>

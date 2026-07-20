@@ -1,11 +1,19 @@
 {
-  "name": "Leadership & Innovation Study Hub",
-  "short_name": "L&I Study Hub",
+  "name": "Python & Pandas Trainer",
+  "short_name": "PyPandas",
+  "description": "Esercizi e schede di ripasso per Python e Pandas.",
+  "lang": "it",
   "start_url": "./index.html",
+  "scope": "./",
   "display": "standalone",
-  "background_color": "#f6f7fb",
-  "theme_color": "#1d3557",
+  "background_color": "#f4f4f7",
+  "theme_color": "#0071e3",
   "icons": [
-    { "src": "icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any maskable" }
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
   ]
 }
