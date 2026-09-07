@@ -96,6 +96,9 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus
 }
 .action-card strong { font-size: 17px; margin-bottom: 5px; }
 .action-card small { color: inherit; opacity: .72; line-height: 1.3; }
+.exam-link { text-decoration: none; border-color: var(--accent); }
+.exam-link:hover { background: color-mix(in srgb, var(--accent) 8%, var(--card)); }
+.exam-link:focus-visible, .study-link:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
 #setupView .card { padding: 22px; }
 .setup-group { margin-top: 22px; }
 .setup-group label { display: block; margin-bottom: 9px; font-size: 13px; color: var(--muted); font-weight: 700; }
