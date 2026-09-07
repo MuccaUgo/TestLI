@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#ffffff">
-  <meta name="description" content="Digital Technology study notes: chapters 6–11 in 45 recall anchors. Smart objects, data architectures, warehouses, security, project management, ethics and 20 original Python exam questions.">
+  <meta name="description" content="Digital Technology study notes: chapters 1–11 in 80 recall anchors. Data management, quality, pipelines, formats, smart objects, architectures, warehouses, security, project management, ethics and 20 original Python exam questions.">
   <title>Digital Technology — Study notes | TestLI</title>
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="manifest" href="manifest.json">
@@ -21,7 +21,52 @@
     <aside class="contents-sidebar" aria-label="Article contents">
       <details id="contents" open>
         <summary>Contents <span aria-hidden="true">⌄</span></summary>
-        <nav aria-label="Chapters and topics"><a class="toc-start" href="#article">Overview</a><ol class="toc-list"><li><a href="#chapter-6"><span>6</span> Smart Objects &amp; Time Series</a><ol>
+        <nav aria-label="Chapters and topics"><a class="toc-start" href="#article">Overview</a><ol class="toc-list"><li><a href="#chapter-1"><span>1</span> Introduction</a><ol>
+<li><a href="#c1-dikw">1. DIKW Pyramid</a></li>
+<li><a href="#c1-information-organisations">2. Information in Organisations</a></li>
+<li><a href="#c1-anthony">3. Anthony’s Pyramid</a></li>
+<li><a href="#c1-oltp-olap">4. OLTP vs OLAP</a></li>
+<li><a href="#c1-dddm">5. Data-Driven Decision Making</a></li>
+<li><a href="#c1-moody">6. Moody’s Laws</a></li>
+<li><a href="#c1-governance">7. Data Governance</a></li>
+</ol></li>
+<li><a href="#chapter-2"><span>2</span> Data Management</a><ol>
+<li><a href="#c2-structured-unstructured">1. Structured vs Unstructured Data</a></li>
+<li><a href="#c2-files-databases">2. File Systems vs Databases</a></li>
+<li><a href="#c2-dbms">3. DBMS Functions &amp; Architectures</a></li>
+<li><a href="#c2-relational-model">4. Relational Model</a></li>
+<li><a href="#c2-keys-constraints">5. Keys &amp; Integrity Constraints</a></li>
+<li><a href="#c2-sql-queries">6. Relational Operations &amp; SQL Queries</a></li>
+<li><a href="#c2-create-crud">7. CREATE TABLE, CRUD &amp; Constraints</a></li>
+</ol></li>
+<li><a href="#chapter-3"><span>3</span> Data Quality</a><ol>
+<li><a href="#c3-fitness-gigo">1. Fitness for Use &amp; GIGO</a></li>
+<li><a href="#c3-accuracy">2. Accuracy</a></li>
+<li><a href="#c3-completeness">3. Completeness</a></li>
+<li><a href="#c3-consistency">4. Consistency</a></li>
+<li><a href="#c3-timeliness">5. Timeliness</a></li>
+<li><a href="#c3-profiling">6. Data Profiling</a></li>
+<li><a href="#c3-improvement">7. Data Quality Improvement &amp; SQL Cleaning</a></li>
+</ol></li>
+<li><a href="#chapter-4"><span>4</span> Data Analysis Pipelines</a><ol>
+<li><a href="#c4-warehouse-pipeline">1. Data Warehousing Pipeline</a></li>
+<li><a href="#c4-data-science-pipeline">2. Data Science Pipeline</a></li>
+<li><a href="#c4-ml-pipeline">3. Machine Learning Pipeline</a></li>
+<li><a href="#c4-source-selection">4. Data Sources &amp; Source Selection</a></li>
+<li><a href="#c4-four-vs">5. Big Data &amp; the Four Vs</a></li>
+<li><a href="#c4-integration">6. Data Integration</a></li>
+<li><a href="#c4-fusion-tools">7. Data Fusion &amp; Pipeline Tools</a></li>
+</ol></li>
+<li><a href="#chapter-5"><span>5</span> Data Formats &amp; Standardization</a><ol>
+<li><a href="#c5-standardization">1. Need for Data Standardization</a></li>
+<li><a href="#c5-variable-structures">2. Variable &amp; Hierarchical Structures</a></li>
+<li><a href="#c5-json">3. JSON</a></li>
+<li><a href="#c5-geojson">4. GeoJSON</a></li>
+<li><a href="#c5-spatial-quality">5. Spatial Data Quality</a></li>
+<li><a href="#c5-geographic-standards">6. Reference Values &amp; Geographic Standards</a></li>
+<li><a href="#c5-nosql">7. NoSQL DBMS</a></li>
+</ol></li>
+<li><a href="#chapter-6"><span>6</span> Smart Objects &amp; Time Series</a><ol>
 <li><a href="#iot">1. IoT &amp; Smart Objects</a></li>
 <li><a href="#identification">2. Object Identification</a></li>
 <li><a href="#rfid">3. RFID</a></li>
@@ -106,16 +151,193 @@
     <main id="article">
       <div class="article-kicker">Study reference · Digital Technology &amp; exam papers</div>
       <h1>Digital Technology</h1>
-      <div class="article-tabs"><span>Chapters 6–11</span><span>English study notes</span><a href="#python-exams">20 Python exam papers</a></div>
+      <div class="article-tabs"><span>Chapters 1–11</span><span>English study notes</span><a href="#python-exams">20 Python exam papers</a></div>
       <div class="article-intro">
-        <aside class="infobox" aria-label="At a glance"><h2>At a glance</h2><dl><dt>Coverage</dt><dd>Chapters 6–11</dd><dt>Recall anchors</dt><dd>45 concepts</dd><dt>Project management</dt><dd>10A + 10B · 5 each</dd><dt>Practice</dt><dd><a href="index.html">Python & Pandas</a></dd></dl></aside>
-        <p class="lead"><strong>Digital Technology</strong> connects physical objects, data systems and the people who use them. These notes follow the textbook from smart objects and time series to data architectures, warehouses, security, project management and ethics.</p>
+        <aside class="infobox" aria-label="At a glance"><h2>At a glance</h2><dl><dt>Coverage</dt><dd>Chapters 1–11</dd><dt>Recall anchors</dt><dd>80 concepts</dd><dt>Project management</dt><dd>10A + 10B · 5 each</dd><dt>Practice</dt><dd><a href="index.html">Python & Pandas</a></dd></dl></aside>
+        <p class="lead"><strong>Digital Technology</strong> connects physical objects, data systems and the people who use them. These notes cover all 11 textbook chapters: information and data management, quality, pipelines and formats, smart objects, architectures, warehouses, security, project management and ethics.</p>
         <p>Each chapter has <strong>seven anchors</strong>, except Project Management, which has <strong>five for Traditional PM and five for Agile PM</strong>. Short explanations, familiar examples and a final memory cue support recall.</p>
         <p class="reading-note"><strong>How to use this page:</strong> choose a topic in the contents, read its explanation, then cover the text and rebuild the answer from its title and memory cue.</p>
       </div>
       <nav class="chapter-index" aria-label="Jump to a chapter">
+        <a href="#chapter-1">1 <span>Introduction</span></a><a href="#chapter-2">2 <span>Data management</span></a><a href="#chapter-3">3 <span>Data quality</span></a><a href="#chapter-4">4 <span>Pipelines</span></a><a href="#chapter-5">5 <span>Formats</span></a>
         <a href="#chapter-6">6 <span>Smart objects</span></a><a href="#chapter-7">7 <span>Architectures</span></a><a href="#chapter-8">8 <span>Warehouses</span></a><a href="#chapter-9">9 <span>Security</span></a><a href="#chapter-10a">10A <span>Traditional PM</span></a><a href="#chapter-10b">10B <span>Agile PM</span></a><a href="#chapter-11">11 <span>Ethics</span></a><a href="#python-exams">Python <span>Past exam papers</span></a>
       </nav>
+<section class="chapter" id="chapter-1" aria-labelledby="heading-1"><header class="chapter-heading"><p class="chapter-label">Chapter 1 · 7 anchors</p><h2 id="heading-1">Introduction</h2><p>How data becomes useful information and supports an organization’s activities and decisions.</p></header>
+<section class="anchor-section" id="c1-dikw" aria-labelledby="title-c1-dikw"><h3 id="title-c1-dikw"><span class="section-number">1.1</span> DIKW Pyramid <a class="permalink" href="#c1-dikw" aria-label="Link to DIKW Pyramid">#</a></h3>
+<p>The <strong>DIKW pyramid</strong> describes how data can support understanding and decisions:</p>
+<ul><li><strong>Data:</strong> raw facts or measurements, such as individual sales records.</li><li><strong>Information:</strong> data interpreted in context, such as “100 iPhones were sold in this store today”.</li><li><strong>Knowledge:</strong> information combined with experience, such as recognizing that sales regularly increase on Saturdays.</li><li><strong>Wisdom:</strong> applying knowledge and judgement to choose an appropriate action, such as scheduling additional staff.</li></ul>
+<p>Higher levels summarize and interpret the detailed data below them.</p><p class="memory-cue"><strong>Remember</strong> Facts → context → understanding → appropriate action.</p></section>
+<section class="anchor-section" id="c1-information-organisations" aria-labelledby="title-c1-information-organisations"><h3 id="title-c1-information-organisations"><span class="section-number">1.2</span> Information in Organisations <a class="permalink" href="#c1-information-organisations" aria-label="Link to Information in Organisations">#</a></h3>
+<p>Organizations use information for <strong>communication</strong>, <strong>process execution</strong>, <strong>control</strong> and <strong>decision-making</strong>. Information can also be a product, such as a market report.</p>
+<p>Information has three important characteristics: it is <strong>intangible</strong>, <strong>shareable without being consumed</strong>, and <strong>self-regenerating</strong>, because using it can produce new information.</p>
+<p>Organizations create, collect, process, store, transmit and present information. These activities may be performed manually or supported by IT.</p><p class="memory-cue"><strong>Remember</strong> Information supports activities and generates further information.</p></section>
+<section class="anchor-section" id="c1-anthony" aria-labelledby="title-c1-anthony"><h3 id="title-c1-anthony"><span class="section-number">1.3</span> Anthony’s Pyramid <a class="permalink" href="#c1-anthony" aria-label="Link to Anthony’s Pyramid">#</a></h3>
+<p><strong>Anthony’s pyramid</strong> divides organizational activities into three levels:</p>
+<ul><li><strong>Operational:</strong> carrying out daily activities, such as recording sales and updating stock.</li><li><strong>Tactical — management and control:</strong> planning resources and checking performance, such as comparing weekly sales with targets.</li><li><strong>Strategic:</strong> defining long-term objectives and policies, such as deciding where to open new stores.</li></ul>
+<p>Strategic goals guide lower levels, while operational results provide information for control and decisions. Departments also exchange information horizontally.</p><p class="memory-cue"><strong>Remember</strong> Perform activities → manage performance → set direction.</p></section>
+<section class="anchor-section" id="c1-oltp-olap" aria-labelledby="title-c1-oltp-olap"><h3 id="title-c1-oltp-olap"><span class="section-number">1.4</span> OLTP vs OLAP <a class="permalink" href="#c1-oltp-olap" aria-label="Link to OLTP vs OLAP">#</a></h3>
+<p><strong>OLTP — Online Transaction Processing</strong> supports daily operations. It handles many short, repetitive transactions using detailed, current data, with frequent reads and writes.</p>
+<p><strong>OLAP — Online Analytical Processing</strong> supports decisions through complex queries over historical data, often involving aggregation and comparisons. Recording an iPhone sale is OLTP; comparing annual sales across stores is OLAP.</p>
+<p>OLTP performance often focuses on <strong>throughput</strong>, or transactions processed per second. OLAP performance focuses on <strong>query response time</strong>.</p>
+<p>Database transactions commonly follow <strong>ACID</strong>: Atomicity, Consistency, Isolation and Durability.</p><p class="memory-cue"><strong>Remember</strong> OLTP runs the business; OLAP helps analyse it.</p></section>
+<section class="anchor-section" id="c1-dddm" aria-labelledby="title-c1-dddm"><h3 id="title-c1-dddm"><span class="section-number">1.5</span> Data-Driven Decision Making <a class="permalink" href="#c1-dddm" aria-label="Link to Data-Driven Decision Making">#</a></h3>
+<p><strong>Data-Driven Decision Making — DDDM</strong> means using data and analysis to support decisions.</p>
+<p>Organizations collect and prepare data, analyse it and present findings in an understandable way. Managers use these findings to improve processes, understand customers and identify opportunities.</p>
+<p>A store can combine sales and visitor counts to identify busy periods and plan staffing. Reliable decisions require both <strong>good-quality data</strong> and <strong>appropriate analysis methods</strong>.</p><p class="memory-cue"><strong>Remember</strong> Collect evidence → analyse it → use the findings to decide.</p></section>
+<section class="anchor-section" id="c1-moody" aria-labelledby="title-c1-moody"><h3 id="title-c1-moody"><span class="section-number">1.6</span> Moody’s Laws <a class="permalink" href="#c1-moody" aria-label="Link to Moody’s Laws">#</a></h3>
+<p>The course emphasizes three rules about the value of information:</p>
+<ul><li><strong>The value of information increases with use:</strong> using the same information for different purposes can create additional value without consuming it.</li><li><strong>Information is perishable:</strong> its usefulness can decrease as it becomes outdated. Data that is no longer useful for daily operations may still support historical analysis.</li><li><strong>More is not necessarily better:</strong> collecting more data does not automatically create more value. Some data may remain unused while still requiring storage and maintenance.</li></ul><p class="memory-cue"><strong>Remember</strong> Use creates value; time affects usefulness; quantity alone is insufficient.</p></section>
+<section class="anchor-section" id="c1-governance" aria-labelledby="title-c1-governance"><h3 id="title-c1-governance"><span class="section-number">1.7</span> Data Governance <a class="permalink" href="#c1-governance" aria-label="Link to Data Governance">#</a></h3>
+<p><strong>Data governance</strong> defines the responsibilities, rules and processes needed to manage data throughout its life cycle, from acquisition to disposal.</p>
+<p>An organization must understand <strong>what its data contains</strong>, <strong>where it is located</strong>, <strong>who can access it</strong>, <strong>how it is protected</strong>, <strong>how long it should be retained</strong> and <strong>how it can create value</strong>.</p>
+<p>Metadata makes data understandable and discoverable. Governance also addresses quality, security, privacy, compliance and the resources required to store and use data sustainably.</p><p class="memory-cue"><strong>Remember</strong> Know your data, control its use and manage its life cycle.</p></section>
+<a class="back-top" href="#top">Back to top ↑</a></section>
+<section class="chapter" id="chapter-2" aria-labelledby="heading-2"><header class="chapter-heading"><p class="chapter-label">Chapter 2 · 7 anchors</p><h2 id="heading-2">Data Management</h2><p>How databases organize shared data, enforce rules and answer queries with SQL.</p></header>
+<section class="anchor-section" id="c2-structured-unstructured" aria-labelledby="title-c2-structured-unstructured"><h3 id="title-c2-structured-unstructured"><span class="section-number">2.1</span> Structured vs Unstructured Data <a class="permalink" href="#c2-structured-unstructured" aria-label="Link to Structured vs Unstructured Data">#</a></h3>
+<p><strong>Structured data</strong> follows a regular structure, such as a table containing product identifiers, names and prices.</p>
+<p><strong>Unstructured data</strong> includes free text, images and other information without a fixed tabular structure. <strong>Semi-structured data</strong>, such as JSON, has a structure that can vary.</p>
+<p><strong>Metadata</strong> describes the data, including its structure, meaning and allowed values.</p><p class="memory-cue"><strong>Remember</strong> Data contains information; metadata explains how to interpret it.</p></section>
+<section class="anchor-section" id="c2-files-databases" aria-labelledby="title-c2-files-databases"><h3 id="title-c2-files-databases"><span class="section-number">2.2</span> File Systems vs Databases <a class="permalink" href="#c2-files-databases" aria-label="Link to File Systems vs Databases">#</a></h3>
+<p>When departments maintain separate files, the same information may appear several times. This causes <strong>redundancy</strong> and can create <strong>inconsistency</strong> when one copy is updated and another is not.</p>
+<p>Other problems include limited sharing, poor access control and <strong>program–data dependence</strong>: changing a file’s structure may require changing the programs using it.</p>
+<p>A <strong>database</strong> provides a shared collection of related data and allows redundancy to be controlled.</p><p class="memory-cue"><strong>Remember</strong> Shared data reduces duplication and conflicting copies.</p></section>
+<section class="anchor-section" id="c2-dbms" aria-labelledby="title-c2-dbms"><h3 id="title-c2-dbms"><span class="section-number">2.3</span> DBMS Functions &amp; Architectures <a class="permalink" href="#c2-dbms" aria-label="Link to DBMS Functions &amp; Architectures">#</a></h3>
+<p>A <strong>Database Management System — DBMS</strong> is the software that manages a database. It supports queries, data changes, access control, concurrent users and persistent storage. It also stores metadata in a <strong>data dictionary</strong>.</p>
+<p>In a <strong>client–server architecture</strong>, clients request services from a database server. The <strong>PAD architecture</strong> separates three responsibilities:</p>
+<ul><li><strong>Presentation:</strong> the interface shown to users.</li><li><strong>Application:</strong> business rules and processing logic.</li><li><strong>Data:</strong> storage, retrieval and management of data.</li></ul>
+<p>A university portal displays a form, checks the rules for recording a grade and stores the result.</p><p class="memory-cue"><strong>Remember</strong> Interface → application logic → data management.</p></section>
+<section class="anchor-section" id="c2-relational-model" aria-labelledby="title-c2-relational-model"><h3 id="title-c2-relational-model"><span class="section-number">2.4</span> Relational Model <a class="permalink" href="#c2-relational-model" aria-label="Link to Relational Model">#</a></h3>
+<p>The <strong>relational model</strong> organizes data into tables, called <strong>relations</strong>. A column is an <strong>attribute</strong>, and a row is a <strong>tuple</strong>. Each attribute has a <strong>domain</strong>, defining its allowed values.</p>
+<p>A <strong>schema</strong> describes the structure: <code>PRODUCT(product_id, name, price)</code>.</p>
+<p>An <strong>instance</strong> is the actual collection of rows stored at a particular moment. The instance changes when products are inserted, updated or deleted.</p><p class="memory-cue"><strong>Remember</strong> Schema = structure; instance = current contents.</p></section>
+<section class="anchor-section" id="c2-keys-constraints" aria-labelledby="title-c2-keys-constraints"><h3 id="title-c2-keys-constraints"><span class="section-number">2.5</span> Keys &amp; Integrity Constraints <a class="permalink" href="#c2-keys-constraints" aria-label="Link to Keys &amp; Integrity Constraints">#</a></h3>
+<p>A <strong>key</strong> is a minimal set of attributes that uniquely identifies a row. It may contain one attribute or several.</p>
+<p>A <strong>primary key</strong> is the chosen identifier: its values must be unique and cannot be <code>NULL</code>. A <strong>foreign key</strong> references a key in another table, or in the same table.</p>
+<p>For example, <code>Sale.product_id</code> can reference <code>Product.product_id</code>. <strong>Referential integrity</strong> requires each non-null reference to identify an existing product.</p>
+<p>A <strong>functional dependency</strong>, such as <code>product_id → name, price</code>, means that the identifier determines those values. Other constraints enforce business rules, such as allowing honours only when the grade is 30.</p><p class="memory-cue"><strong>Remember</strong> Primary keys identify; foreign keys connect; constraints enforce rules.</p></section>
+<section class="anchor-section" id="c2-sql-queries" aria-labelledby="title-c2-sql-queries"><h3 id="title-c2-sql-queries"><span class="section-number">2.6</span> Relational Operations &amp; SQL Queries <a class="permalink" href="#c2-sql-queries" aria-label="Link to Relational Operations &amp; SQL Queries">#</a></h3>
+<p><strong>Selection</strong> keeps rows satisfying a condition. <strong>Projection</strong> chooses columns. A <strong>join</strong> combines related rows from different tables.</p>
+<p>In SQL, <strong><code>SELECT</code> chooses columns</strong>, while <strong><code>WHERE</code> filters rows</strong>:</p><pre class="study-code"><code class="language-sql">SELECT p.name, s.quantity
+FROM Product p
+JOIN Sale s ON p.product_id = s.product_id
+WHERE s.quantity &gt; 1;</code></pre>
+<p>This query combines products and sales, then returns product names and quantities for sales involving more than one unit. Conditions can be combined with <code>AND</code> and <code>OR</code>; parentheses make their grouping explicit.</p><p class="memory-cue"><strong>Remember</strong> Choose columns, connect tables, filter rows.</p></section>
+<section class="anchor-section" id="c2-create-crud" aria-labelledby="title-c2-create-crud"><h3 id="title-c2-create-crud"><span class="section-number">2.7</span> CREATE TABLE, CRUD &amp; Constraints <a class="permalink" href="#c2-create-crud" aria-label="Link to CREATE TABLE, CRUD &amp; Constraints">#</a></h3>
+<p><strong><code>CREATE TABLE</code></strong> defines a table’s structure, including attributes, types and constraints:</p><pre class="study-code"><code class="language-sql">CREATE TABLE Product (
+    product_id INTEGER PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    price DECIMAL(10, 2) CHECK (price &gt;= 0)
+);</code></pre>
+<p><strong>CRUD</strong> describes operations on stored records: <strong>Create → <code>INSERT</code></strong>, <strong>Read → <code>SELECT</code></strong>, <strong>Update → <code>UPDATE</code></strong>, and <strong>Delete → <code>DELETE</code></strong>.</p>
+<p><code>NOT NULL</code> requires a value, while <code>CHECK</code> enforces a condition. <code>WHERE</code> selects the rows affected by an update or deletion.</p>
+<p><strong><code>ALTER TABLE</code> changes the schema</strong>; <code>INSERT</code>, <code>UPDATE</code> and <code>DELETE</code> change the data.</p><p class="memory-cue"><strong>Remember</strong> Define the structure, then create, read, update and delete records.</p></section>
+<a class="back-top" href="#top">Back to top ↑</a></section>
+<section class="chapter" id="chapter-3" aria-labelledby="heading-3"><header class="chapter-heading"><p class="chapter-label">Chapter 3 · 7 anchors</p><h2 id="heading-3">Data Quality</h2><p>How to assess whether data is suitable for use and how to identify and improve its weaknesses.</p></header>
+<section class="anchor-section" id="c3-fitness-gigo" aria-labelledby="title-c3-fitness-gigo"><h3 id="title-c3-fitness-gigo"><span class="section-number">3.1</span> Fitness for Use &amp; GIGO <a class="permalink" href="#c3-fitness-gigo" aria-label="Link to Fitness for Use &amp; GIGO">#</a></h3>
+<p><strong>Data quality</strong> means <strong>fitness for use</strong>: data must satisfy the requirements of the people and processes using it. The same dataset may be suitable for one task and unsuitable for another.</p>
+<p><strong>GIGO — Garbage In, Garbage Out</strong> means that errors in input data can propagate through processing and produce misleading results. Small errors can grow into larger problems.</p>
+<p>Yesterday’s sales data may support a weekly report, while yesterday’s stock levels may be unsuitable for checking current availability.</p><p class="memory-cue"><strong>Remember</strong> Quality depends on the purpose.</p></section>
+<section class="anchor-section" id="c3-accuracy" aria-labelledby="title-c3-accuracy"><h3 id="title-c3-accuracy"><span class="section-number">3.2</span> Accuracy <a class="permalink" href="#c3-accuracy" aria-label="Link to Accuracy">#</a></h3>
+<p><strong>Accuracy</strong> describes how closely a recorded value matches the correct real-world value.</p>
+<p><strong>Syntactic accuracy</strong> checks whether a value belongs to the expected domain. For example, <code>"abc"</code> is invalid in a numeric price field.</p>
+<p><strong>Semantic accuracy</strong> checks whether a valid value is actually correct. A price of €90 is a valid number, but it is inaccurate if the product really costs €900. One possible measure is <strong>correct values divided by total values assessed</strong>.</p>
+<p><strong>How to improve it:</strong> validate types, formats and allowed values; compare values with a reliable reference and correct verified errors.</p>
+<p><strong>Grade example:</strong> if allowed grades are 1–30 plus 30L, a grade of 35 is outside the domain: syntactic inaccuracy. A grade of 25 instead of the true 28 is a semantic inaccuracy. A domain error may also violate a database constraint.</p><p class="memory-cue"><strong>Remember</strong> Validate the format, verify the real value, then correct the error.</p></section>
+<section class="anchor-section" id="c3-completeness" aria-labelledby="title-c3-completeness"><h3 id="title-c3-completeness"><span class="section-number">3.3</span> Completeness <a class="permalink" href="#c3-completeness" aria-label="Link to Completeness">#</a></h3>
+<p><strong>Completeness</strong> concerns whether the data needed to represent the real-world situation is present.</p>
+<p>A sales record without a required product identifier is incomplete. A simple measure compares the number of available values with the number expected.</p>
+<p>We must distinguish <strong>missing information</strong> from <strong>information that does not exist or does not apply</strong>. A missing phone number does not necessarily indicate poor quality if the person has no phone.</p><p class="memory-cue"><strong>Remember</strong> Is the required information present?</p></section>
+<section class="anchor-section" id="c3-consistency" aria-labelledby="title-c3-consistency"><h3 id="title-c3-consistency"><span class="section-number">3.4</span> Consistency <a class="permalink" href="#c3-consistency" aria-label="Link to Consistency">#</a></h3>
+<p><strong>Consistency</strong> means that data respects defined rules and does not contain contradictions.</p>
+<p>Rules can concern several attributes or records. A delivery date should not precede the order date. If revenue is defined as price multiplied by quantity, the recorded values must satisfy that relationship. A recorded average that is incompatible with individual grades is another inconsistency.</p>
+<p>We can assess consistency by comparing <strong>successful rule checks with all checks performed</strong>.</p><p class="memory-cue"><strong>Remember</strong> Do the values respect the rules and agree with each other?</p></section>
+<section class="anchor-section" id="c3-timeliness" aria-labelledby="title-c3-timeliness"><h3 id="title-c3-timeliness"><span class="section-number">3.5</span> Timeliness <a class="permalink" href="#c3-timeliness" aria-label="Link to Timeliness">#</a></h3>
+<p><strong>Timeliness</strong> means that data is current enough for its intended use.</p>
+<p>Two important concepts are <strong>currency</strong>, meaning how old the data is, and <strong>volatility</strong>, meaning how frequently the information changes.</p>
+<p>Stock availability changes quickly and requires frequent updates. A person’s date of birth is stable, so an older record may still be suitable.</p><p class="memory-cue"><strong>Remember</strong> How old is the data, and how quickly does it change?</p></section>
+<section class="anchor-section" id="c3-profiling" aria-labelledby="title-c3-profiling"><h3 id="title-c3-profiling"><span class="section-number">3.6</span> Data Profiling <a class="permalink" href="#c3-profiling" aria-label="Link to Data Profiling">#</a></h3>
+<p><strong>Data profiling</strong> examines a dataset and collects statistics to identify potential quality problems before cleaning.</p>
+<p>Typical checks include data types, missing values, distinct values, duplicates, distributions, minimums, maximums and relationships between attributes. Counting records by city may reveal that both “Milan” and “Milano” are used:</p><pre class="study-code"><code class="language-sql">SELECT city, COUNT(*)
+FROM Sales
+GROUP BY city;</code></pre>
+<p>Profiling identifies suspicious patterns. An unusual value still needs investigation before being changed.</p><p class="memory-cue"><strong>Remember</strong> Inspect and measure before correcting.</p></section>
+<section class="anchor-section" id="c3-improvement" aria-labelledby="title-c3-improvement"><h3 id="title-c3-improvement"><span class="section-number">3.7</span> Data Quality Improvement &amp; SQL Cleaning <a class="permalink" href="#c3-improvement" aria-label="Link to Data Quality Improvement &amp; SQL Cleaning">#</a></h3>
+<p><strong>Data-driven strategies</strong> directly correct existing data. <strong>Process-driven strategies</strong> improve the processes that create or modify data, addressing the causes of recurring errors.</p>
+<p>The main cleaning steps are <strong>standardization</strong>, <strong>error correction</strong> and <strong>duplicate detection</strong>, followed by a new quality assessment. SQL can standardize two names for the same city:</p><pre class="study-code"><code class="language-sql">UPDATE Sales
+SET city = &#x27;Milan&#x27;
+WHERE city = &#x27;Milano&#x27;;</code></pre>
+<p><code>SELECT DISTINCT</code> returns unique combinations of selected values; it does not delete stored records. Detecting records about the same real-world entity may also require similarity checks and human review.</p><p class="memory-cue"><strong>Remember</strong> Profile → standardize → correct → detect duplicates → assess again.</p></section>
+<a class="back-top" href="#top">Back to top ↑</a></section>
+<section class="chapter" id="chapter-4" aria-labelledby="heading-4"><header class="chapter-heading"><p class="chapter-label">Chapter 4 · 7 anchors</p><h2 id="heading-4">Data Analysis Pipelines</h2><p>How a sequence of preparation and analysis steps turns data from different sources into useful information.</p></header>
+<section class="anchor-section" id="c4-warehouse-pipeline" aria-labelledby="title-c4-warehouse-pipeline"><h3 id="title-c4-warehouse-pipeline"><span class="section-number">4.1</span> Data Warehousing Pipeline <a class="permalink" href="#c4-warehouse-pipeline" aria-label="Link to Data Warehousing Pipeline">#</a></h3>
+<p>A data warehouse supports business decisions by collecting and preparing data from internal and external sources.</p>
+<p><strong>ETL</strong> extracts the data, cleans and transforms it, and loads it into the warehouse. Analysis tools then help users compare results across products, locations and periods.</p>
+<p>An Apple Store manager can compare monthly iPhone sales across different stores.</p><p class="memory-cue"><strong>Remember</strong> Sources → ETL → warehouse → analysis.</p></section>
+<section class="anchor-section" id="c4-data-science-pipeline" aria-labelledby="title-c4-data-science-pipeline"><h3 id="title-c4-data-science-pipeline"><span class="section-number">4.2</span> Data Science Pipeline <a class="permalink" href="#c4-data-science-pipeline" aria-label="Link to Data Science Pipeline">#</a></h3>
+<p>A data science pipeline covers the complete life cycle of data. The main stages are <strong>acquisition</strong>, <strong>cleaning and transformation</strong>, <strong>use or reuse</strong>, <strong>publication</strong>, and <strong>preservation or destruction</strong>.</p>
+<p>A company collects customer data, corrects errors, analyses purchasing behaviour and publishes the results. It then decides which data to preserve or delete.</p>
+<p>Data may be reused for further analysis, so its quality, meaning and history remain important.</p><p class="memory-cue"><strong>Remember</strong> Acquire → clean → use → publish → preserve or destroy.</p></section>
+<section class="anchor-section" id="c4-ml-pipeline" aria-labelledby="title-c4-ml-pipeline"><h3 id="title-c4-ml-pipeline"><span class="section-number">4.3</span> Machine Learning Pipeline <a class="permalink" href="#c4-ml-pipeline" aria-label="Link to Machine Learning Pipeline">#</a></h3>
+<p>A <strong>Machine Learning pipeline</strong> collects and prepares data, trains a model and uses it to produce predictions or other results.</p>
+<p>In <strong>supervised learning</strong>, training examples include known answers, called labels. <strong>Classification</strong> predicts categories, such as “fraud” or “not fraud”. <strong>Regression</strong> predicts numerical values, such as future sales.</p>
+<p><strong>Overfitting</strong> occurs when a model performs well on training data but poorly on new data. Training data must also cover relevant situations to reduce misleading results and bias.</p>
+<p><strong>Online models</strong> update as new data arrives. <strong>Offline models</strong> remain fixed between training runs.</p><p class="memory-cue"><strong>Remember</strong> Prepare data → train → check performance → use the model.</p></section>
+<section class="anchor-section" id="c4-source-selection" aria-labelledby="title-c4-source-selection"><h3 id="title-c4-source-selection"><span class="section-number">4.4</span> Data Sources &amp; Source Selection <a class="permalink" href="#c4-source-selection" aria-label="Link to Data Sources &amp; Source Selection">#</a></h3>
+<p><strong>Internal sources</strong> come from inside an organization: operational databases, sensors and internal documents. <strong>External sources</strong> include public datasets, statistical agencies and other organizations.</p>
+<p>Choosing a source requires checking its <strong>accessibility and licence</strong>, <strong>data quality</strong>, <strong>metadata</strong>, <strong>ease of integration</strong>, <strong>reputation</strong> and <strong>cost</strong>.</p>
+<p>A store could combine its internal sales records with external weather data to investigate changes in customer demand.</p><p class="memory-cue"><strong>Remember</strong> Choose data that is relevant, reliable and usable.</p></section>
+<section class="anchor-section" id="c4-four-vs" aria-labelledby="title-c4-four-vs"><h3 id="title-c4-four-vs"><span class="section-number">4.5</span> Big Data &amp; the Four Vs <a class="permalink" href="#c4-four-vs" aria-label="Link to Big Data &amp; the Four Vs">#</a></h3>
+<p><strong>Big Data</strong> creates challenges because of its scale and other characteristics. The four main Vs are:</p>
+<ul><li><strong>Volume:</strong> how much data is produced and stored.</li><li><strong>Velocity:</strong> how quickly data arrives and needs processing.</li><li><strong>Variety:</strong> the different forms of data, such as tables, text, images and sensor readings.</li><li><strong>Veracity:</strong> the reliability and uncertainty of the data.</li></ul>
+<p>A retailer may combine large numbers of transactions, continuous sensor readings and customer reviews. Reliable analysis still depends on good data quality.</p><p class="memory-cue"><strong>Remember</strong> Amount, speed, forms and trustworthiness.</p></section>
+<section class="anchor-section" id="c4-integration" aria-labelledby="title-c4-integration"><h3 id="title-c4-integration"><span class="section-number">4.6</span> Data Integration <a class="permalink" href="#c4-integration" aria-label="Link to Data Integration">#</a></h3>
+<p><strong>Data integration</strong> combines data from different sources into a consistent representation.</p>
+<p>We must resolve differences in <strong>representation</strong>, such as an address stored as text or separate fields; <strong>structure</strong>, such as different field orders or nesting; and <strong>presentation</strong>, such as different maximum field lengths.</p>
+<p>We must also align <strong>semantics</strong>, meaning what the data represents. Two columns named <code>price</code> may use different currencies. Sales recorded in euros and pounds require a common interpretation before comparison.</p><p class="memory-cue"><strong>Remember</strong> Align both the format and the meaning.</p></section>
+<section class="anchor-section" id="c4-fusion-tools" aria-labelledby="title-c4-fusion-tools"><h3 id="title-c4-fusion-tools"><span class="section-number">4.7</span> Data Fusion &amp; Pipeline Tools <a class="permalink" href="#c4-fusion-tools" aria-label="Link to Data Fusion &amp; Pipeline Tools">#</a></h3>
+<p><strong>Data fusion</strong> combines information referring to the same real-world entity, resolving conflicting or overlapping values.</p>
+<p>The main phases are <strong>schema alignment</strong>, <strong>entity reconciliation</strong> and <strong>fusion</strong>. First, make the structures compatible. Then identify records describing the same entity. Finally, combine their information and resolve conflicts.</p>
+<p>Two customer records with slightly different names may describe the same person. Pipeline tools support these activities: SQL and Python/Pandas can prepare data, warehouses and lakes store it, and analysis tools present results.</p><p class="memory-cue"><strong>Remember</strong> Align schemas → match entities → combine information.</p></section>
+<a class="back-top" href="#top">Back to top ↑</a></section>
+<section class="chapter" id="chapter-5" aria-labelledby="heading-5"><header class="chapter-heading"><p class="chapter-label">Chapter 5 · 7 anchors</p><h2 id="heading-5">Data Formats &amp; Standardization</h2><p>How flexible formats and shared standards help systems exchange and interpret data.</p></header>
+<section class="anchor-section" id="c5-standardization" aria-labelledby="title-c5-standardization"><h3 id="title-c5-standardization"><span class="section-number">5.1</span> Need for Data Standardization <a class="permalink" href="#c5-standardization" aria-label="Link to Need for Data Standardization">#</a></h3>
+<p>Different systems may represent the same information using different names, formats or units. <strong>Data standardization</strong> creates a common representation so that data can be exchanged, combined and interpreted correctly.</p>
+<p>One store records a location as “Milano” and another as “Milan”. Standardization helps recognize that they refer to the same city.</p><p class="memory-cue"><strong>Remember</strong> Shared representations make data reusable.</p></section>
+<section class="anchor-section" id="c5-variable-structures" aria-labelledby="title-c5-variable-structures"><h3 id="title-c5-variable-structures"><span class="section-number">5.2</span> Variable &amp; Hierarchical Structures <a class="permalink" href="#c5-variable-structures" aria-label="Link to Variable &amp; Hierarchical Structures">#</a></h3>
+<p>Data does not always fit naturally into a fixed table. An object may have <strong>multiple values</strong>, such as several phone numbers; <strong>nested information</strong>, such as an address containing a city and a postcode; or <strong>optional attributes</strong> that other objects do not have.</p>
+<p>Name–value pairs allow new properties to be added when needed.</p><p class="memory-cue"><strong>Remember</strong> Multiple values, nested objects and changing attributes.</p></section>
+<section class="anchor-section" id="c5-json" aria-labelledby="title-c5-json"><h3 id="title-c5-json"><span class="section-number">5.3</span> JSON <a class="permalink" href="#c5-json" aria-label="Link to JSON">#</a></h3>
+<p><strong>JSON — JavaScript Object Notation</strong> is a text format used to store and exchange data. It represents information through <strong>name–value pairs</strong>. Curly brackets <code>{}</code> define objects, while square brackets <code>[]</code> define arrays.</p>
+<p>Objects and arrays can be nested:</p><pre class="study-code"><code class="language-json">{
+  &quot;name&quot;: &quot;Anna&quot;,
+  &quot;address&quot;: {&quot;city&quot;: &quot;Milan&quot;},
+  &quot;phones&quot;: [&quot;111&quot;, &quot;222&quot;]
+}</code></pre>
+<p>Here, <code>address</code> is a nested object and <code>phones</code> contains multiple values.</p>
+<p><strong>XML</strong> also represents hierarchical information, but uses tags, for example: <code>&lt;person&gt;&lt;name&gt;Anna&lt;/name&gt;&lt;/person&gt;</code>.</p><p class="memory-cue"><strong>Remember</strong> JSON uses objects, arrays and name–value pairs.</p></section>
+<section class="anchor-section" id="c5-geojson" aria-labelledby="title-c5-geojson"><h3 id="title-c5-geojson"><span class="section-number">5.4</span> GeoJSON <a class="permalink" href="#c5-geojson" aria-label="Link to GeoJSON">#</a></h3>
+<p><strong>GeoJSON</strong> uses JSON to represent geographical information. A <strong>Feature</strong> combines a <strong>geometry</strong>, describing its position or shape, with <strong>properties</strong>, describing its characteristics.</p><pre class="study-code"><code class="language-json">{
+  &quot;type&quot;: &quot;Feature&quot;,
+  &quot;geometry&quot;: {
+    &quot;type&quot;: &quot;Point&quot;,
+    &quot;coordinates&quot;: [9.19, 45.46]
+  },
+  &quot;properties&quot;: {
+    &quot;name&quot;: &quot;Example shop&quot;
+  }
+}</code></pre>
+<p>Coordinates are written as <strong>longitude first, latitude second</strong>. Geometry types include <code>Point</code>, <code>LineString</code> and <code>Polygon</code>. A <strong>FeatureCollection</strong> contains multiple features.</p><p class="memory-cue"><strong>Remember</strong> Geometry tells us where; properties tell us what.</p></section>
+<section class="anchor-section" id="c5-spatial-quality" aria-labelledby="title-c5-spatial-quality"><h3 id="title-c5-spatial-quality"><span class="section-number">5.5</span> Spatial Data Quality <a class="permalink" href="#c5-spatial-quality" aria-label="Link to Spatial Data Quality">#</a></h3>
+<p>Geographical data can contain several quality problems. <strong>Granularity</strong> concerns the level of detail: a city and a region are different geographical levels. <strong>Different names</strong> may identify the same place, such as “Milan” and “Milano”. Conversely, the <strong>same name</strong> may refer to different places.</p>
+<p>Coordinates may also be missing, inaccurate or insufficiently precise. We improve quality by standardizing names, checking coordinates and identifying the correct geographical entity.</p><p class="memory-cue"><strong>Remember</strong> Correct place, consistent detail, reliable coordinates.</p></section>
+<section class="anchor-section" id="c5-geographic-standards" aria-labelledby="title-c5-geographic-standards"><h3 id="title-c5-geographic-standards"><span class="section-number">5.6</span> Reference Values &amp; Geographic Standards <a class="permalink" href="#c5-geographic-standards" aria-label="Link to Reference Values &amp; Geographic Standards">#</a></h3>
+<p><strong>Reference values</strong> provide shared codes and identifiers that reduce ambiguity. <strong>ISO 3166-1</strong> provides country codes in three forms. For Italy, these are <strong>IT</strong>, <strong>ITA</strong> and <strong>380</strong>.</p>
+<p>These codes help different systems recognize the same country. Other sources, such as Wikidata and OpenStreetMap, provide identifiers for geographical entities, although their identifiers are not equivalent to international standards.</p><p class="memory-cue"><strong>Remember</strong> Shared identifiers make matching more reliable.</p></section>
+<section class="anchor-section" id="c5-nosql" aria-labelledby="title-c5-nosql"><h3 id="title-c5-nosql"><span class="section-number">5.7</span> NoSQL DBMS <a class="permalink" href="#c5-nosql" aria-label="Link to NoSQL DBMS">#</a></h3>
+<p><strong>NoSQL databases</strong> support flexible data models, including documents and other structures beyond traditional relational tables. Many support distributed storage and scalability as data volumes increase.</p>
+<p><strong>MongoDB</strong> and <strong>CouchDB</strong> are examples of document databases that store JSON or JSON-like documents. They can represent nested objects and records with different attributes.</p>
+<p>Flexible structures still require clear meanings, validation and quality controls.</p><p class="memory-cue"><strong>Remember</strong> Flexible models for storing and managing varied data.</p></section>
+<a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-6" aria-labelledby="heading-6"><header class="chapter-heading"><p class="chapter-label">Chapter 6 · 7 anchors</p><h2 id="heading-6">Smart Objects &amp; Time Series</h2><p>How physical objects are identified, located and observed over time.</p></header>
 <section class="anchor-section" id="iot" aria-labelledby="title-iot"><h3 id="title-iot"><span class="section-number">6.1</span> IoT &amp; Smart Objects <a class="permalink" href="#iot" aria-label="Link to IoT &amp; Smart Objects">#</a></h3>
 <p>The <strong>Internet of Things (IoT)</strong> connects physical objects to information systems. A <strong>smart object</strong> can collect information through sensors, process it and communicate with other devices or services. Some objects can also act on the environment through actuators.</p>

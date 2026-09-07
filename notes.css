@@ -81,6 +81,8 @@ h1 { margin: 0; padding-bottom: 7px; border-bottom: 1px solid var(--line); font-
 .anchor-section h3:hover .permalink, .permalink:focus { visibility: visible; }
 .anchor-section p { margin: 8px 0; }
 .anchor-section code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; background: #f8f9fa; padding: 1px 4px; border: 1px solid var(--line-soft); font-size: .92em; }
+.study-code { max-width: 100%; overflow-x: auto; margin: 16px 0; padding: 16px; border: 1px solid #dfe2e5; border-radius: 3px; background: #f6f8fa; color: #202122; tab-size: 4; }
+.study-code code { padding: 0; border: 0; background: transparent; color: inherit; font-size: 14px; line-height: 1.6; white-space: pre; font-variant-ligatures: none; }
 .flow { padding: 11px 13px; background: #f8f9fa; border: 1px solid var(--line-soft); font-weight: 650; }
 .flow span { font-weight: 450; color: var(--muted); }
 .memory-cue { padding: 9px 12px; background: var(--memory); border-left: 4px solid #d79921; font-size: 14px; }

@@ -1,4 +1,4 @@
-const CACHE_NAME = "python-pandas-trainer-v3";
+const CACHE_NAME = "python-pandas-trainer-v4";
 const APP_ASSETS = [
   "./",
   "./index.html",
