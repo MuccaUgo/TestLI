@@ -1,0 +1,26 @@
+:root { --bg:#f4f4f7;--card:#fff;--text:#182335;--muted:#5b6576;--line:#dce1e9;--accent:#245ac7;--accent-2:#1748ac;--soft:#eaf0fd;--code:#172235;--code-text:#f1f5ff;--shadow:0 3px 16px rgb(24 35 53 / 4%);--paper:var(--card);--ink:var(--text);--blue:var(--accent);--blue-soft:var(--soft);--line-soft:var(--line);--purple:var(--accent);--memory:var(--soft); }
+[data-theme="dark"] { --bg:#0b0b0f;--card:#181e29;--text:#edf1f8;--muted:#a9b5c8;--line:#343e50;--accent:#8cb5ff;--accent-2:#aac8ff;--soft:#23324b;--code:#0c1220;--code-text:#edf1f8;--shadow:none;color-scheme:dark; }
+* { box-sizing:border-box; } html { scroll-behavior:smooth;-webkit-text-size-adjust:100%; } body { margin:0;background:var(--bg);color:var(--text);font:1rem/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+button,input,select { font:inherit; } button,summary { cursor:pointer; } a { color:var(--accent);text-decoration:none; } a:hover { text-decoration:underline; }
+:is(a,button,input,select,summary):focus-visible { outline:3px solid var(--accent);outline-offset:3px; } [hidden] { display:none!important; }
+.skip-link { position:fixed;top:-80px;left:16px;z-index:100;background:var(--text);color:var(--card);padding:10px 16px; } .skip-link:focus { top:12px; }
+.site-header { display:block;min-height:0;padding:0;background:var(--card);border-bottom:1px solid var(--line); }
+.header-inner { max-width:1280px;margin:auto;padding:16px 24px;display:flex;align-items:center;gap:24px; }
+.wordmark { display:flex;align-items:center;gap:10px;color:var(--text);font-size:1.15rem;line-height:1.2;font-weight:800;white-space:nowrap; } .wordmark:hover { text-decoration:none; }
+.wordmark small { display:block;font-size:.75rem;font-weight:500;color:var(--muted);margin-top:4px; }
+.monogram { display:grid;place-items:center;width:38px;height:38px;background:#245ac7;color:#fff;border-radius:9px;font:800 1.45rem -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+.site-header .study-nav { display:flex;flex-direction:row;gap:6px;margin-left:auto; }
+.site-header .study-nav a { min-height:44px;display:flex;align-items:center;padding:8px 14px;border-radius:8px;font-size:.9rem;font-weight:650;color:var(--muted);white-space:nowrap; }
+.site-header .study-nav a:hover { background:var(--bg);text-decoration:none; } .site-header .study-nav a[aria-current="page"] { background:var(--soft);color:var(--accent); }
+.theme-button { min-width:44px;min-height:44px;padding:6px;background:var(--card);color:var(--text);border:1px solid var(--line);border-radius:9px;font-size:1.25rem; }
+h1,h2,h3 { font-family:inherit;color:var(--text);line-height:1.25;letter-spacing:-.025em; }
+.eyebrow,.article-kicker,.chapter-label { color:var(--muted);font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase; }
+.muted { color:var(--muted); } .text-link { display:inline-block;padding:5px 0;font-size:.9rem;font-weight:650; }
+.app-shell { width:min(1000px,100%);padding-top:28px; } .card,.action-card { border-radius:12px;box-shadow:var(--shadow); }
+.hero { padding:20px 24px; } .hero h2 { font-size:clamp(1.65rem,4vw,2.1rem);margin:0 0 8px;line-height:1.2;letter-spacing:-.025em; } .hero p { margin:0; }
+.action-card { min-height:155px; } .action-card small { font-size:.875rem;opacity:1;color:var(--muted); } .action-card.primary { background:#245ac7;color:#fff; } .action-card.primary small { color:#fff; } .action-icon { margin-bottom:16px; }
+.primary-button { background:#245ac7;color:#fff; } .primary-button:hover { background:#1748ac; }
+.pill,.difficulty,.progress-text,.bottom-nav button,.setup-group label { font-size:.875rem; }
+.article-footer { display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;margin-top:36px;padding-top:20px;border-top:1px solid var(--line);font-size:.875rem;color:var(--muted); }
+@media(max-width:650px) { .header-inner { gap:10px;padding:12px 16px;flex-wrap:wrap; } .wordmark { flex:1; } .site-header .study-nav { order:3;flex-basis:100%;margin:0;gap:4px; } .site-header .study-nav a { flex:1;justify-content:center;padding:8px 6px;font-size:.875rem; } .theme-button { margin-left:auto; } .app-shell { padding-top:18px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { animation:none!important;transition:none!important; } }

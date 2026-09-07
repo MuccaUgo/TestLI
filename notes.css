@@ -140,3 +140,43 @@ tbody th { background: #f8f9fa; white-space: nowrap; }
   .exam-prompt pre { padding: 12px; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Unified TestLI reading surface. */
+.wiki-layout { gap:28px;max-width:1240px; }
+.wiki-layout main { border-radius:12px; }
+.contents-sidebar details { border-radius:12px;padding:16px; }
+.contents-sidebar nav { font-size:.875rem; }
+.toc-list { list-style:none;padding:0; }
+.toc-list > li > a { display:block;padding:8px;border-radius:6px;color:var(--text);line-height:1.4; }
+.toc-list ol { display:none;padding-left:14px; }
+.toc-list > li.is-active ol,.toc-list > li:focus-within ol { display:block; }
+.toc-list ol a { display:block;padding:5px 7px;color:var(--muted); }
+.toc-list > li.is-active > a { color:var(--accent);background:var(--soft); }
+h1 { border:0;font-weight:750; } h2,h3 { font-weight:700; }
+.article-tabs { font-size:.875rem;gap:8px 18px; }
+.article-tabs span + span::before { content:none; }
+.infobox { display:none; }
+.lead { font-size:1.05rem; }
+.reading-note { background:var(--soft);border:0;border-radius:8px;padding:13px 16px;font-size:.925rem; }
+.chapter-index { display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:transparent;padding:0;border:0;gap:8px; }
+.chapter-index a { min-width:0;border-radius:8px;padding:10px 12px; }
+.chapter-index a span { font-size:.8rem;line-height:1.4; }
+.chapter-heading { border-top:2px solid var(--accent); }
+.chapter-label { font-size:.8rem; }
+.anchor-section h3 { font-size:1.25rem; }
+.anchor-section code { background:var(--soft); }
+.memory-cue { background:var(--soft);border-color:var(--accent);border-radius:0 6px 6px 0;padding:12px 15px;font-size:.925rem; }
+.memory-cue strong { color:var(--accent); }
+.study-code,.exam-prompt pre { border:0;border-radius:8px;background:var(--code);color:var(--code-text); }
+.study-code code { background:transparent; }
+.flow,.source-context { background:var(--bg);border-radius:8px; }
+.toc-list ol a,.flow span { color:var(--muted); }
+.exam-years a,.exam-paper > summary { background:var(--card); }
+.exam-paper { border-color:var(--line);border-radius:9px; }
+.exam-paper[open] > summary { background:var(--soft); }
+.exam-summary-label,.back-top,.exam-source,.article-footer { font-size:.875rem; }
+thead th,tbody th { background:var(--soft); }
+.permalink { visibility:visible;opacity:.6; }
+@media(max-width:900px) { .wiki-layout { gap:16px;padding:20px 16px 60px; } .toc-list { columns:1; } .toc-list ol { display:block; } }
+@media(max-width:560px) { .chapter-index { grid-template-columns:repeat(2,minmax(0,1fr)); } .wiki-layout { padding:14px 10px 50px; } }
+@media print { .site-header,.contents-sidebar,.chapter-index,.back-top { display:none; } .wiki-layout { display:block;padding:0; } .wiki-layout main { border:0;padding:0; } .anchor-section { break-inside:avoid; } }

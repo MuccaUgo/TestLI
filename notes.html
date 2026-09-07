@@ -10,13 +10,16 @@
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="notes.css">
   <script src="notes.js" defer></script>
+  <link rel="stylesheet" href="common.css">
+  <script src="common.js" defer></script>
 </head>
 <body id="top">
   <a class="skip-link" href="#article">Skip to article</a>
-  <header class="site-header">
-    <a class="wordmark" href="index.html" aria-label="TestLI home"><span class="monogram" aria-hidden="true">T</span><span>TestLI<small>The study notebook</small></span></a>
-    <nav aria-label="Study areas"><a class="current" href="notes.html" aria-current="page">Theory notes</a><a href="index.html">Python exercises <span aria-hidden="true">↗</span></a></nav>
-  </header>
+<header class="site-header"><div class="header-inner">
+<a class="wordmark" href="index.html" aria-label="TestLI home"><span class="monogram" aria-hidden="true">T</span><span>TestLI<small>Digital Technology</small></span></a>
+<nav class="study-nav" aria-label="Study areas"><a href="notes.html" aria-current="page">Theory notes</a><a href="questions.html">Exam questions</a><a href="index.html">Python practice</a></nav>
+<button id="themeToggle" class="theme-button" aria-label="Toggle dark theme" aria-pressed="false">◐</button>
+</div></header>
   <div class="wiki-layout">
     <aside class="contents-sidebar" aria-label="Article contents">
       <details id="contents" open>
@@ -145,13 +148,13 @@
 <li><a href="#exam-2022-07-11">11 July 2022</a></li>
 <li><a href="#exam-2022-06-23-a">23 June 2022 — Version A</a></li>
 <li><a href="#exam-2022-06-23-b">23 June 2022 — Version B</a></li>
-</ol></li></ol><a class="toc-source" href="#sources">Sources & study notes</a></nav>
+</ol></li></ol><a class="toc-source" href="questions.html">Original exam questions →</a><a class="toc-source" href="#sources">Sources & study notes</a></nav>
       </details>
     </aside>
     <main id="article">
       <div class="article-kicker">Study reference · Digital Technology &amp; exam papers</div>
       <h1>Digital Technology</h1>
-      <div class="article-tabs"><span>Chapters 1–11</span><span>English study notes</span><a href="#python-exams">20 Python exam papers</a></div>
+      <div class="article-tabs"><span>Chapters 1–11</span><span>English study notes</span><a href="questions.html">Original exam questions</a><a href="#python-exams">20 Python exam papers</a></div>
       <div class="article-intro">
         <aside class="infobox" aria-label="At a glance"><h2>At a glance</h2><dl><dt>Coverage</dt><dd>Chapters 1–11</dd><dt>Recall anchors</dt><dd>80 concepts</dd><dt>Project management</dt><dd>10A + 10B · 5 each</dd><dt>Practice</dt><dd><a href="index.html">Python & Pandas</a></dd></dl></aside>
         <p class="lead"><strong>Digital Technology</strong> connects physical objects, data systems and the people who use them. These notes cover all 11 textbook chapters: information and data management, quality, pipelines and formats, smart objects, architectures, warehouses, security, project management and ethics.</p>
@@ -163,6 +166,7 @@
         <a href="#chapter-6">6 <span>Smart objects</span></a><a href="#chapter-7">7 <span>Architectures</span></a><a href="#chapter-8">8 <span>Warehouses</span></a><a href="#chapter-9">9 <span>Security</span></a><a href="#chapter-10a">10A <span>Traditional PM</span></a><a href="#chapter-10b">10B <span>Agile PM</span></a><a href="#chapter-11">11 <span>Ethics</span></a><a href="#python-exams">Python <span>Past exam papers</span></a>
       </nav>
 <section class="chapter" id="chapter-1" aria-labelledby="heading-1"><header class="chapter-heading"><p class="chapter-label">Chapter 1 · 7 anchors</p><h2 id="heading-1">Introduction</h2><p>How data becomes useful information and supports an organization’s activities and decisions.</p></header>
+<a class="text-link" href="questions.html?chapter=1">Original questions for this chapter →</a>
 <section class="anchor-section" id="c1-dikw" aria-labelledby="title-c1-dikw"><h3 id="title-c1-dikw"><span class="section-number">1.1</span> DIKW Pyramid <a class="permalink" href="#c1-dikw" aria-label="Link to DIKW Pyramid">#</a></h3>
 <p>The <strong>DIKW pyramid</strong> describes how data can support understanding and decisions:</p>
 <ul><li><strong>Data:</strong> raw facts or measurements, such as individual sales records.</li><li><strong>Information:</strong> data interpreted in context, such as “100 iPhones were sold in this store today”.</li><li><strong>Knowledge:</strong> information combined with experience, such as recognizing that sales regularly increase on Saturdays.</li><li><strong>Wisdom:</strong> applying knowledge and judgement to choose an appropriate action, such as scheduling additional staff.</li></ul>
@@ -193,6 +197,7 @@
 <p>Metadata makes data understandable and discoverable. Governance also addresses quality, security, privacy, compliance and the resources required to store and use data sustainably.</p><p class="memory-cue"><strong>Remember</strong> Know your data, control its use and manage its life cycle.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-2" aria-labelledby="heading-2"><header class="chapter-heading"><p class="chapter-label">Chapter 2 · 7 anchors</p><h2 id="heading-2">Data Management</h2><p>How databases organize shared data, enforce rules and answer queries with SQL.</p></header>
+<a class="text-link" href="questions.html?chapter=2">Original questions for this chapter →</a>
 <section class="anchor-section" id="c2-structured-unstructured" aria-labelledby="title-c2-structured-unstructured"><h3 id="title-c2-structured-unstructured"><span class="section-number">2.1</span> Structured vs Unstructured Data <a class="permalink" href="#c2-structured-unstructured" aria-label="Link to Structured vs Unstructured Data">#</a></h3>
 <p><strong>Structured data</strong> follows a regular structure, such as a table containing product identifiers, names and prices.</p>
 <p><strong>Unstructured data</strong> includes free text, images and other information without a fixed tabular structure. <strong>Semi-structured data</strong>, such as JSON, has a structure that can vary.</p>
@@ -233,6 +238,7 @@ WHERE s.quantity &gt; 1;</code></pre>
 <p><strong><code>ALTER TABLE</code> changes the schema</strong>; <code>INSERT</code>, <code>UPDATE</code> and <code>DELETE</code> change the data.</p><p class="memory-cue"><strong>Remember</strong> Define the structure, then create, read, update and delete records.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-3" aria-labelledby="heading-3"><header class="chapter-heading"><p class="chapter-label">Chapter 3 · 7 anchors</p><h2 id="heading-3">Data Quality</h2><p>How to assess whether data is suitable for use and how to identify and improve its weaknesses.</p></header>
+<a class="text-link" href="questions.html?chapter=3">Original questions for this chapter →</a>
 <section class="anchor-section" id="c3-fitness-gigo" aria-labelledby="title-c3-fitness-gigo"><h3 id="title-c3-fitness-gigo"><span class="section-number">3.1</span> Fitness for Use &amp; GIGO <a class="permalink" href="#c3-fitness-gigo" aria-label="Link to Fitness for Use &amp; GIGO">#</a></h3>
 <p><strong>Data quality</strong> means <strong>fitness for use</strong>: data must satisfy the requirements of the people and processes using it. The same dataset may be suitable for one task and unsuitable for another.</p>
 <p><strong>GIGO — Garbage In, Garbage Out</strong> means that errors in input data can propagate through processing and produce misleading results. Small errors can grow into larger problems.</p>
@@ -269,6 +275,7 @@ WHERE city = &#x27;Milano&#x27;;</code></pre>
 <p><code>SELECT DISTINCT</code> returns unique combinations of selected values; it does not delete stored records. Detecting records about the same real-world entity may also require similarity checks and human review.</p><p class="memory-cue"><strong>Remember</strong> Profile → standardize → correct → detect duplicates → assess again.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-4" aria-labelledby="heading-4"><header class="chapter-heading"><p class="chapter-label">Chapter 4 · 7 anchors</p><h2 id="heading-4">Data Analysis Pipelines</h2><p>How a sequence of preparation and analysis steps turns data from different sources into useful information.</p></header>
+<a class="text-link" href="questions.html?chapter=4">Original questions for this chapter →</a>
 <section class="anchor-section" id="c4-warehouse-pipeline" aria-labelledby="title-c4-warehouse-pipeline"><h3 id="title-c4-warehouse-pipeline"><span class="section-number">4.1</span> Data Warehousing Pipeline <a class="permalink" href="#c4-warehouse-pipeline" aria-label="Link to Data Warehousing Pipeline">#</a></h3>
 <p>A data warehouse supports business decisions by collecting and preparing data from internal and external sources.</p>
 <p><strong>ETL</strong> extracts the data, cleans and transforms it, and loads it into the warehouse. Analysis tools then help users compare results across products, locations and periods.</p>
@@ -300,6 +307,7 @@ WHERE city = &#x27;Milano&#x27;;</code></pre>
 <p>Two customer records with slightly different names may describe the same person. Pipeline tools support these activities: SQL and Python/Pandas can prepare data, warehouses and lakes store it, and analysis tools present results.</p><p class="memory-cue"><strong>Remember</strong> Align schemas → match entities → combine information.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-5" aria-labelledby="heading-5"><header class="chapter-heading"><p class="chapter-label">Chapter 5 · 7 anchors</p><h2 id="heading-5">Data Formats &amp; Standardization</h2><p>How flexible formats and shared standards help systems exchange and interpret data.</p></header>
+<a class="text-link" href="questions.html?chapter=5">Original questions for this chapter →</a>
 <section class="anchor-section" id="c5-standardization" aria-labelledby="title-c5-standardization"><h3 id="title-c5-standardization"><span class="section-number">5.1</span> Need for Data Standardization <a class="permalink" href="#c5-standardization" aria-label="Link to Need for Data Standardization">#</a></h3>
 <p>Different systems may represent the same information using different names, formats or units. <strong>Data standardization</strong> creates a common representation so that data can be exchanged, combined and interpreted correctly.</p>
 <p>One store records a location as “Milano” and another as “Milan”. Standardization helps recognize that they refer to the same city.</p><p class="memory-cue"><strong>Remember</strong> Shared representations make data reusable.</p></section>
@@ -339,6 +347,7 @@ WHERE city = &#x27;Milano&#x27;;</code></pre>
 <p>Flexible structures still require clear meanings, validation and quality controls.</p><p class="memory-cue"><strong>Remember</strong> Flexible models for storing and managing varied data.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-6" aria-labelledby="heading-6"><header class="chapter-heading"><p class="chapter-label">Chapter 6 · 7 anchors</p><h2 id="heading-6">Smart Objects &amp; Time Series</h2><p>How physical objects are identified, located and observed over time.</p></header>
+<a class="text-link" href="questions.html?chapter=6">Original questions for this chapter →</a>
 <section class="anchor-section" id="iot" aria-labelledby="title-iot"><h3 id="title-iot"><span class="section-number">6.1</span> IoT &amp; Smart Objects <a class="permalink" href="#iot" aria-label="Link to IoT &amp; Smart Objects">#</a></h3>
 <p>The <strong>Internet of Things (IoT)</strong> connects physical objects to information systems. A <strong>smart object</strong> can collect information through sensors, process it and communicate with other devices or services. Some objects can also act on the environment through actuators.</p>
 <p>An object may connect to the Internet directly or through a <strong>gateway</strong>. The data may describe its identity, position or changing conditions, such as temperature. In a shop, a connected sensor can measure room temperature and send readings to a monitoring system.</p><p class="memory-cue"><strong>Remember</strong> Object → sensing → communication → useful action.</p></section>
@@ -364,6 +373,7 @@ WHERE city = &#x27;Milano&#x27;;</code></pre>
 <p><strong>ISO 8601</strong> provides a standard date and time representation. In <code>2026-09-07T10:30:00Z</code>, <code>T</code> separates the date and time, and <code>Z</code> means UTC. An offset such as <code>+02:00</code> specifies a difference from UTC. Normalize time zones before comparing observations.</p><p class="memory-cue"><strong>Remember</strong> A value becomes a time series observation when it has a time.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-7" aria-labelledby="heading-7"><header class="chapter-heading"><p class="chapter-label">Chapter 7 · 7 anchors</p><h2 id="heading-7">Data Architectures</h2><p>How data systems are organized, how organizations share data and how its history is recorded.</p></header>
+<a class="text-link" href="questions.html?chapter=7">Original questions for this chapter →</a>
 <section class="anchor-section" id="reference-architectures" aria-labelledby="title-reference-architectures"><h3 id="title-reference-architectures"><span class="section-number">7.1</span> Reference Architectures — NIST <a class="permalink" href="#reference-architectures" aria-label="Link to Reference Architectures — NIST">#</a></h3>
 <p>A <strong>reference architecture</strong> is a general model of the roles and components needed in a system. It provides a common language for designing solutions, rather than prescribing one specific product.</p>
 <p>The NIST Big Data model identifies five roles: <strong>Data Provider</strong>, <strong>Data Consumer</strong>, <strong>Big Data Application Provider</strong>, <strong>Big Data Framework Provider</strong> and <strong>System Orchestrator</strong>. Applications collect, prepare, analyse and present data. The framework supplies infrastructure such as storage and processing. The orchestrator coordinates requirements and the overall system. Management, security and privacy apply across the architecture.</p><p class="memory-cue"><strong>Remember</strong> Who provides, uses, processes, supports and coordinates the data?</p></section>
@@ -391,6 +401,7 @@ WHERE city = &#x27;Milano&#x27;;</code></pre>
 <p><strong>Datasheets for datasets</strong> explain motivation, composition, collection, preprocessing/cleaning/labelling, uses, distribution and maintenance. PROV structures the history of data; a datasheet gives readers broader context for deciding how to use it.</p><p class="memory-cue"><strong>Remember</strong> PROV: entity, activity, agent. Datasheet: context and intended use.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-8" aria-labelledby="heading-8"><header class="chapter-heading"><p class="chapter-label">Chapter 8 · 7 anchors</p><h2 id="heading-8">Data Warehouses</h2><p>From everyday transactions to historical, multidimensional analysis.</p></header>
+<a class="text-link" href="questions.html?chapter=8">Original questions for this chapter →</a>
 <section class="anchor-section" id="oltp-olap" aria-labelledby="title-oltp-olap"><h3 id="title-oltp-olap"><span class="section-number">8.1</span> OLTP vs OLAP <a class="permalink" href="#oltp-olap" aria-label="Link to OLTP vs OLAP">#</a></h3>
 <p><strong>Online Transaction Processing (OLTP)</strong> supports daily operations, such as recording the sale of an iPhone. It handles many short transactions involving detailed, current data and frequent inserts or updates.</p>
 <p><strong>Online Analytical Processing (OLAP)</strong> supports decisions through complex queries over historical data, often using aggregates. A manager comparing revenue across stores and years is performing analysis.</p>
@@ -422,6 +433,7 @@ WHERE city = &#x27;Milano&#x27;;</code></pre>
 <p>A warehouse develops iteratively: collect requirements, model the data, implement and test ETL and analytical structures, then deploy and maintain them. Refresh schedules, changing dimensions, historical accuracy and query performance require continuing attention.</p><p class="memory-cue"><strong>Remember</strong> Roll up = summarize; drill down = detail; slice = one cut; dice = a subset.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-9" aria-labelledby="heading-9"><header class="chapter-heading"><p class="chapter-label">Chapter 9 · 7 anchors</p><h2 id="heading-9">Security</h2><p>What must be protected, how access is controlled and what cryptography can guarantee.</p></header>
+<a class="text-link" href="questions.html?chapter=9">Original questions for this chapter →</a>
 <section class="anchor-section" id="security-domains" aria-labelledby="title-security-domains"><h3 id="title-security-domains"><span class="section-number">9.1</span> Security Domains, Vulnerabilities &amp; Policies <a class="permalink" href="#security-domains" aria-label="Link to Security Domains, Vulnerabilities &amp; Policies">#</a></h3>
 <p>A <strong>security domain</strong> groups resources subject to common security rules and administration. A <strong>vulnerability</strong> is a weakness that could be exploited, such as an unpatched service, a weak password or a poorly controlled physical entrance.</p>
 <p>A <strong>security policy</strong> states what must be protected, who may do what and which rules apply. Controls implement those rules through technical measures, organizational procedures and physical protection.</p>
@@ -452,6 +464,7 @@ WHERE city = &#x27;Milano&#x27;;</code></pre>
 <p>A <strong>digital certificate</strong> binds a public key to an identity and is signed by an issuer, commonly a certification authority. Verification must consider the trust chain, validity period and revocation status.</p><p class="memory-cue"><strong>Remember</strong> Hash = digest; signature = verifiable authorship; certificate = key–identity binding.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-10a" aria-labelledby="heading-10a"><header class="chapter-heading"><p class="chapter-label">Chapter 10A · 5 anchors</p><h2 id="heading-10a">Traditional Project Management</h2><p>Five anchors for defining a project, planning the work and controlling delivery.</p></header>
+<a class="text-link" href="questions.html?chapter=10a">Original questions for this chapter →</a>
 <section class="anchor-section" id="project-fundamentals" aria-labelledby="title-project-fundamentals"><h3 id="title-project-fundamentals"><span class="section-number">10A.1</span> Project Fundamentals &amp; Golden Triangle <a class="permalink" href="#project-fundamentals" aria-label="Link to Project Fundamentals &amp; Golden Triangle">#</a></h3>
 <p>A <strong>project</strong> is a temporary effort that produces a unique result using limited resources. It has objectives, a beginning and an end. Routine operations, in contrast, continue to deliver recurring activities.</p>
 <p>The <strong>golden triangle</strong> links time, cost and scope/quality. These constraints affect one another: adding features may require more time, more resources or a change in other expectations. A project manager must make these trade-offs explicit.</p>
@@ -474,6 +487,7 @@ WHERE city = &#x27;Milano&#x27;;</code></pre>
 <p>A <strong>risk matrix</strong> helps prioritize risks using probability and impact. A <strong>risk response plan</strong> records actions, owners and resources. Revisit both during the project because new risks emerge and existing risks change.</p><p class="memory-cue"><strong>Remember</strong> Identify → assess → respond → monitor; give each important risk an owner.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-10b" aria-labelledby="heading-10b"><header class="chapter-heading"><p class="chapter-label">Chapter 10B · 5 anchors</p><h2 id="heading-10b">Agile Project Management</h2><p>Five anchors for adapting through feedback and organizing work with Scrum.</p></header>
+<a class="text-link" href="questions.html?chapter=10b">Original questions for this chapter →</a>
 <section class="anchor-section" id="agile-values" aria-labelledby="title-agile-values"><h3 id="title-agile-values"><span class="section-number">10B.1</span> Agile Principles &amp; Values <a class="permalink" href="#agile-values" aria-label="Link to Agile Principles &amp; Values">#</a></h3>
 <p><strong>Agile</strong> develops solutions through short feedback cycles. <strong>Iterative</strong> work revisits and improves a solution; <strong>incremental</strong> work adds usable parts. Teams collaborate with customers, deliver frequently and adapt as they learn.</p>
 <p>The Agile Manifesto values <strong>individuals and interactions</strong> over processes and tools; <strong>working software</strong> over comprehensive documentation; <strong>customer collaboration</strong> over contract negotiation; and <strong>responding to change</strong> over following a plan. The items on the right still have value.</p>
@@ -496,6 +510,7 @@ WHERE city = &#x27;Milano&#x27;;</code></pre>
 <p>A <strong>burndown chart</strong> shows remaining work over time. <strong>Velocity</strong> can help a team forecast using completed work, often measured in story points; it is not a fair ranking of different teams.</p><p class="memory-cue"><strong>Remember</strong> Plan → coordinate daily → review the outcome → improve the process.</p></section>
 <a class="back-top" href="#top">Back to top ↑</a></section>
 <section class="chapter" id="chapter-11" aria-labelledby="heading-11"><header class="chapter-heading"><p class="chapter-label">Chapter 11 · 7 anchors</p><h2 id="heading-11">Ethical Issues</h2><p>How to reason about technology’s effects and protect people throughout the data life cycle.</p></header>
+<a class="text-link" href="questions.html?chapter=11">Original questions for this chapter →</a>
 <section class="anchor-section" id="ethical-issues" aria-labelledby="title-ethical-issues"><h3 id="title-ethical-issues"><span class="section-number">11.1</span> Ethical, Social &amp; Political Issues <a class="permalink" href="#ethical-issues" aria-label="Link to Ethical, Social &amp; Political Issues">#</a></h3><p>Technology can create new possibilities before rules and social habits have time to adapt. The same system can improve life for some people and disadvantage others. Ethical questions therefore concern more than whether a system works.</p><p>The course identifies five moral dimensions: <strong>information rights and privacy</strong>; <strong>property and intellectual property</strong>; <strong>accountability and control</strong>; <strong>system quality</strong>; and <strong>quality of life</strong>. Social and political decisions also influence who receives benefits, who bears risks and which uses are permitted.</p><p>For example, a data platform may make services faster while increasing surveillance or excluding people whose data is incomplete. A good analysis makes those effects visible.</p><p class="memory-cue"><strong>Remember</strong> New possibilities can arrive before rules; ask who benefits, who is exposed and who can control the system.</p></section>
 <section class="anchor-section" id="privacy-profiling" aria-labelledby="title-privacy-profiling"><h3 id="title-privacy-profiling"><span class="section-number">11.2</span> Privacy, Tracking &amp; Profiling <a class="permalink" href="#privacy-profiling" aria-label="Link to Privacy, Tracking &amp; Profiling">#</a></h3><p><strong>Privacy</strong> concerns people’s ability to control information about themselves and the contexts in which it is used. A service may collect location, clicks, purchases or device identifiers. Each item can appear harmless, but combining data can reveal habits, relationships and sensitive attributes.</p><p><strong>Tracking</strong> follows a person or device over time. <strong>Profiling</strong> combines observations to infer a person’s interests, behaviour or likely characteristics and may influence prices, access or opportunities. The inference can be wrong and the person may not know that it is being made.</p><p>Ethical design asks whether collection is necessary, whether the purpose is clear, whether people can exercise meaningful control and whether access, retention and sharing are limited.</p><p class="memory-cue"><strong>Remember</strong> Many small observations can become a sensitive profile when combined.</p></section>
 <section class="anchor-section" id="ethical-analysis" aria-labelledby="title-ethical-analysis"><h3 id="title-ethical-analysis"><span class="section-number">11.3</span> Ethical Principles &amp; Five-Step Analysis <a class="permalink" href="#ethical-analysis" aria-label="Link to Ethical Principles &amp; Five-Step Analysis">#</a></h3><p>Ethical decisions should use explicit principles and a structured analysis rather than personal intuition alone. Useful principles include the <strong>Golden Rule</strong> (“treat others as you would want to be treated”), Kant’s respect for people as ends, <strong>utilitarianism</strong> (consider overall benefits and harms), risk aversion and the idea that there is no free lunch when benefits have hidden costs.</p><ol><li><strong>Facts:</strong> what is happening and what could happen?</li><li><strong>Values:</strong> could it create disparity, injustice or harm?</li><li><strong>Stakeholders:</strong> who is affected and who has duties?</li><li><strong>Options:</strong> what decisions or safeguards are available?</li><li><strong>Consequences:</strong> what will follow from each option?</li></ol><p>Revisit assumptions and include people who may be affected indirectly, not only the organization making the decision.</p><p class="memory-cue"><strong>Remember</strong> Facts → values → stakeholders → options → consequences.</p></section>

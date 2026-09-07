@@ -7,32 +7,31 @@
   <meta name="description" content="Webapp mobile per ripassare Python e Pandas">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <title>Python &amp; Pandas Trainer</title>
+  <title>Python &amp; Pandas practice | TestLI</title>
   <link rel="manifest" href="manifest.json">
   <link rel="icon" href="icon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="common.css">
+  <script src="common.js" defer></script>
 </head>
-<body>
-  <header class="topbar">
-    <div>
-      <p class="eyebrow">DIGITAL TECHNOLOGY</p>
-      <h1>Python &amp; Pandas Trainer</h1>
-    </div>
-    <div class="topbar-actions">
-      <a class="study-link" href="notes.html">Theory notes <span aria-hidden="true">↗</span></a>
-      <button id="themeToggle" class="icon-button" aria-label="Cambia tema">◐</button>
-    </div>
-  </header>
+<body data-area="python">
+<a class="skip-link" href="#main">Skip to exercises</a>
+<header class="site-header"><div class="header-inner">
+<a class="wordmark" href="index.html" aria-label="TestLI home"><span class="monogram" aria-hidden="true">T</span><span>TestLI<small>Digital Technology</small></span></a>
+<nav class="study-nav" aria-label="Study areas"><a href="notes.html">Theory notes</a><a href="questions.html">Exam questions</a><a href="index.html" aria-current="page">Python practice</a></nav>
+<button id="themeToggle" class="theme-button" aria-label="Toggle dark theme" aria-pressed="false">◐</button>
+</div></header>
 
-  <main class="app-shell">
+  <main class="app-shell" id="main">
     <section id="homeView" class="view active">
       <div class="hero card">
-        <span class="pill">Ottimizzata per iPhone</span>
-        <h2>Allenati sul programma d’esame</h2>
-        <p>Domande, output, debugging e mini-problemi. Nessun account, nessuna distrazione.</p>
+
+        <h2>Python &amp; Pandas practice</h2>
+        <p>Scegli un esercizio, un argomento o una simulazione d’esame.</p>
       </div>
 
       <div class="action-grid">
+        <a class="action-card wide exam-link" href="questions.html"><span class="action-icon" aria-hidden="true">?</span><strong>Domande originali in inglese</strong><small>Esami e quiz del corso · consulta per argomento e fonte</small></a>
         <a class="action-card wide exam-link" href="notes.html#python-exams">
           <span class="action-icon" aria-hidden="true">≡</span>
           <strong>Prove d’esame Python</strong>

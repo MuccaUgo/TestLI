@@ -1,4 +1,4 @@
-const CACHE_NAME = "python-pandas-trainer-v4";
+const CACHE_NAME = "python-pandas-trainer-v5";
 const APP_ASSETS = [
   "./",
   "./index.html",
@@ -8,7 +8,12 @@ const APP_ASSETS = [
   "./icon.svg",
   "./notes.html",
   "./notes.css",
-  "./notes.js"
+  "./notes.js",
+  "./common.css",
+  "./common.js",
+  "./questions.html",
+  "./questions.css",
+  "./questions.js"
 ];
 
 self.addEventListener("install", event => {

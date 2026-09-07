@@ -9,6 +9,21 @@
     link.addEventListener("click", () => { if (media.matches) details.removeAttribute("open"); });
   });
 
+  // Show the current chapter's topics in the compact desktop contents.
+  const markChapter = id => {
+    document.querySelectorAll(".toc-list > li").forEach(item => {
+      item.classList.toggle("is-active", item.querySelector("a")?.getAttribute("href") === `#${id}`);
+    });
+  };
+  markChapter("chapter-1");
+  if ("IntersectionObserver" in window) {
+    const observer = new IntersectionObserver(entries => {
+      const visible = entries.find(entry => entry.isIntersecting);
+      if (visible) markChapter(visible.target.id);
+    }, { rootMargin: "-5% 0px -65% 0px" });
+    document.querySelectorAll(".chapter").forEach(chapter => observer.observe(chapter));
+  }
+
   // A link to an exam opens that paper even when its disclosure is collapsed.
   const revealExam = hash => {
     let id;
