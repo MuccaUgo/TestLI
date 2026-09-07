@@ -1,11 +1,14 @@
-const CACHE_NAME = "python-pandas-trainer-v1";
+const CACHE_NAME = "python-pandas-trainer-v2";
 const APP_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
   "./app.js",
   "./manifest.json",
-  "./icon.svg"
+  "./icon.svg",
+  "./notes.html",
+  "./notes.css",
+  "./notes.js"
 ];
 
 self.addEventListener("install", event => {

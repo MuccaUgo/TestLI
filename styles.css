@@ -53,6 +53,9 @@ button:focus-visible, input:focus-visible, textarea:focus-visible, summary:focus
   border-bottom: 1px solid var(--line);
 }
 .topbar h1 { margin: 2px 0 0; font-size: 20px; letter-spacing: -.02em; }
+.topbar-actions { display: flex; align-items: center; gap: 8px; }
+.study-link { min-height: 40px; display: inline-flex; align-items: center; padding: 0 11px; border-radius: 12px; color: var(--accent); background: color-mix(in srgb, var(--accent) 10%, transparent); font-size: 12px; font-weight: 800; text-decoration: none; }
+.study-link:hover { background: color-mix(in srgb, var(--accent) 18%, transparent); text-decoration: none; }
 .eyebrow { margin: 0; font-size: 11px; font-weight: 800; letter-spacing: .12em; color: var(--muted); }
 .icon-button, .back-button {
   min-width: 44px; min-height: 44px; border: 0; border-radius: 14px;
