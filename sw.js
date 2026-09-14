@@ -1,19 +1,12 @@
-const CACHE_NAME = "python-pandas-trainer-v5";
+const CACHE_NAME = "financial-accounting-hub-v1";
 const APP_ASSETS = [
   "./",
   "./index.html",
   "./styles.css",
+  "./data.js",
   "./app.js",
   "./manifest.json",
-  "./icon.svg",
-  "./notes.html",
-  "./notes.css",
-  "./notes.js",
-  "./common.css",
-  "./common.js",
-  "./questions.html",
-  "./questions.css",
-  "./questions.js"
+  "./icon.svg"
 ];
 
 self.addEventListener("install", event => {
