@@ -1,42 +1,51 @@
-# Python & Pandas Trainer
+# Financial Accounting Study Hub
 
-Webapp statica, mobile-first, per ripassare il programma Python/Pandas di Digital Technology.
+Static, mobile-first web app to revise IFRS financial accounting: concept cards plus practice questions.
 
-## Avvio locale
+Content is drawn from the course annexure on financial accounting, covering the accrual principle, the
+balance sheet, the income statement, the cash flow statement and the notes to the financial statements.
 
-Apri `index.html` nel browser.
+## What is inside
 
-Per evitare eventuali limiti del browser sui file locali puoi usare:
+- **Concepts** — 44 cards grouped in five areas (Principles, Balance Sheet, Income Statement, Cash Flow,
+  Notes & Reporting). Each card gives the meaning, how the rule works in practice, and the typical exam trap.
+  Searchable and filterable by area.
+- **Full Test** — all 33 questions in order, with *Start from question* to resume and *Jump to question*.
+- **Practice 10** — 10 random questions with immediate feedback, optionally filtered to a single area.
+- **Exam Test** — 10 random questions across all areas, no feedback until the final recap.
+- **Mistakes Review** — wrong answers are stored in the browser for later revision.
+
+Progress, study streak and accuracy are saved in `localStorage`; nothing is sent anywhere.
+
+## Running locally
+
+Open `index.html` in a browser, or serve the folder to enable the offline mode:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Poi apri `http://localhost:8000`.
+Then open `http://localhost:8000`.
 
-## Pubblicazione su GitHub Pages
+## Publishing on GitHub Pages
 
-1. Crea un repository GitHub.
-2. Carica tutti i file di questa cartella nella root del repository.
-3. Apri **Settings → Pages**.
-4. In **Build and deployment**, scegli **Deploy from a branch**.
-5. Seleziona il branch `main` e la cartella `/root`.
-6. Salva.
+1. Push the files to the repository root.
+2. Open **Settings → Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select branch `main` and folder `/root`, then save.
 
-## Struttura
+## Offline use
 
-- `index.html`: struttura dell’interfaccia
-- `styles.css`: layout responsive e temi
-- `app.js`: banca domande, generatori, test e correzioni
+The app ships a manifest and a service worker. After the first load over HTTPS or a local server it can be
+installed to the home screen and reopened without a connection. Opening the files directly via `file://`
+works but does not enable offline mode.
 
-Non usa framework, backend, database o dipendenze esterne.
+## Structure
 
-L’app include un manifest e un service worker: dopo la prima apertura tramite HTTPS o server locale può essere installata e riaperta anche senza connessione. L’avvio diretto con `file://` funziona, ma non abilita la modalità offline.
+- `index.html` — page shell and static sections
+- `styles.css` — layout, light and dark themes
+- `data.js` — concept cards and question bank
+- `app.js` — concepts browser, quiz engine, stats and review
+- `sw.js`, `manifest.json`, `icon.svg` — installability and offline support
 
-## Test
-
-Esegui i controlli sulla banca domande e sui generatori con:
-
-```bash
-node --test tests.js
-```
+No frameworks, no backend, no external dependencies.
