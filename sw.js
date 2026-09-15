@@ -1,4 +1,4 @@
-const CACHE_NAME = "financial-accounting-hub-v1";
+const CACHE_NAME = "strategy-marketing-hub-v1";
 const APP_ASSETS = [
   "./",
   "./index.html",

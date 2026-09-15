@@ -1,13 +1,13 @@
 {
-  "name": "Financial Accounting Study Hub",
-  "short_name": "FA Study Hub",
-  "description": "Concepts and practice questions on IFRS financial accounting.",
+  "name": "Strategy & Marketing Study Hub",
+  "short_name": "S&M Study Hub",
+  "description": "Concepts and practice questions on Strategy and Marketing.",
   "lang": "en",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#f5f7f8",
-  "theme_color": "#0f4c5c",
+  "background_color": "#f6f6fa",
+  "theme_color": "#312e81",
   "icons": [
     {
       "src": "icon.svg",

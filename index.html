@@ -3,14 +3,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Financial Accounting Study Hub</title>
-<meta name="description" content="Concepts and practice questions on IFRS financial accounting: balance sheet, income statement, cash flow statement and notes." />
+<title>Strategy &amp; Marketing Study Hub</title>
+<meta name="description" content="Concepts and practice questions on Strategy and Marketing: the company, legal forms, ownership and evolution, value, governance and ESG." />
 <link rel="manifest" href="manifest.json" />
 <link rel="icon" href="icon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="icon.svg" />
-<meta name="theme-color" content="#0f4c5c" />
+<meta name="theme-color" content="#312e81" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<script>(function(){try{var t=localStorage.getItem('fa_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<script>(function(){try{var t=localStorage.getItem('sm_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -18,7 +18,7 @@
   <div class="header-inner">
     <div class="topbar">
       <div>
-        <h1>Financial Accounting <span class="badge" id="versionBadge">v1.0</span></h1>
+        <h1>Strategy &amp; Marketing <span class="badge" id="versionBadge">v1.0</span></h1>
         <div class="small" id="count"></div>
       </div>
       <div class="topbar-actions">
@@ -41,13 +41,13 @@
 <main>
   <section id="home" class="app-section card hero">
     <h2>Study menu</h2>
-    <p>IFRS financial reporting: the accrual principle, the balance sheet, the income statement, the cash flow statement and the notes. Concept cards for the theory, three test modes for practice.</p>
+    <p>Introduction to Strategy and Marketing: what a company is, the legal forms it can take, how ownership evolves from foundation to IPO, how value is defined for shareholders and stakeholders, and how the company is governed. Concept cards for the theory, three test modes for practice.</p>
     <div class="stats-row" id="homeStats"></div>
     <div class="grid">
       <div class="topic">
         <div class="kicker">Concepts</div>
         <strong>Course recap</strong>
-        <p class="mini">Accrual vs cash, fair value, impairment, assets and depreciation, financial instruments, inventories, equity and provisions, EBIT, cash flow methods, notes and segmental reporting.</p>
+        <p class="mini">Company scope and size, legal forms, shareholders and takeovers, financing rounds and dilution, IPO, shareholder and enterprise value, the stakeholder perspective, corporate governance models and ESG.</p>
         <button class="pill" data-section="concepts">Open Concepts</button>
       </div>
       <div class="topic">
@@ -57,7 +57,7 @@
         <button class="pill" id="continueBtn" data-mode="full">Start Full Test</button>
       </div>
     </div>
-    <div class="callout"><strong>Recommended use:</strong> read the concept cards for one statement at a time, then run Practice 10 filtered on that area. Use the Full Test in order once you have covered everything, and the Exam Test to simulate the real thing.</div>
+    <div class="callout"><strong>Recommended use:</strong> read the concept cards one area at a time, then run Practice 10 filtered on that area. Use the Full Test in order once you have covered everything, and the Exam Test to simulate the real thing. The dilution and valuation questions reward doing the arithmetic rather than recognising the wording.</div>
   </section>
 
   <section id="concepts" class="app-section hidden">
@@ -70,14 +70,14 @@
       <div class="callout warn">
         <strong>High-frequency traps</strong>
         <div class="topic-grid">
-          <div class="topic"><div class="kicker">Trap</div><strong>Accrual ≠ cash</strong><p>Revenue belongs to the year the transaction takes effect; the cash inflow can fall in a different year.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>FVTPL ≠ Available-for-sale</strong><p>Both are measured at fair value, but the variation goes to the income statement for FVTPL and to the revaluation reserve for available-for-sale.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>Impairment ≠ depreciation</strong><p>Depreciation allocates cost across useful life; impairment captures a durable, unrecoverable loss of value.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>Land is never depreciated</strong><p>Every other item of PPE is, and depreciation continues even while an asset sits idle.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>LIFO is not allowed</strong><p>IFRS permits FIFO and weighted average only; LIFO logic is considered unrealistic.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>Inventories: lower of the two</strong><p>Cost versus net realizable value, where NRV is the selling price less completion and selling costs.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>Gross profit only by function</strong><p>The by-nature format runs from revenue straight to operating profit with no gross profit subtotal.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>Goodwill is tested, not amortized</strong><p>Indefinite life means an impairment test every year, with the loss credited to the income statement.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Percentages need a valuation</strong><p>A stake falling from 40% to 20% can be worth far more if the company grew from €10m to €60m. Never read dilution without the valuation behind it.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Post-money, not pre-money</strong><p>An investor's share is the investment divided by the post-money valuation, which already includes the cash injected.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Primary ≠ secondary IPO</strong><p>In a primary the cash goes to the company; in a secondary it goes to the selling shareholders.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>SV = EV − debt + cash</strong><p>Cash reduces net debt, so it raises shareholder value. Dropping the cash term is the usual slip.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Hostile refers to the board</strong><p>A takeover is hostile when the target's board opposes it, whatever the price offered.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Unlimited ≠ unregulated</strong><p>Unlimited companies lack limited liability but are exempted from filing accounts for public disclosure.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>One-tier still supervises</strong><p>A single board is not an absence of supervision: non-executives outnumber executives and some act as supervisors.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Stakeholder view adds, not replaces</strong><p>The argument is that shareholder value alone is insufficient over the long term, not that it should be abandoned.</p></div>
         </div>
       </div>
     </div>

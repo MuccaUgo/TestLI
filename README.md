@@ -1,16 +1,17 @@
-# Financial Accounting Study Hub
+# Strategy & Marketing Study Hub
 
-Static, mobile-first web app to revise IFRS financial accounting: concept cards plus practice questions.
+Static, mobile-first web app to revise Strategy and Marketing: concept cards plus practice questions.
 
-Content is drawn from the course annexure on financial accounting, covering the accrual principle, the
-balance sheet, the income statement, the cash flow statement and the notes to the financial statements.
+Content is drawn from the course Introduction deck (V. Chiesa, MSc Management Engineering), covering what a
+company is, the legal forms it can take, how ownership evolves from foundation to IPO, shareholder and
+stakeholder value, corporate governance models and ESG.
 
 ## What is inside
 
-- **Concepts** — 44 cards grouped in five areas (Principles, Balance Sheet, Income Statement, Cash Flow,
-  Notes & Reporting). Each card gives the meaning, how the rule works in practice, and the typical exam trap.
-  Searchable and filterable by area.
-- **Full Test** — all 33 questions in order, with *Start from question* to resume and *Jump to question*.
+- **Concepts** — 39 cards grouped in five areas (The Company, Legal Forms, Ownership & Evolution,
+  Value & Objectives, Governance & ESG). Each card gives the meaning, how it works in practice, and the
+  typical exam trap. Searchable and filterable by area.
+- **Full Test** — all 31 questions in order, with *Start from question* to resume and *Jump to question*.
 - **Practice 10** — 10 random questions with immediate feedback, optionally filtered to a single area.
 - **Exam Test** — 10 random questions across all areas, no feedback until the final recap.
 - **Mistakes Review** — wrong answers are stored in the browser for later revision.

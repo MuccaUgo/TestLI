@@ -1,4 +1,4 @@
-/* Financial Accounting Study Hub — concepts browser and quiz engine. */
+/* Strategy & Marketing Study Hub — concepts browser and quiz engine. */
 (function () {
   "use strict";
 
@@ -34,9 +34,9 @@
     var cur = document.documentElement.getAttribute("data-theme") || "light";
     var next = cur === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
-    lsSet("fa_theme", next);
+    lsSet("sm_theme", next);
     var meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.content = next === "dark" ? "#0a0f12" : "#0f4c5c";
+    if (meta) meta.content = next === "dark" ? "#0c0c12" : "#312e81";
     syncThemeButton();
   }
 
@@ -115,7 +115,7 @@
     $("summary").classList.add("hidden");
     $("category").value = "All";
     $("orderMode").value = "ordered";
-    $("startFrom").value = lsGet("fa_last_full_start") || 1;
+    $("startFrom").value = lsGet("sm_last_full_start") || 1;
     $("categoryWrap").classList.toggle("hidden", mode === "exam");
     $("startWrap").classList.toggle("hidden", mode !== "full");
     $("orderWrap").classList.toggle("hidden", mode === "exam");
@@ -149,7 +149,7 @@
     start = Math.min(Math.max(start, 1), questions.length);
     index = currentMode === "full" ? start - 1 : 0;
     answers = [];
-    if (currentMode === "full") lsSet("fa_last_full_start", String(index + 1));
+    if (currentMode === "full") lsSet("sm_last_full_start", String(index + 1));
     $("setup").classList.add("hidden");
     $("summary").classList.add("hidden");
     $("quiz").classList.remove("hidden");
@@ -166,7 +166,7 @@
   function renderQuestion() {
     updateHeader();
     var q = questions[index];
-    if (currentMode === "full") lsSet("fa_last_full_start", String(index + 1));
+    if (currentMode === "full") lsSet("sm_last_full_start", String(index + 1));
     var letters = ["A", "B", "C", "D"].filter(function (l) { return q.options && q.options[l]; });
     $("quiz").innerHTML =
       '<div class="meta"><span class="badge">' + esc(q.cat) + "</span>" +
@@ -232,7 +232,7 @@
 
   /* ---------------- mistakes ---------------- */
   function saveMistakes(wrongItems) {
-    var saved = lsJSON("fa_mistakes", []);
+    var saved = lsJSON("sm_mistakes", []);
     wrongItems.forEach(function (x) {
       saved.push({
         t: Date.now(), cat: x.q.cat, title: x.q.title,
@@ -241,10 +241,10 @@
         selected: x.a.selected, recap: clean(x.q.recap).slice(0, 600)
       });
     });
-    lsSet("fa_mistakes", JSON.stringify(saved.slice(-100)));
+    lsSet("sm_mistakes", JSON.stringify(saved.slice(-100)));
   }
   function renderMistakes() {
-    var saved = lsJSON("fa_mistakes", []).reverse();
+    var saved = lsJSON("sm_mistakes", []).reverse();
     $("mistakeList").innerHTML = saved.length
       ? saved.map(function (m) {
           return '<div class="review-item"><span class="badge">' + esc(m.cat) + "</span> " +
@@ -258,7 +258,7 @@
 
   /* ---------------- stats ---------------- */
   function updateStudyStats(correct, total) {
-    var s = lsJSON("fa_stats", {});
+    var s = lsJSON("sm_stats", {});
     s.totalAnswered = (s.totalAnswered || 0) + total;
     s.totalCorrect = (s.totalCorrect || 0) + correct;
     var today = new Date().toISOString().slice(0, 10);
@@ -267,25 +267,25 @@
       s.streak = s.lastStudyDate === yesterday ? (s.streak || 0) + 1 : 1;
       s.lastStudyDate = today;
     }
-    lsSet("fa_stats", JSON.stringify(s));
+    lsSet("sm_stats", JSON.stringify(s));
   }
   function renderHomeStats() {
     var el = $("homeStats");
     if (!el) return;
-    var s = lsJSON("fa_stats", {});
+    var s = lsJSON("sm_stats", {});
     var acc = s.totalAnswered ? Math.round((s.totalCorrect / s.totalAnswered) * 100) : 0;
     var streak = s.streak || 0;
     el.innerHTML =
       '<div class="stat-pill"><strong>' + (streak > 0 ? "🔥 " + streak : "0") + "</strong><span>Day streak</span></div>" +
       '<div class="stat-pill"><strong>' + (s.totalAnswered ? acc + "%" : "—") + "</strong><span>Accuracy</span></div>" +
       '<div class="stat-pill"><strong>' + (s.totalAnswered || 0) + "</strong><span>Answered</span></div>";
-    var last = parseInt(lsGet("fa_last_full_start") || "1", 10);
+    var last = parseInt(lsGet("sm_last_full_start") || "1", 10);
     var cbtn = $("continueBtn");
     if (cbtn) cbtn.textContent = last > 1 ? "Continue Full Test (Q" + last + ")" : "Start Full Test";
   }
 
   function celebrate() {
-    var colors = ["#0f4c5c", "#2a9d8f", "#10b981", "#f0a35c", "#4fb3c8", "#f04438"];
+    var colors = ["#312e81", "#6366f1", "#a5a5fb", "#f0a35c", "#10b981", "#f04438"];
     var box = document.createElement("div");
     box.className = "confetti-container";
     for (var i = 0; i < 40; i++) {
@@ -377,7 +377,7 @@
       if (e.target.closest("#restartBtn")) { openTest(currentMode); return; }
       if (e.target.closest("#backHomeBtn")) { showSection("home"); return; }
       if (e.target.closest("#clearMistakesBtn")) {
-        try { localStorage.removeItem("fa_mistakes"); } catch (err) {}
+        try { localStorage.removeItem("sm_mistakes"); } catch (err) {}
         renderMistakes();
       }
     });

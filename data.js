@@ -1,943 +1,870 @@
-// Financial Accounting study data. Generated from the course annexure on IFRS financial reporting.
-const CATEGORIES = ["Principles", "Balance Sheet", "Income Statement", "Cash Flow", "Notes & Reporting"];
+// Strategy & Marketing study data. Generated from the course Introduction deck (V. Chiesa, MSc Management Engineering).
+const CATEGORIES = ["The Company", "Legal Forms", "Ownership & Evolution", "Value & Objectives", "Governance & ESG"];
 
 const CONCEPTS = [
  {
-  "cat": "Principles",
-  "title": "Financial Accounting",
-  "meaning": "The branch of accounting intended for users outside the organization (external accountability). It refers to mandatory financial reports that companies must prepare and publish according to international and national rules.",
-  "how": "Annual reports are the main yearly documents: the accounting year lasts 12 months but may start in different months around the world (January, March, June). Interim reports include quarterly and half-year reports.",
-  "trap": "Companies also publish environmental, corporate and social responsibility reports, but those are voluntary. Financial reporting is the part that is mandatory."
+  "cat": "The Company",
+  "title": "What Is a Company",
+  "meaning": "A company can take many forms: a small business, a large corporation, a public sector organization or a not-for-profit organization. The unit of analysis in this course is the profit-oriented organization responsible for its economic and financial results.",
+  "how": "When a case describes an entity, first place it: is it profit-oriented and accountable for its own economic and financial performance? That is the object the course analyses.",
+  "trap": "Restricting the analysis to profit-oriented organizations is a choice of scope, not a claim that other forms are unimportant."
  },
  {
-  "cat": "Principles",
-  "title": "The Four IFRS Financial Statements",
-  "meaning": "Under IFRS an annual report must contain four compulsory financial statements: the balance sheet, the income statement, the cash flow statement, and the statement of changes in equity.",
-  "how": "Balance sheet = condition of resources and rights at year end. Income statement = revenues and costs of the year. Cash flow statement = cash flows of the year. Statement of changes in equity = variations in equity during the year.",
-  "trap": "The notes to the financial statements are compulsory too. They are not an optional appendix: they explain the rules followed and the choices made in preparing the statements."
+  "cat": "The Company",
+  "title": "Measuring the Size of a Company",
+  "meaning": "There is no single indicator of company size. The main ones used are market capitalization, revenues and number of employees.",
+  "how": "The ranking of the largest companies changes depending on the indicator: the leaders by market cap are not the same as the leaders by revenues or by employees. The market cap of the big tech companies is comparable with the GDP of European countries.",
+  "trap": "Quoting one ranking as if it were the ranking hides the choice of indicator. Always say by what measure a company is large."
  },
  {
-  "cat": "Principles",
-  "title": "Accrual Principle",
-  "meaning": "Under the accrual principle, the effects of transactions and other events are recognized when they occur, not when cash is received or paid, and they are reported in the financial statements of the periods to which they relate.",
-  "how": "It is the underlying logic of both the income statement and the balance sheet. Revenues are recorded in the financial year in which the accrual event occurs; costs are registered in the year of the revenues they relate to.",
-  "trap": "When costs cannot reasonably be related to revenues (for example administrative costs), they are attributed directly to the accounting period in which they are paid."
+  "cat": "The Company",
+  "title": "Scope of Output: Single Product or Portfolio",
+  "meaning": "A company can realize a single output or a portfolio of outputs. This is one of the structural choices that define what the company is.",
+  "how": "Ask what the firm sells: one product or service line, or a set of different ones addressed to different needs and markets.",
+  "trap": "A wide portfolio is not automatically a strength: it is a choice with consequences for focus, coordination and resource allocation."
  },
  {
-  "cat": "Principles",
-  "title": "Accrual Event vs Cash Event",
-  "meaning": "The accrual event is the moment the transaction takes effect, when the company signs the contract transferring the goods and all the risk included. The cash event is the moment cash or its equivalent is actually received or paid.",
-  "how": "Car sales of 1 million reached in December 2013 with cash collected in January 2014: revenue of 1 million is counted in 2013 (accrual), cash in 2013 is 0 and there is a cash inflow of 1 million in 2014.",
-  "trap": "The same single transaction generates both an accrual event and a cash event, in different years. Do not treat them as alternative readings of the same figure."
+  "cat": "The Company",
+  "title": "Scope of Activities: Embody or Outsource",
+  "meaning": "A company can embody many activities internally or outsource many of them. This defines how much of the value chain sits inside the firm.",
+  "how": "Compare the activities the firm performs itself with those bought from third parties; the smartphone and the car industries are used in the course as contrasting illustrations.",
+  "trap": "Outsourcing is not simply cost cutting: it changes which capabilities the firm retains and which it depends on others for."
  },
  {
-  "cat": "Principles",
-  "title": "Fair Value",
-  "meaning": "IFRS defines fair value as the amount for which an asset could be exchanged, or a liability settled, between knowledgeable, willing parties in an arm's length transaction. It became relevant as an alternative to the cost method for evaluating assets and liabilities.",
-  "how": "It reflects an objective evaluation external to the enterprise, related to the knowledge and estimation of sellers and buyers. Land bought for 500,000 and worth 550,000 after two years stays at 500,000 under cost, and is revalued to 550,000 under fair value.",
-  "trap": "Fair value is not the company's own opinion of what an asset is worth: it is anchored to an external, market-based estimate between willing parties."
+  "cat": "The Company",
+  "title": "Geographic Scope and Internationalization",
+  "meaning": "A company can serve a single geographical market or several countries. Serving several countries is internationalization.",
+  "how": "Look at where revenues come from and where activities are located; globalisation has pushed a growing number of firms across borders.",
+  "trap": "Selling abroad and being organized as a global company are different degrees of the same dimension; do not treat exporting as full internationalization."
  },
  {
-  "cat": "Principles",
-  "title": "Benchmark vs Allowed Treatment",
-  "meaning": "When IFRS gives the option to choose between accounting criteria, the preferred one is called the benchmark treatment and the possible alternative is called the allowed treatment.",
-  "how": "Benchmark treatment indicates the preferred accounting criteria for a specific category; allowed treatment is the legitimate alternative for that category.",
-  "trap": "The allowed treatment is a fully legitimate option, not an irregularity. The notes are what tell the reader which of the two the company actually applied."
+  "cat": "The Company",
+  "title": "From Conglomerate to Focus: the Eni Case",
+  "meaning": "The scope of a company is not fixed. Eni in the 1980s spanned energy, engineering, chemicals, construction and perforation, mechanical components, textile machines, non-ferrous ores, clothing and newspapers.",
+  "how": "Eni today is organized around Exploration & Production, energy transition businesses (Plenitude and Enilive) and long-term opportunity technology: far fewer, far more related businesses.",
+  "trap": "The case shows scope changing over decades in a deliberate direction; it is about refocusing, not merely shrinking."
  },
  {
-  "cat": "Principles",
-  "title": "Impairment Test",
-  "meaning": "IFRS principles state that companies must review all assets to look for any indication of unrecoverable loss of their value. This assessment is called the impairment test.",
-  "how": "The frequency depends on the category of asset. Goodwill, because of its indefinite nature, must be tested every year, and the loss of value is credited in the income statement.",
-  "trap": "Impairment is about an unrecoverable loss of value, not about routine wear. Systematic allocation of cost over useful life is depreciation or amortization, which is a different mechanism."
+  "cat": "The Company",
+  "title": "Integration and Brand Portfolio: EssilorLuxottica",
+  "meaning": "EssilorLuxottica is a leader in the design, manufacture and distribution of fashion, luxury and sports eyewear, combining a wide brand portfolio with control of production and retail.",
+  "how": "Its portfolio includes proprietary brands such as Ray-Ban, Oakley, Vogue Eyewear, Persol, Oliver Peoples, Arnette, Costa del Mar and Alain Mikli, plus licensed brands including Giorgio Armani, Burberry, Bulgari, Chanel, Coach, Dolce&Gabbana, Ferrari, Michael Kors, Prada, Ralph Lauren, Tiffany & Co., Valentino and Versace. It runs a global network of nearly 20,000 shops, and the merger with Essilor integrated lens production.",
+  "trap": "Proprietary brands and licensed brands are not the same thing: the firm owns the first and operates the second under contract."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "The Balance Sheet",
-  "meaning": "The balance sheet describes the circumstances of the enterprise as an entity in a precise moment. It comprises assets, which report the enterprise's resources, and equity and liabilities, which list the rights to those resources held by shareholders and third parties.",
-  "how": "Every item is expressed in financial terms. The two sections mirror each other: what the company has, and who has claims over it.",
-  "trap": "It is a snapshot at a precise date, not a flow over the year. Flows over the period are what the income statement and the cash flow statement describe."
+  "cat": "The Company",
+  "title": "Globalisation and Global Companies",
+  "meaning": "Globalisation is the background trend that pushes firms to operate across several countries, reshaping competition, supply chains and organization.",
+  "how": "A global company serves several geographical markets and organizes its activities across them, rather than replicating a national business abroad.",
+  "trap": "Global reach changes the set of stakeholders a firm answers to, adding regulators, communities and labour markets in every country it enters."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Current vs Noncurrent",
-  "meaning": "An entity must present a classified balance sheet, separating assets and liabilities into current and noncurrent.",
-  "how": "Current assets are resources retained within the normal operating cycle or within 12 months, such as cash or inventories of material. Current liabilities are those settled within the operating cycle or due within 12 months, such as short-term loans. Everything else is noncurrent, for instance manufacturing machines and equipment.",
-  "trap": "The test is the normal operating cycle or the 12-month horizon, not the nature of the item in itself: the same kind of financial asset can sit under current or noncurrent depending on its horizon."
+  "cat": "Legal Forms",
+  "title": "The Company as a Legal Entity",
+  "meaning": "A company is a legal entity: a legal construct, essentially a contract, through which the law allows a group of natural persons to act as if they were a single artificial person for certain purposes.",
+  "how": "The legal form is the nature of that contract. Two dimensions define it: limited or unlimited liability, and private or public status.",
+  "trap": "The legal entity is separate from the people behind it; this separation is the point of the construct, not a technicality."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Recognition of Assets",
-  "meaning": "Assets are identified by the presence of a direct or indirect contribution to companies' financial inflows or their equivalents. The initial recognition of assets under IFRS is at cost.",
-  "how": "Subsequent measurement follows one of two alternative models: the cost method or the fair value method. Assets are registered with current monetary values, so items of different periods are summed without adjusting for variations in purchasing power.",
-  "trap": "Property rights are not essential for recognition. Enterprises must account for assets retained by leasing when the lease substantially transfers all the risks and benefits."
+  "cat": "Legal Forms",
+  "title": "Unlimited Company",
+  "meaning": "A company, with or without share capital, whose members or shareholders do not benefit from limited liability should the company ever go into formal liquidation.",
+  "how": "Members remain exposed beyond their contribution if the company is wound up. In exchange, unlimited companies are exempted from filing accounts with the Registrar of Companies for public disclosure.",
+  "trap": "The exemption from public disclosure is the flip side of unlimited exposure: less protection for members, less information for outsiders."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Property, Plant and Equipment (PPE)",
-  "meaning": "PPE includes tangible assets retained by the enterprise for long-term use, employed in the production of goods and services or in supporting activities: production machinery, buildings, land, office equipment.",
-  "how": "Initial measurement is at cost. Measurement after initial recognition follows either the cost model, where the asset is carried at cost, or the revaluation model, where it is carried at a revalued (fair value) amount.",
-  "trap": "With the sole exception of land, PPE must be depreciated, whichever of the two measurement models is applied."
+  "cat": "Legal Forms",
+  "title": "Private Company Limited by Guarantee",
+  "meaning": "A company that does not have share capital, but is guaranteed by its members, who agree to pay a fixed amount in the event of the company's liquidation.",
+  "how": "Charitable organisations are often incorporated using this form of limited liability, since there are no shares and no shareholders seeking a return on capital.",
+  "trap": "No share capital does not mean no limited liability: the members' exposure is capped at the guaranteed amount."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Depreciation",
-  "meaning": "Depreciation is a noncash expense that reduces the value of an asset as a result of use, age or obsolescence. The decrease in the value of the asset is balanced with a cost in the income statement.",
-  "how": "It touches two statements at once: the balance sheet, where the value of PPE decreases, and the income statement, where depreciation appears as a noncash cost. Depreciation begins when the asset is available for use and continues until the asset is derecognized, even if it is idle.",
-  "trap": "An idle asset keeps being depreciated. And because depreciation is a noncash cost, it lowers profit without any cash leaving the company."
+  "cat": "Legal Forms",
+  "title": "Private Company Limited by Shares",
+  "meaning": "A company that has shareholders with limited liability and whose shares may not be offered to the general public.",
+  "how": "Shareholders of private companies limited by shares are often bound to offer their shares to their fellow shareholders before selling them to a third party.",
+  "trap": "The restriction is on offering shares to the public and on freely transferring them, not on having shareholders or raising equity privately."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Depreciation Methods",
-  "meaning": "The depreciation methods allowed under IFRS are straight-line, declining and usage. The straight-line method is favored by international standards.",
-  "how": "With straight-line, companies apportion the value of the asset in equal parts over its useful life. A machine bought for 10,000 with a useful life of 10 years and no residual value generates a yearly depreciation of 10,000 / 10 = 1,000 per year.",
-  "trap": "Determining depreciation means defining both the period (useful life) and the method. Land is the exception that is never depreciated."
+  "cat": "Legal Forms",
+  "title": "Public Limited Company",
+  "meaning": "A company that can be publicly traded on a stock exchange. It is similar to the U.S. Corporation (Corp.) and the German Aktiengesellschaft (AG).",
+  "how": "Public companies have access to the financial markets and can raise money for expansion and other projects by selling stock or bonds.",
+  "trap": "Access to public markets comes with disclosure obligations, market valuation and stronger governance requirements; it is not only a funding advantage."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Intangible Assets",
-  "meaning": "IFRS defines intangible assets as identifiable nonmonetary assets without physical substance. Their three critical attributes are identifiability, control (the power to obtain benefits from the asset) and the existence of future economic benefits, such as revenues or reduced future costs.",
-  "how": "They split into intangibles with a finite life, such as patents, and intangibles with an indefinite life, among which goodwill is of particular interest. Initial measurement is at cost; the benchmark treatment afterwards is cost less any amortization and impairment losses.",
-  "trap": "The revaluation model is allowed only if fair value can be determined by reference to an active market (for example milk quotas), and revaluation increases are credited directly to the revaluation reserve under equity."
+  "cat": "Ownership & Evolution",
+  "title": "Shareholders' Objectives",
+  "meaning": "Shareholders pursue two distinct objectives: earning money by selling the stock when the share price appreciates, and having power and controlling the company.",
+  "how": "Identify which objective drives a shareholder in a case: a financial investor seeking appreciation behaves differently from one seeking control.",
+  "trap": "The two objectives can conflict, for example when an offer maximises price but removes control from existing owners."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Goodwill",
-  "meaning": "Goodwill can occur from mergers and acquisitions when the purchasing value is higher than the fair value of the resources acquired. It is the difference between the acquisition cost and the participation of the purchaser in the fair value of assets less liabilities.",
-  "how": "It sits under intangible assets and has an indefinite life, so IFRS requires an impairment test every year. The loss of its value is credited in the income statement.",
-  "trap": "Goodwill is not amortized over a useful life like a patent. Its indefinite nature is exactly why it gets the annual impairment test instead."
+  "cat": "Ownership & Evolution",
+  "title": "Initial Public Offering (IPO)",
+  "meaning": "An IPO is the operation through which a company's shares are offered on a public market for the first time.",
+  "how": "It can be primary, through a capital increase where new shares are issued and the cash goes to the company, or secondary, through the sale of shares of the current shareholders where the cash goes to the sellers. A mixed IPO combines both.",
+  "trap": "Primary and secondary differ in who receives the money: the company in the first case, the selling shareholders in the second."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Financial Assets: the Four Categories",
-  "meaning": "IFRS defines financial instruments as contracts that give rise to a financial asset of one entity and a financial liability or equity instrument of another entity. Financial assets can be found under both noncurrent and current assets.",
-  "how": "The four categories are: financial assets at fair value through profit or loss (FVTPL), loans and receivables, held-to-maturity investments, and available-for-sale financial assets.",
-  "trap": "The category is what drives the measurement rule, so classification is the first thing to settle before asking how an instrument is valued."
+  "cat": "Ownership & Evolution",
+  "title": "Takeovers: Friendly and Hostile",
+  "meaning": "A takeover is the acquisition of control of a company. It can be friendly or hostile.",
+  "how": "A friendly takeover is agreed with the target's board; a hostile one proceeds against the board's wishes through a takeover bid addressed to shareholders.",
+  "trap": "Hostility refers to the board's position, not to the price offered: a hostile bid can be generous and a friendly one modest."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "FVTPL — Fair Value Through Profit or Loss",
-  "meaning": "FVTPL includes assets held for trading, such as derivatives, and financial assets acquired or held for the purpose of selling in the short term.",
-  "how": "Initial measurement at fair value; subsequent measurement at fair value; the balance of the fair value variation goes to the income statement.",
-  "trap": "This is the category where fair value swings hit profit directly. Available-for-sale assets are also measured at fair value, but their variation goes to equity instead."
+  "cat": "Ownership & Evolution",
+  "title": "The Stages of an Organisation's Evolution",
+  "meaning": "A company evolves through distinct stages: foundation, financing rounds and IPO. Each stage changes not only its size, but also its ownership structure, governance model and strategic priorities.",
+  "how": "Place a case on this path: who owns the company, who decides, and what the firm is optimising for at that point.",
+  "trap": "The overall movement is a transition from entrepreneurial control to shared ownership and public accountability, so governance requirements rise along the way."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Available-for-Sale Financial Assets",
-  "meaning": "Any nonderivative financial assets designated on initial recognition as available for sale.",
-  "how": "Initial measurement at fair value plus transaction costs; subsequent measurement at fair value; the balance of the fair value variation goes to the revaluation reserve.",
-  "trap": "Same fair value measurement as FVTPL, opposite destination for the variation: revaluation reserve in equity, not the income statement."
+  "cat": "Ownership & Evolution",
+  "title": "Foundation and Initial Ownership",
+  "meaning": "At foundation the firm is established as a legal entity, and ownership rights are allocated among the founders.",
+  "how": "Founders define the initial ownership structure, allocate equity among themselves and set the first decision-making rules, for example 40% / 40% / 20% between three co-founders.",
+  "trap": "The initial split also fixes the first decision rules; it is a governance choice as much as an economic one."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Held-to-Maturity Investments",
-  "meaning": "Nonderivative financial assets with fixed or determinable payments that the entity intends to hold to maturity.",
-  "how": "Initial measurement at fair value plus transaction costs; subsequent measurement at amortized cost using the effective interest method.",
-  "trap": "Because they are carried at amortized cost, there is no fair value variation to allocate either to profit or to reserves."
+  "cat": "Ownership & Evolution",
+  "title": "Financing Rounds and Dilution",
+  "meaning": "When external investors enter the company by injecting capital, the company issues new shares. This supports growth, but dilutes existing shareholders and may reduce founders' control.",
+  "how": "After a round, existing shareholders usually own a smaller percentage of a larger company: their stake in percent falls while the value behind it may rise.",
+  "trap": "Dilution is mechanical, not a penalty: it follows from issuing new shares, and says nothing on its own about whether value was created."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Loans and Receivables",
-  "meaning": "Nonderivative financial assets with fixed or determinable payments that are not quoted in an active market and are not held for trading. Trade receivables are an important item of this category, usually listed under current assets.",
-  "how": "Initial measurement at fair value plus transaction costs; subsequent measurement at amortized cost using the effective interest method.",
-  "trap": "What excludes an instrument from this category is being quoted in an active market or being held for trading, not the length of its horizon."
+  "cat": "Ownership & Evolution",
+  "title": "Pre-money and Post-money Valuation",
+  "meaning": "Pre-money valuation is the value of the company before the new investment; post-money valuation is the pre-money valuation plus the new capital injected.",
+  "how": "Post-money = pre-money + investment. With €10m pre-money and €5m injected, the post-money valuation is €15m.",
+  "trap": "The investor's percentage is always computed on the post-money figure, because the injected cash is by then part of the company."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Trade Receivables",
-  "meaning": "Trade receivables originate from the operating activity of enterprises and account for cash to be received in the face of selling activity.",
-  "how": "A company selling products for 100,000 in December, with 50% paid immediately, records revenues of 100,000 in the income statement, trade receivables of 50,000 and cash of 50,000 under assets.",
-  "trap": "They are calculated at net realizable value, considering the probability that some customers will not pay. Since a precise calculation is impossible, enterprises use statistical methods based on historical values."
+  "cat": "Ownership & Evolution",
+  "title": "Computing Ownership after a Round",
+  "meaning": "The arithmetic of a financing round follows two formulas: new investor ownership = investment / post-money valuation, and existing shareholders' retention = pre-money valuation / post-money valuation.",
+  "how": "With €5m injected at €10m pre-money, the investor gets 5/15 = 33.33% and every existing holder keeps 10/15 = two thirds of their previous stake, so a 40% founder goes to 26.67% and a 20% founder to 13.33%.",
+  "trap": "Retention applies uniformly to all existing shareholders; they are all diluted in the same proportion, not by the same number of percentage points."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Inventories",
-  "meaning": "Inventories are assets held in the ordinary course of business: finished goods produced for sale, work in progress generated in the production process, and materials and supplies consumed in production.",
-  "how": "They are required to be stated at the lower end between cost and net realizable value. Cost comprises purchase costs (including taxes, transport and handling) net of trade discounts, conversion costs (fixed and variable manufacturing overheads) and other costs to bring inventories to their present location and condition.",
-  "trap": "Net realizable value is the estimated selling price in the ordinary course of business less the estimated cost of completion and the estimated costs necessary to make the sale, so it is not simply the market price."
+  "cat": "Ownership & Evolution",
+  "title": "Dilution Is Not Necessarily Negative",
+  "meaning": "Dilution reduces the percentage owned but usually accompanies an increase in the value of the company.",
+  "how": "After Series A at €10m pre-money and Series B at €45m pre-money, a founder moves from 40% to 26.67% and then to 20%, while the company grows from €10m to €60m post-money.",
+  "trap": "Comparing percentages across rounds without looking at valuations is the classic error: founders own a smaller share of a potentially much more valuable company."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "FIFO vs Weighted Average",
-  "meaning": "The cost evaluation of inventories must take into account the sequence of use of goods. Two methods are allowed by IFRS: first in first out (FIFO) and weighted average.",
-  "how": "Under FIFO the goods that leave the firm are those that have been in inventory the longest, so the inventory on hand is assumed to be the latest. Under weighted average the physical flow is ignored and each unit is valued at total costs of goods produced and bought divided by the quantity produced or bought in the period.",
-  "trap": "LIFO (last in first out) is not permitted by IFRS: the logic that the goods leaving are those held for the shortest time is considered unrealistic."
+  "cat": "Ownership & Evolution",
+  "title": "IPO and the Cap Table",
+  "meaning": "The IPO is the transition from a privately held company to a publicly traded one, and it reshapes the ownership table.",
+  "how": "In a primary IPO raising €160m at €240m pre-money, the post-money valuation is €400m, public shareholders receive 160/400 = 40%, and every existing shareholder is diluted by 40%: a 20% holder goes to 12%, a 25% holder to 15%.",
+  "trap": "The company gains access to public markets but also becomes subject to market valuation, disclosure obligations and stronger governance requirements."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Equity",
-  "meaning": "IFRS defines equity as the residual interest in the assets of the enterprise after deducting all its liabilities. It reports all shareholders' rights.",
-  "how": "It is organized in four categories: capital, reserves, profit or loss brought forward, and profit or loss for the year.",
-  "trap": "Equity is a residual, not an independent valuation of the company: it follows from assets minus liabilities, and has no direct relation to market capitalization."
+  "cat": "Value & Objectives",
+  "title": "Shareholder Value",
+  "meaning": "The dominant view is that the objective of a company is to create value for its shareholders. Shareholder value is the sum of the net cash flows to shareholders, discounted at the cost of equity capital.",
+  "how": "SV = Σ NCF_t / (1 + re)^t, where NCF_t is the net cash flow at year t for the shareholders, equal to dividends plus the share price at the time of sale minus capital injections, and re is the cost of equity capital.",
+  "trap": "Capital injected by shareholders is subtracted in the net cash flow: money they put in is not a return to them."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Capital and Par Value",
-  "meaning": "Capital accounts for the portion of equity obtained directly by shareholders' provisions, made at the corporation's foundation or in subsequent periods.",
-  "how": "Capital is reported at par (nominal) value, the value stated in the enterprise's charter and at which shares are offered initially. Under IFRS, capital is decreased by receivables from shareholders, shares issued but not fully paid, and treasury shares.",
-  "trap": "Par value is unrelated to market value and to the issuing value at which shares may be put on the market in the future."
+  "cat": "Value & Objectives",
+  "title": "Shareholder Value vs Enterprise Value",
+  "meaning": "Enterprise value and shareholder value are different quantities, separated by net debt.",
+  "how": "The shareholder value equals the enterprise value less net debt, where net debt is debt less cash. Therefore SV = EV − debt + cash.",
+  "trap": "Cash increases shareholder value for a given enterprise value, because it reduces net debt; forgetting the cash term is the usual slip."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Reserves",
-  "meaning": "Reserves are additional shareholders' rights generated during the normal operations of the company. Their types vary with national regulations.",
-  "how": "The most common are: share premium reserves, arising when shares are sold above nominal value; the revaluation reserve, from fair value revaluation of assets; profit brought forward, from prior-year profit not distributed as dividends; and other reserves such as legal and statutory ones.",
-  "trap": "In a share issue above par, the cash inflow is split in equity: the nominal portion goes to capital, the exceeding portion to the share premium reserve."
+  "cat": "Value & Objectives",
+  "title": "Stock Market Value as a Proxy",
+  "meaning": "The stock market value of a listed company is used as a proxy of its shareholder value, but only a proxy.",
+  "how": "It is a proxy rather than a measure because the stock market is affected by bubbles, fads and speculation.",
+  "trap": "Treating market capitalization as if it were the intrinsic shareholder value ignores exactly the distortions that make it approximate."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Liabilities",
-  "meaning": "IFRS defines a liability as a present obligation arising from a past event, the settlement of which is expected to lead to an outflow of future economic benefits from the entity.",
-  "how": "Among the items reported, three deserve attention: provisions for liabilities and charges, pensions and similar obligations, and financial liabilities.",
-  "trap": "The obligation must already exist because of a past event. An intention to spend in the future, with no obligating event behind it, is not a liability."
+  "cat": "Value & Objectives",
+  "title": "The Company in Its Ecosystem",
+  "meaning": "A company is a living organism inside a complex ecosystem, exchanging resources with shareholders on one side and a range of stakeholders on the other.",
+  "how": "Shareholders provide equity; stakeholders include labour and management, suppliers of materials, components and technologies, the financial system providing loans, consultants and third parties, consumers in B2C and B2B, society and community, and government, authorities and public services setting laws, regulations and taxes.",
+  "trap": "Stakeholders are not only those inside the firm: regulators, communities and the financial system belong to the same ecosystem."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Provisions",
-  "meaning": "Provisions are a particular kind of liability characterized by an uncertain timing or amount.",
-  "how": "Three conditions must hold for recognition: a present obligation has arisen as a result of a past (obligating) event, the cash outflow is probable (more likely than not), and the amount can be estimated reliably.",
-  "trap": "All three conditions are required together. A possible but not probable outflow, or an amount that cannot be reliably estimated, does not produce a provision in the balance sheet."
+  "cat": "Value & Objectives",
+  "title": "The Stakeholder Perspective",
+  "meaning": "The shareholder perspective alone looks incomplete. Under the stakeholder perspective, corporations should be socially responsible and serve the broader public interest as well as the shareholder interest.",
+  "how": "Stakeholders can have different objectives, in some cases even in contrast with each other. This holds particularly true for public limited companies, which live in the most complicated ecosystem with a huge number of shareholders and stakeholders.",
+  "trap": "The stakeholder view does not replace shareholder value; it says shareholder value is not sufficient as the whole objective."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Measuring Provisions",
-  "meaning": "Because of their uncertain nature, provisions are based on estimations of the expenditure required to settle the present obligation at the balance sheet date.",
-  "how": "One-off events, such as environmental cleanup or the settlement of a lawsuit, are measured at the most likely amount. Recurring events, such as warranties or customer refunds, are measured at a probability-weighted expected value, triangulating historical data with future forecasts.",
-  "trap": "Both calculations are made at a discounted present value, using a pretax discount rate reflecting current market assessments of the time value of money and the risks specific to the liability."
+  "cat": "Value & Objectives",
+  "title": "Partnership of Value Creation",
+  "meaning": "The value of a business is increasingly measured by a combination of financial success, usefulness to society and satisfaction of employees, with shareholders, managers and other stakeholders engaged in a partnership of value creation.",
+  "how": "In a long-term view the dependence runs both ways: stakeholders are vulnerable when management fails to create shareholder value, and without stakeholder value there can be no shareholder value in the long term. The emphasis falls on the maximisation of long-term cash flows.",
+  "trap": "This is an argument about the long term: short-term shareholder returns can be raised in ways that destroy the stakeholder relationships the firm depends on."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Pensions: Defined Contribution vs Defined Benefit",
-  "meaning": "Pensions and similar obligations account for postemployment benefit plans. IAS/IFRS distinguishes between defined contribution plans and defined benefit plans.",
-  "how": "Under a defined contribution plan the enterprise pays fixed contributions into a fund and has no obligation to make further payments if the fund cannot pay all employees' claims. Under a defined benefit plan the company calculates the present value of future obligations, using actuarial assumptions to assess the value.",
-  "trap": "The dividing line is where the risk sits: with a defined contribution plan the obligation stops at the contribution, with a defined benefit plan the company carries the future obligation."
+  "cat": "Value & Objectives",
+  "title": "Why a Stakeholder Impact Analysis",
+  "meaning": "Several events eroded the public's trust in business and capitalism, made relationships with stakeholders more critical and reinforced their role.",
+  "how": "The course points to accounting scandals (Enron, Arthur Andersen, WorldCom, Tyco, Parmalat), the Global Financial Crisis, and other black swan events such as 9/11, the Fukushima nuclear disaster, the fall of the Berlin wall with the collapse of the Soviet Union, and the pandemic.",
+  "trap": "The argument is historical: stakeholder analysis gained weight because trust was damaged by concrete failures, not because of an abstract preference."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Financial Liabilities",
-  "meaning": "A financial liability is a contractual obligation to deliver cash or another financial asset to another entity under conditions that are potentially unfavorable to the entity.",
-  "how": "IFRS recognizes two classes: financial liabilities at FVTPL (initial and subsequent measurement at fair value, variation to the income statement) and other financial liabilities (initial measurement at fair value plus transaction costs, then amortized cost using the effective interest method).",
-  "trap": "The FVTPL class mirrors the asset side and includes liabilities held for trading, such as an obligation for securities borrowed in a short sale."
+  "cat": "Value & Objectives",
+  "title": "The Pyramid of Corporate Social Responsibility",
+  "meaning": "The course presents the pyramid of corporate social responsibility (Rothaermel, 2015) as the framework ordering the responsibilities a company carries, from economic responsibilities at the base up through legal and ethical ones to philanthropic responsibilities at the top.",
+  "how": "The layered shape makes the point that the higher responsibilities rest on the lower ones: a firm that is not economically viable and legally compliant cannot sustain the levels above.",
+  "trap": "The pyramid ranks responsibilities without licensing a firm to stop at the bottom layer; it is a structure of expectations, not a menu."
  },
  {
-  "cat": "Income Statement",
-  "title": "The Income Statement",
-  "meaning": "The income statement, also labelled Profit and Loss Account, can be considered the summary of the economic flows that occurred during a reference accounting period.",
-  "how": "IFRS requires a minimum set of items: revenue, gains and losses related to financial assets, finance costs, share of the profit or loss of associates and joint ventures, tax expenses, and a single amount for the total of discontinued items.",
-  "trap": "It is built on accrual logic, like the balance sheet. Only the cash flow statement is prepared with cash logic."
+  "cat": "Governance & ESG",
+  "title": "Corporate Governance: Definition",
+  "meaning": "Corporate governance refers to the set of systems, principles and processes by which a company is governed.",
+  "how": "They provide the guidelines as to how the company can be directed or controlled in order to fulfill its goals and objectives, add value, and be beneficial for all stakeholders in the long term.",
+  "trap": "Governance is about direction and control together; reducing it to compliance checks misses the first half."
  },
  {
-  "cat": "Income Statement",
-  "title": "By Nature vs By Function",
-  "meaning": "Income statements can be presented in two different formats: by nature or by function.",
-  "how": "The format by nature aggregates costs on the basis of what they are: raw materials and consumables used, employee benefits expense, depreciation and amortization, other operating expenses. The format by function analyses costs by their use in company activities: cost of sales, distribution costs, administrative expenses.",
-  "trap": "Gross profit appears in the by-function format, right after revenue less cost of sales. Both formats converge on the same operating profit (EBIT)."
+  "cat": "Governance & ESG",
+  "title": "Extraordinary Decisions of the Shareholders Assembly",
+  "meaning": "Some decisions are reserved to the shareholders assembly rather than delegated to the board.",
+  "how": "The extraordinary decisions of the shareholders assembly are the bond issue, the capital increase and the change of the statute.",
+  "trap": "These are exactly the decisions that alter the capital structure or the constitution of the company, which is why they sit with the owners."
  },
  {
-  "cat": "Income Statement",
-  "title": "Continuing vs Discontinued Operations",
-  "meaning": "Regardless of the format chosen, operations are divided into continuing and discontinuing, allowing the reader to clearly identify which activities will be retained by the company in future years.",
-  "how": "The bottom part of the income statement reports revenues and costs from discontinued operations and gains or losses from asset disposals.",
-  "trap": "Gains and losses on disposal are calculated as the difference between the selling value and the fair value of the assets at the moment of disposal."
+  "cat": "Governance & ESG",
+  "title": "The Traditional Governance Model",
+  "meaning": "In the traditional model the shareholders meeting sits at the top and appoints the bodies that direct and control the company.",
+  "how": "The shareholders meeting hires and fires members and reviews decisions of the Board of Directors, which includes shareholder representatives, stakeholder representatives and the CEO, and may include executive managers; the board approves the financial statement and decides upon dividends. A Board of Supervisors made of independent members checks that the decisions undertaken by management comply with normative and statutory requirements, and a committee of independent auditors checks the financial statements.",
+  "trap": "Direction and supervision are assigned to distinct bodies; conflating the board of directors with the board of supervisors loses the control mechanism."
  },
  {
-  "cat": "Income Statement",
-  "title": "Revenue Recognition",
-  "meaning": "Revenues account for the sales of products and services according to the accrual principle. For their recognition under IFRS, property rights are not a sufficient condition.",
-  "how": "For sales of goods all these conditions must be satisfied: the seller has transferred significant risks and rights over the goods, has no managerial involvement or control over them, the amount of revenue can be measured reliably, economic benefits are likely to flow to the seller, and related costs can be measured reliably.",
-  "trap": "For services, similar conditions apply, but revenues are recognized by reference to the stage of completion of the transaction at the balance sheet date."
+  "cat": "Governance & ESG",
+  "title": "The Two-Tier System",
+  "meaning": "The two-tier system, found in the Netherlands and Germany, separates supervision and management into two distinct boards.",
+  "how": "The shareholders meeting appoints a Supervisory Board made of shareholder representatives, stakeholder representatives and non-executive directors, which hires and fires the members of the Management Board, reviews its decisions and approves the financial statements. The Management Board is made of the CEO and the company executives. A committee of independent auditors checks the financial statements.",
+  "trap": "The supervisory board is not a second executive layer: it appoints and monitors the managers rather than running operations."
  },
  {
-  "cat": "Income Statement",
-  "title": "Operating Costs",
-  "meaning": "Operating costs account for the resources used in the operating activities of the enterprise.",
-  "how": "The main categories are: cost of raw materials, supplies and goods for resale, listed as consumption (materials purchased less the changes in inventory); cost of services; depreciation, amortization and changes in value of noncurrent assets; write-offs for durable loss of value recognized with the impairment test; finished goods and WIP variations; and employee benefit expenses including wages, social security contributions, staff indemnity and pension benefits.",
-  "trap": "Materials appear as consumption, not as purchases: the inventory variation is what turns one into the other."
+  "cat": "Governance & ESG",
+  "title": "The One-Tier System",
+  "meaning": "The one-tier system, found in the U.S. and the U.K., places direction and supervision inside a single board.",
+  "how": "The shareholders meeting appoints a Board of Directors including shareholder representatives, executive and non-executive directors, the CEO and a control committee. Non-executives are more numerous than executives, and some non-executive members act as supervisors. A committee of independent auditors checks the financial statements.",
+  "trap": "Having one board does not mean having no supervision: the supervisory function is carried by the non-executive majority inside the board."
  },
  {
-  "cat": "Income Statement",
-  "title": "Operating Profit (EBIT)",
-  "meaning": "The result of operating activities, addressed alternatively as operating profit, operating income or net operating income, and most commonly called earnings before interest and taxes (EBIT).",
-  "how": "It is obtained as revenues minus operating costs, and it closes the section of the income statement devoted to operating activities, before any financial item.",
-  "trap": "EBIT stops before interest and taxes by construction: finance costs and tax expense belong to the sections below it."
+  "cat": "Governance & ESG",
+  "title": "Governance Failure: the Volkswagen Diesel Scandal",
+  "meaning": "Volkswagen admitted installing software in engines over several years so they passed laboratory emission tests but emitted dangerous nitrogen oxides when on the road.",
+  "how": "Chief executive Martin Winterkorn resigned insisting he knew nothing of the cheating, which analysts feared could cost billions in fines, lawsuits and recall costs. Governance experts argued the cheating was predictable because of lax boardroom controls and a peculiar corporate culture, and warnings about VW's governance had been raised for years. Even before the scandal, VW shares traded at a discount to other carmakers partly because of governance concerns.",
+  "trap": "The market had already priced the governance weakness before the scandal broke, which is the point: governance quality is not only an ethical matter but a valuation one."
  },
  {
-  "cat": "Income Statement",
-  "title": "Financial Income and Charges",
-  "meaning": "Below the operating section, the income statement lists income and charges related to financial activities.",
-  "how": "These include profit from shares of profit of associates, investment revenues, write-off of financial assets from the impairment test, fair value variation of financial activities classified as FVTPL, and finance costs such as financial interests related to bank debt and bonds.",
-  "trap": "Adding financial income and subtracting financial expenses to EBIT gives profit before taxes from continuing operations; subtracting taxes gives profit after taxes from continuing operations, and only then discontinued operations lead to net profit."
+  "cat": "Governance & ESG",
+  "title": "Board Independence and Diversity at Volkswagen",
+  "meaning": "A key weakness at VW was the lack of diversity of opinion and expertise on its supervisory board, the body responsible for hiring and firing executives, advising management and monitoring their actions.",
+  "how": "The 20-member council of directors was equally divided between shareholder and worker representatives, but 17 of the 20 members were German or Austrian and the board had only one truly independent voice. Many of the remaining directors represented the three largest shareholders: the Porsche and Piëch families, the State of Lower Saxony and Qatar. External investors held only 12% of the voting shares and therefore could not change anything.",
+  "trap": "Formal balance is not independence: seats were evenly split between shareholders and workers, yet the board still lacked independent, relevantly skilled voices."
  },
  {
-  "cat": "Income Statement",
-  "title": "Assets Held for Sale",
-  "meaning": "Discontinuing operations report income or losses due to assets held for sale.",
-  "how": "An asset is held for sale when management is committed to a plan to sell, the asset is available for immediate sale, an active program to locate a buyer is initiated, the sale is highly probable within 12 months, the asset is actively marketed at a price reasonable in relation to its fair value, and it is unlikely the plan will be significantly changed or withdrawn.",
-  "trap": "Merely intending to sell is not enough: the criteria require a committed plan, active marketing and a highly probable sale within 12 months."
- },
- {
-  "cat": "Cash Flow",
-  "title": "The Cash Flow Statement",
-  "meaning": "The cash flow statement shows the capability of the enterprise to generate cash flow in a specific period.",
-  "how": "Contrary to the balance sheet and the income statement, it is prepared with cash logic and not with accrual logic.",
-  "trap": "This is the one statement where the accrual principle does not drive the numbers, which is why a profitable company can still show weak cash generation."
- },
- {
-  "cat": "Cash Flow",
-  "title": "Direct vs Indirect Method",
-  "meaning": "IFRS allows two methods for presenting the cash flow statement: the direct method, encouraged by IAS/IFRS, and the indirect method.",
-  "how": "The direct method shows each major class of gross cash receipts and gross cash payments. The indirect method starts from accrual results, usually operating profit or net profit, and adjusts them for the effects of noncash transactions.",
-  "trap": "The indirect method is often adopted in practice precisely because it highlights the relation between accrual results and financial flows."
- },
- {
-  "cat": "Cash Flow",
-  "title": "Operating, Investing and Financing Activities",
-  "meaning": "Regardless of the method chosen, the cash flow statement is divided into three categories of activities.",
-  "how": "Operating activities refer to cash flows generated or employed in the current activities of the company, such as cash received from customers and cash paid to suppliers and employees. Investing activities are the acquisition and disposal of long-term assets and other investments that are not cash equivalents. Financing activities alter the equity capital and borrowing structure of the enterprise.",
-  "trap": "Buying a machine is investing, not operating, even though the machine serves day-to-day production."
- },
- {
-  "cat": "Notes & Reporting",
-  "title": "Notes to the Financial Statements",
-  "meaning": "The annual report includes an additional compulsory document that is crucial for understanding the financial statements: the notes.",
-  "how": "They must include information about the basis of preparation and the specific accounting policies used, additional information not presented in the four statements but relevant to understanding them, and any information required by IFRS that is not shown on the face of the statements.",
-  "trap": "The notes are where the reader discovers which measurement method was adopted when a choice between the cost model and the fair value model was available."
- },
- {
-  "cat": "Notes & Reporting",
-  "title": "Segmental Reporting",
-  "meaning": "IFRS requires enterprises to report financial and descriptive information about their reportable segments, which are operating segments or aggregations of operating segments.",
-  "how": "Segments refer either to specific businesses (business segments) or to specific geographical areas (geographical segments). Segmental reporting must include important financial information such as sales, results, assets, liabilities, depreciation and noncash expenses other than depreciation.",
-  "trap": "A worked example is the Volkswagen Group 2012 annual report, which splits its income statement into the Automotive and Financial Services divisions."
+  "cat": "Governance & ESG",
+  "title": "ESG",
+  "meaning": "Environmental, social and corporate governance (ESG) is a framework designed to be integrated into an organization's strategy to create enterprise value by expanding the organizational objectives to include the identification, assessment and management of sustainability-related risks and opportunities in respect to all organizational stakeholders and the environment.",
+  "how": "The environmental aspect focuses on preserving the natural world: climate change, greenhouse gas emissions, biodiversity loss, deforestation, pollution, energy efficiency and water management. The social aspect focuses on people and relationships: gender and diversity, equity and inclusion, customer satisfaction and employee engagement. The governance aspect focuses on enhancing corporate governance: board composition, cybersecurity practices, management structure, executive compensation and preventing bribery and corruption.",
+  "trap": "ESG is framed as a way of creating enterprise value by managing risks and opportunities, not as a set of obligations separate from strategy."
  }
 ];
 
 const QUESTIONS = [
  {
-  "cat": "Principles",
-  "title": "Accrual vs Cash Timing",
-  "question": "On 18 December Year 1, a software company signs a contract and delivers a perpetual licence to a client, transferring all significant risks and rights at that moment. The invoice is issued the same day for 240,000, and the client pays in full on 20 January Year 2. The company closes its accounting year on 31 December. How should this transaction be treated?",
+  "cat": "The Company",
+  "title": "The Unit of Analysis",
+  "question": "A course introduction notes that the term company covers small businesses, large corporations, public sector organizations and not-for-profit organizations. Which of these is taken as the unit of analysis?",
   "options": {
-   "A": "Revenue of 240,000 in Year 2, when the cash is received, with no entry in Year 1.",
-   "B": "Revenue of 240,000 in Year 1 and a cash inflow of 240,000 in Year 2.",
-   "C": "Revenue of 120,000 in Year 1 and 120,000 in Year 2, split across the two periods.",
-   "D": "Revenue of 240,000 in Year 1 and a cash inflow of 240,000 in Year 1."
+   "A": "Any organization that employs people, regardless of its purpose.",
+   "B": "The profit-oriented organization responsible for its economic and financial results.",
+   "C": "Only large corporations listed on a stock exchange.",
+   "D": "The public sector organization, since it answers to the broadest set of stakeholders."
   },
   "correct": "B",
   "expl": {
-   "A": "Incorrect. This applies cash logic to the income statement. Under the accrual principle revenue is recognized when the transaction takes effect, which here is the December delivery, not when cash arrives.",
-   "B": "Correct. The accrual event is December of Year 1, when the licence is delivered and the significant risks and rights are transferred, so revenue belongs to Year 1. The cash event is January of Year 2, so the cash inflow of 240,000 appears in Year 2.",
-   "C": "Incorrect. There is no basis for splitting the amount: the transfer of risks and rights happens entirely in December of Year 1, and the payment happens entirely in January of Year 2.",
-   "D": "Incorrect. The revenue timing is right but the cash timing is not: no cash is received in Year 1, so the cash inflow cannot be recorded there."
+   "A": "Incorrect. Employing people is not the criterion: what defines the unit of analysis is being profit-oriented and accountable for economic and financial results.",
+   "B": "Correct. Although the word company covers several kinds of organization, the unit of analysis is the profit-oriented organization responsible for the economic and financial results.",
+   "C": "Incorrect. Listing on a stock exchange is a later stage in a company's evolution, not the boundary of the unit of analysis, which includes unlisted profit-oriented firms.",
+   "D": "Incorrect. Public sector organizations are explicitly listed as one possible meaning of company, but they are not the object the analysis focuses on."
   },
-  "recap": "Correct. The accrual event is December of Year 1, when the licence is delivered and the significant risks and rights are transferred, so revenue belongs to Year 1. The cash event is January of Year 2, so the cash inflow of 240,000 appears in Year 2."
+  "recap": "Correct. Although the word company covers several kinds of organization, the unit of analysis is the profit-oriented organization responsible for the economic and financial results."
  },
  {
-  "cat": "Principles",
-  "title": "Fair Value vs Cost Model",
-  "question": "Company A owns a plot of land initially bought for 800,000. Three years later the market value of the land is 870,000. Land is not depreciated. What is the value in the balance sheet under the two measurement models?",
+  "cat": "The Company",
+  "title": "Measuring Company Size",
+  "question": "Rankings of the largest companies by market capitalization, by revenues and by number of employees produce noticeably different lists. What does this imply?",
   "options": {
-   "A": "800,000 under the cost method and 870,000 under the fair value method.",
-   "B": "870,000 under both methods, since IFRS always requires the market value.",
-   "C": "800,000 under both methods, since the revaluation is only recognized on sale.",
-   "D": "870,000 under the cost method and 800,000 under the fair value method."
+   "A": "Two of the three rankings must be based on incorrect data.",
+   "B": "Size is not captured by a single indicator, so the measure used has to be stated explicitly.",
+   "C": "Market capitalization is the only valid measure, since it reflects the market's judgement.",
+   "D": "The three indicators are equivalent, and the differences are rounding effects."
+  },
+  "correct": "B",
+  "expl": {
+   "A": "Incorrect. The differences come from measuring different things, not from data errors: a capital-intensive firm and a labour-intensive one are large in different senses.",
+   "B": "Correct. Market capitalization, revenues and employees are distinct indicators of size and produce distinct rankings, so a claim that a company is among the largest is only meaningful once the indicator is named.",
+   "C": "Incorrect. Market capitalization is one indicator among several, and it reflects expectations about the future rather than the current scale of operations.",
+   "D": "Incorrect. The rankings differ substantially, not marginally: the leaders by employees are not the leaders by market cap."
+  },
+  "recap": "Correct. Market capitalization, revenues and employees are distinct indicators of size and produce distinct rankings, so a claim that a company is among the largest is only meaningful once the indicator is named."
+ },
+ {
+  "cat": "The Company",
+  "title": "Dimensions of Company Scope",
+  "question": "Along which three dimensions does the course describe the general trends that define the scope of a company?",
+  "options": {
+   "A": "Single output or portfolio of outputs; embodying or outsourcing activities; serving one country or several.",
+   "B": "Revenues, market capitalization and number of employees.",
+   "C": "Limited or unlimited liability; private or public status; listed or unlisted.",
+   "D": "Shareholders, stakeholders and regulators."
   },
   "correct": "A",
   "expl": {
-   "A": "Correct. Adopting the cost method, the value of the land remains at 800,000 and the revaluation is not counted. Adopting the fair value method, the land is revalued and included in the balance sheet at 870,000.",
-   "B": "Incorrect. IFRS does not always require fair value: it is an alternative to the cost method, and where the option exists the company chooses and discloses its choice in the notes.",
-   "C": "Incorrect. This describes only the cost method. Under the fair value method the revaluation is recognized in the balance sheet without waiting for a sale.",
-   "D": "Incorrect. The two values are swapped: the cost method keeps the historical 800,000, while the fair value method brings the asset to 870,000."
+   "A": "Correct. A company can realize a single output or a portfolio of outputs, can embody many activities or outsource many of them, and can serve a single geographical market or several countries through internationalization.",
+   "B": "Incorrect. Those are indicators of size, which is a separate question from how broad the company's scope of products, activities and markets is.",
+   "C": "Incorrect. Those are dimensions of legal form, which describe the contract behind the company rather than the breadth of what it does.",
+   "D": "Incorrect. Those identify categories of actors in the company's ecosystem, not the structural choices that define its scope."
   },
-  "recap": "Correct. Adopting the cost method, the value of the land remains at 800,000 and the revaluation is not counted. Adopting the fair value method, the land is revalued and included in the balance sheet at 870,000."
+  "recap": "Correct. A company can realize a single output or a portfolio of outputs, can embody many activities or outsource many of them, and can serve a single geographical market or several countries through internationalization."
  },
  {
-  "cat": "Principles",
-  "title": "Benchmark vs Allowed Treatment",
-  "question": "The notes of a company state that, for a category where IFRS permits a choice, management has applied the allowed treatment rather than the benchmark treatment. How should a reader interpret this?",
+  "cat": "The Company",
+  "title": "From Conglomerate to Focus",
+  "question": "In the 1980s Eni spanned energy, engineering, chemicals, construction and perforation, mechanical components, textile machines, non-ferrous ores, clothing and newspapers. Today it is organized around Exploration & Production, energy transition businesses and long-term opportunity technology. What does this illustrate?",
   "options": {
-   "A": "The company has breached IFRS and the statements are not compliant.",
-   "B": "The company has applied the preferred IFRS criteria for that category.",
-   "C": "The company has applied the legitimate alternative criteria, while the benchmark treatment is the preferred one.",
-   "D": "The terminology has no accounting meaning and only concerns internal reporting."
+   "A": "That the scope of a company's portfolio of outputs is a strategic choice that can change substantially over time.",
+   "B": "That companies inevitably shrink as their industry matures.",
+   "C": "That internationalization always replaces diversification.",
+   "D": "That changes in legal form drive changes in the business portfolio."
+  },
+  "correct": "A",
+  "expl": {
+   "A": "Correct. Eni moved from a very wide, largely unrelated portfolio to a far narrower set of related businesses, showing that the choice between a single output and a broad portfolio is a strategic decision that firms revisit over decades.",
+   "B": "Incorrect. The case describes refocusing on fewer, related businesses, not a reduction of the company's overall scale.",
+   "C": "Incorrect. Geographic scope and portfolio scope are separate dimensions, and the Eni example concerns the portfolio of businesses rather than the countries served.",
+   "D": "Incorrect. Nothing in the case links the change in portfolio to a change in the company's legal form."
+  },
+  "recap": "Correct. Eni moved from a very wide, largely unrelated portfolio to a far narrower set of related businesses, showing that the choice between a single output and a broad portfolio is a strategic decision that firms revisit over decades."
+ },
+ {
+  "cat": "The Company",
+  "title": "Proprietary and Licensed Brands",
+  "question": "EssilorLuxottica's portfolio includes brands such as Ray-Ban, Oakley and Persol alongside brands such as Chanel, Prada and Giorgio Armani, and the merger with Essilor brought lens production inside the company. How should these two facts be read?",
+  "options": {
+   "A": "All the brands are owned outright, and the Essilor merger was a geographic expansion.",
+   "B": "Ray-Ban and Persol are licensed, while Chanel and Prada are proprietary brands of the group.",
+   "C": "The first group are proprietary brands and the second are licensed brands, while the Essilor merger represents integration into lens production.",
+   "D": "The brand portfolio shows outsourcing of activities, and the merger shows a reduction of scope."
   },
   "correct": "C",
   "expl": {
-   "A": "Incorrect. The allowed treatment is one of the options IFRS itself makes available; applying it does not make the financial statements non-compliant.",
-   "B": "Incorrect. The preferred criteria is called the benchmark treatment. The allowed treatment is the alternative to it.",
-   "C": "Correct. Benchmark treatment indicates the preferred accounting criteria for a specific category, while allowed treatment is the possible legitimate alternative for that category.",
-   "D": "Incorrect. The distinction is an IFRS concept about which accounting criteria are preferred and which are permitted alternatives, and the choice must be disclosed in the notes."
+   "A": "Incorrect. The two sets of brands are held on different bases: some are owned by the group, others are operated under licence from the fashion houses that own them.",
+   "B": "Incorrect. The two groups are inverted: Ray-Ban, Oakley and Persol are proprietary brands, while Chanel, Prada and Giorgio Armani are licensed.",
+   "C": "Correct. Ray-Ban, Oakley, Vogue Eyewear, Persol and the others are proprietary brands, whereas Giorgio Armani, Chanel, Prada and similar names are licensed. Integrating lens production through the merger with Essilor extends the activities the company performs itself.",
+   "D": "Incorrect. Bringing lens production in-house is the opposite of outsourcing, and it widens rather than reduces the activities embodied in the firm."
   },
-  "recap": "Correct. Benchmark treatment indicates the preferred accounting criteria for a specific category, while allowed treatment is the possible legitimate alternative for that category."
+  "recap": "Correct. Ray-Ban, Oakley, Vogue Eyewear, Persol and the others are proprietary brands, whereas Giorgio Armani, Chanel, Prada and similar names are licensed. Integrating lens production through the merger with Essilor extends the activities the company performs itself."
  },
  {
-  "cat": "Principles",
-  "title": "Purpose of the Impairment Test",
-  "question": "A manufacturer reviews its assets at year end and finds that a production line has suffered a durable loss of value that will not be recovered. Which mechanism captures this, and how does it differ from depreciation?",
+  "cat": "Legal Forms",
+  "title": "The Company as a Legal Construct",
+  "question": "What does it mean, precisely, that a company is a legal entity?",
   "options": {
-   "A": "The impairment test, which identifies an unrecoverable loss of value; depreciation instead allocates cost systematically over useful life.",
-   "B": "Depreciation, which is precisely the tool for unrecoverable losses of value.",
-   "C": "The impairment test, which replaces depreciation for the remaining useful life of the asset.",
-   "D": "The revaluation model, which is the only way to reduce the carrying value of an asset."
-  },
-  "correct": "A",
-  "expl": {
-   "A": "Correct. IFRS requires companies to review all assets for any indication of unrecoverable loss of their value, and this assessment is the impairment test. Depreciation is a different mechanism: it is the systematic reduction of value due to use, age or obsolescence over the asset's useful life.",
-   "B": "Incorrect. Depreciation reflects use, age and obsolescence spread across useful life; it is not the instrument for recognizing a specific durable loss of value.",
-   "C": "Incorrect. The impairment test does not replace depreciation: an asset that is impaired continues to be depreciated over its remaining useful life.",
-   "D": "Incorrect. The revaluation model is a measurement option based on fair value; the specific mechanism for identifying unrecoverable losses is the impairment test."
-  },
-  "recap": "Correct. IFRS requires companies to review all assets for any indication of unrecoverable loss of their value, and this assessment is the impairment test. Depreciation is a different mechanism: it is the systematic reduction of value due to use, age or obsolescence over the asset's useful life."
- },
- {
-  "cat": "Principles",
-  "title": "Compulsory Documents under IFRS",
-  "question": "Which set of documents does IFRS make compulsory within the annual report?",
-  "options": {
-   "A": "Balance sheet, income statement and cash flow statement only.",
-   "B": "Balance sheet, income statement, cash flow statement and statement of changes in equity, plus the notes to the financial statements.",
-   "C": "Balance sheet, income statement, cash flow statement, statement of changes in equity and the corporate social responsibility report.",
-   "D": "Balance sheet and income statement, with the other documents left to the company's discretion."
+   "A": "That it is registered with a public authority and pays taxes.",
+   "B": "That it is a legal construct, essentially a contract, through which the law allows a group of natural persons to act as if they were a single artificial person for certain purposes.",
+   "C": "That its shareholders are personally liable for its obligations.",
+   "D": "That it must publish financial statements for public disclosure."
   },
   "correct": "B",
   "expl": {
-   "A": "Incorrect. This omits the statement of changes in equity, which details variations in equity through the year, and the notes.",
-   "B": "Correct. IFRS requires four financial statements — balance sheet, income statement, cash flow statement and statement of changes in equity — and in addition the notes, which explain the rules followed and the choices made in preparing them.",
-   "C": "Incorrect. Environmental, corporate and social responsibility reports are published by many enterprises but they are not part of the compulsory financial reporting set.",
-   "D": "Incorrect. All four statements are compulsory, not just two, and the notes are compulsory as well."
+   "A": "Incorrect. Registration and taxation are consequences of existing as an entity, not the definition of what a legal entity is.",
+   "B": "Correct. A company is a legal construct, a contract, through which the law allows a group of natural persons to act as if they were a single artificial person for certain purposes. The legal form is the nature of that contract.",
+   "C": "Incorrect. Personal liability depends on the legal form chosen: in limited companies shareholders precisely do not carry it.",
+   "D": "Incorrect. Disclosure obligations vary by legal form, and unlimited companies are in fact exempted from filing accounts for public disclosure."
   },
-  "recap": "Correct. IFRS requires four financial statements — balance sheet, income statement, cash flow statement and statement of changes in equity — and in addition the notes, which explain the rules followed and the choices made in preparing them."
+  "recap": "Correct. A company is a legal construct, a contract, through which the law allows a group of natural persons to act as if they were a single artificial person for certain purposes. The legal form is the nature of that contract."
  },
  {
-  "cat": "Principles",
-  "title": "Costs That Cannot Be Matched to Revenues",
-  "question": "A company incurs general administrative costs during the year that cannot be reasonably related to any specific revenue. Under the accrual principle, how are they treated?",
+  "cat": "Legal Forms",
+  "title": "Unlimited Company",
+  "question": "Which combination correctly describes an unlimited company?",
   "options": {
-   "A": "They are capitalized as an asset until a related revenue is identified.",
-   "B": "They are attributed directly to the accounting period in which they are paid.",
-   "C": "They are spread evenly over the following five accounting periods.",
-   "D": "They are excluded from the income statement and reported only in the notes."
-  },
-  "correct": "B",
-  "expl": {
-   "A": "Incorrect. Administrative costs of the period are not resources generating identifiable future inflows, so they are not capitalized as assets waiting for a matching revenue.",
-   "B": "Correct. Costs are normally registered in the financial year of the revenues they relate to, but when they cannot be reasonably related to revenues, as with administrative costs, they are attributed directly to the accounting period in which they are paid.",
-   "C": "Incorrect. There is no rule spreading unmatched administrative costs across future periods; they belong to the period concerned.",
-   "D": "Incorrect. They are ordinary operating costs of the period and appear in the income statement, not only as a note disclosure."
-  },
-  "recap": "Correct. Costs are normally registered in the financial year of the revenues they relate to, but when they cannot be reasonably related to revenues, as with administrative costs, they are attributed directly to the accounting period in which they are paid."
- },
- {
-  "cat": "Balance Sheet",
-  "title": "Current vs Noncurrent Classification",
-  "question": "At year end a company holds: (1) raw material inventories expected to be used in three months, (2) a production machine with a ten-year life, (3) a bank loan due in eight months, (4) a bond repayable in six years. How are these classified?",
-  "options": {
-   "A": "(1) current asset, (2) noncurrent asset, (3) current liability, (4) noncurrent liability.",
-   "B": "(1) noncurrent asset, (2) noncurrent asset, (3) current liability, (4) current liability.",
-   "C": "(1) current asset, (2) current asset, (3) noncurrent liability, (4) noncurrent liability.",
-   "D": "(1) current asset, (2) noncurrent asset, (3) noncurrent liability, (4) current liability."
+   "A": "Members do not benefit from limited liability in a formal liquidation, and the company is exempted from filing accounts for public disclosure.",
+   "B": "Members benefit from limited liability, and the company must file accounts for public disclosure.",
+   "C": "The company has no share capital and is guaranteed by its members up to a fixed amount.",
+   "D": "The company can be publicly traded on a stock exchange and raise money by selling stock or bonds."
   },
   "correct": "A",
   "expl": {
-   "A": "Correct. Inventories used within the operating cycle or 12 months are current assets; a ten-year production machine is a noncurrent asset; a loan due within 12 months is a current liability; a bond repayable in six years is a noncurrent liability.",
-   "B": "Incorrect. Inventories consumed within three months sit clearly within the 12-month horizon, so they are current assets, and a six-year bond is not due within 12 months.",
-   "C": "Incorrect. A machine with a ten-year life is retained well beyond the operating cycle, making it noncurrent, and a loan due in eight months falls inside the 12-month horizon.",
-   "D": "Incorrect. The two liabilities are inverted: the eight-month loan is current and the six-year bond is noncurrent."
+   "A": "Correct. An unlimited company, with or without share capital, is one whose members or shareholders do not benefit from limited liability should the company go into formal liquidation, and such companies are exempted from filing accounts with the Registrar of Companies for public disclosure.",
+   "B": "Incorrect. Both halves are reversed: the absence of limited liability is what defines the form, and it comes with an exemption from public filing rather than an obligation.",
+   "C": "Incorrect. That describes a private company limited by guarantee, where liability is capped at the guaranteed amount.",
+   "D": "Incorrect. That describes a public limited company, which is a different legal form entirely."
   },
-  "recap": "Correct. Inventories used within the operating cycle or 12 months are current assets; a ten-year production machine is a noncurrent asset; a loan due within 12 months is a current liability; a bond repayable in six years is a noncurrent liability."
+  "recap": "Correct. An unlimited company, with or without share capital, is one whose members or shareholders do not benefit from limited liability should the company go into formal liquidation, and such companies are exempted from filing accounts with the Registrar of Companies for public disclosure."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Straight-Line Depreciation",
-  "question": "A company buys a machine on 1 January for 24,000, to be used immediately in manufacturing. Its useful life is 8 years and it is worthless at the end of that period. The company applies the straight-line method. What is the yearly depreciation, and what is the net book value at the end of Year 3?",
+  "cat": "Legal Forms",
+  "title": "Company Limited by Guarantee",
+  "question": "A charitable organisation is incorporated with no share capital; its members agree to pay a fixed amount in the event of liquidation. Which legal form is this?",
   "options": {
-   "A": "Yearly depreciation 3,000; net book value at the end of Year 3 equal to 15,000.",
-   "B": "Yearly depreciation 3,000; net book value at the end of Year 3 equal to 9,000.",
-   "C": "Yearly depreciation 8,000; net book value at the end of Year 3 equal to 0.",
-   "D": "Yearly depreciation 2,400; net book value at the end of Year 3 equal to 16,800."
-  },
-  "correct": "A",
-  "expl": {
-   "A": "Correct. Straight-line depreciation apportions the value in equal parts over useful life: 24,000 / 8 = 3,000 per year. After three years the accumulated depreciation is 9,000, so the net book value (written down value) is 24,000 − 9,000 = 15,000.",
-   "B": "Incorrect. 9,000 is the accumulated depreciation after three years, not the net book value; the net book value is what remains of the original 24,000 after subtracting it.",
-   "C": "Incorrect. This divides by a wrong number of years: the useful life is 8 years, so the annual charge is 3,000, and the asset is not fully depreciated after three years.",
-   "D": "Incorrect. 2,400 would correspond to a ten-year useful life; here the useful life is stated as 8 years."
-  },
-  "recap": "Correct. Straight-line depreciation apportions the value in equal parts over useful life: 24,000 / 8 = 3,000 per year. After three years the accumulated depreciation is 9,000, so the net book value (written down value) is 24,000 − 9,000 = 15,000."
- },
- {
-  "cat": "Balance Sheet",
-  "title": "Depreciation, Land and Idle Assets",
-  "question": "Which statement about depreciation is correct under IFRS?",
-  "options": {
-   "A": "Depreciation is a cash expense that reduces both profit and cash at the same time.",
-   "B": "All items of PPE, land included, must be depreciated over their useful life.",
-   "C": "Depreciation stops as soon as an asset becomes idle, and land is never depreciated.",
-   "D": "Depreciation continues even if the asset is idle, and land is the exception that is not depreciated."
-  },
-  "correct": "D",
-  "expl": {
-   "A": "Incorrect. Depreciation is explicitly a noncash expense: it reduces the value of the asset and profit, but no cash leaves the company for it.",
-   "B": "Incorrect. Land is the exception: with the exception of land, PPE must be depreciated.",
-   "C": "Incorrect about idle assets. Depreciation begins when the asset is available for use and continues until the asset is derecognized, even if it is idle.",
-   "D": "Correct. Depreciation runs from when the asset is available for use until it is derecognized, even during idle periods, and land is the one item of PPE that is not depreciated."
-  },
-  "recap": "Correct. Depreciation runs from when the asset is available for use until it is derecognized, even during idle periods, and land is the one item of PPE that is not depreciated."
- },
- {
-  "cat": "Balance Sheet",
-  "title": "Attributes of an Intangible Asset",
-  "question": "A company is assessing whether an item qualifies as an intangible asset under IFRS. Which three critical attributes must be present?",
-  "options": {
-   "A": "Identifiability, control, and the existence of future economic benefits.",
-   "B": "Physical substance, identifiability, and a finite useful life.",
-   "C": "Legal ownership, an active market, and an indefinite useful life.",
-   "D": "Identifiability, legal ownership, and immediate cash generation."
-  },
-  "correct": "A",
-  "expl": {
-   "A": "Correct. IFRS defines intangible assets as identifiable nonmonetary assets without physical substance, and their three critical attributes are identifiability, control (the power to obtain benefits from the asset) and the existence of future economic benefits such as revenues or reduced future costs.",
-   "B": "Incorrect. Intangible assets are by definition without physical substance, and they may have either a finite or an indefinite life.",
-   "C": "Incorrect. An active market matters only for applying the revaluation model, and an indefinite useful life is a possible feature, not a requirement.",
-   "D": "Incorrect. What is required is control rather than legal ownership, and the benefits are future economic benefits, which may also take the form of reduced future costs rather than immediate cash."
-  },
-  "recap": "Correct. IFRS defines intangible assets as identifiable nonmonetary assets without physical substance, and their three critical attributes are identifiability, control (the power to obtain benefits from the asset) and the existence of future economic benefits such as revenues or reduced future costs."
- },
- {
-  "cat": "Balance Sheet",
-  "title": "Goodwill and the Annual Impairment Test",
-  "question": "A group acquires a company paying more than the fair value of the acquired resources net of liabilities. How is the resulting goodwill treated in subsequent years?",
-  "options": {
-   "A": "It is amortized on a straight-line basis over a maximum of five years.",
-   "B": "It is subject to an impairment test every year, and any loss of value is credited in the income statement.",
-   "C": "It is revalued annually to fair value with the variation credited to the revaluation reserve.",
-   "D": "It remains at its original amount and is only adjusted when the acquired business is sold."
-  },
-  "correct": "B",
-  "expl": {
-   "A": "Incorrect. Goodwill has an indefinite life, so it does not follow the amortization logic used for intangibles with a finite life such as patents.",
-   "B": "Correct. Goodwill is the difference between acquisition cost and the purchaser's participation in the fair value of assets less liabilities. Because of its indefinite nature, IFRS requires an impairment test every year, and the loss of its value is credited in the income statement.",
-   "C": "Incorrect. Goodwill is not routinely revalued upwards to fair value through the revaluation reserve; what IFRS mandates is the annual test for loss of value.",
-   "D": "Incorrect. Waiting for a disposal would ignore the compulsory annual impairment test that IFRS requires precisely because the asset has an indefinite life."
-  },
-  "recap": "Correct. Goodwill is the difference between acquisition cost and the purchaser's participation in the fair value of assets less liabilities. Because of its indefinite nature, IFRS requires an impairment test every year, and the loss of its value is credited in the income statement."
- },
- {
-  "cat": "Balance Sheet",
-  "title": "Where Fair Value Variations Land",
-  "question": "A company holds two portfolios: one of derivatives held for trading (classified at fair value through profit or loss) and one of nonderivative assets designated on initial recognition as available for sale. Both are measured at fair value after acquisition. Where does the balance of the fair value variation go in each case?",
-  "options": {
-   "A": "To the income statement for both portfolios.",
-   "B": "To the revaluation reserve for both portfolios.",
-   "C": "To the income statement for the FVTPL portfolio and to the revaluation reserve for the available-for-sale portfolio.",
-   "D": "To the revaluation reserve for the FVTPL portfolio and to the income statement for the available-for-sale portfolio."
+   "A": "An unlimited company.",
+   "B": "A private company limited by shares.",
+   "C": "A private company limited by guarantee.",
+   "D": "A public limited company."
   },
   "correct": "C",
   "expl": {
-   "A": "Incorrect. Only the FVTPL category sends its fair value variation to the income statement; the available-for-sale category does not.",
-   "B": "Incorrect. Only the available-for-sale category sends its fair value variation to the revaluation reserve; FVTPL variations hit profit.",
-   "C": "Correct. Both categories are measured at fair value after acquisition, but the destination of the variation differs: FVTPL variations go to the income statement, while available-for-sale variations go to the revaluation reserve in equity.",
-   "D": "Incorrect. The two destinations are inverted: trading assets at FVTPL affect profit, while available-for-sale assets affect the revaluation reserve."
+   "A": "Incorrect. In an unlimited company members do not benefit from limited liability at all, whereas here their exposure is capped at the amount guaranteed.",
+   "B": "Incorrect. A company limited by shares has share capital and shareholders, while this form has neither.",
+   "C": "Correct. A private company limited by guarantee has no share capital but is guaranteed by its members, who agree to pay a fixed amount in the event of the company's liquidation. Charitable organisations are often incorporated using this form of limited liability.",
+   "D": "Incorrect. A public limited company is traded on a stock exchange and has share capital, neither of which applies here."
   },
-  "recap": "Correct. Both categories are measured at fair value after acquisition, but the destination of the variation differs: FVTPL variations go to the income statement, while available-for-sale variations go to the revaluation reserve in equity."
+  "recap": "Correct. A private company limited by guarantee has no share capital but is guaranteed by its members, who agree to pay a fixed amount in the event of the company's liquidation. Charitable organisations are often incorporated using this form of limited liability."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Held-to-Maturity Measurement",
-  "question": "A company purchases nonderivative bonds with fixed payments and the firm intention of holding them to maturity. How are they measured, initially and subsequently?",
+  "cat": "Legal Forms",
+  "title": "Private Company Limited by Shares",
+  "question": "Which feature distinguishes a private company limited by shares from a public limited company?",
   "options": {
-   "A": "Initially at fair value plus transaction costs, subsequently at amortized cost using the effective interest method.",
-   "B": "Initially at fair value, subsequently at fair value with variations to the income statement.",
-   "C": "Initially at cost, subsequently at fair value with variations to the revaluation reserve.",
-   "D": "Initially at nominal value, subsequently at nominal value until maturity."
+   "A": "Its shareholders do not have limited liability.",
+   "B": "Its shares may not be offered to the general public, and shareholders are often bound to offer shares to fellow shareholders before selling to a third party.",
+   "C": "It has no share capital.",
+   "D": "It is exempted from filing accounts for public disclosure."
+  },
+  "correct": "B",
+  "expl": {
+   "A": "Incorrect. Shareholders of a private company limited by shares do have limited liability; that is what limited by shares means.",
+   "B": "Correct. A private company limited by shares has shareholders with limited liability, but its shares may not be offered to the general public, and its shareholders are often bound to offer their shares to their fellow shareholders before selling them to a third party.",
+   "C": "Incorrect. It does have share capital; the form with no share capital is the company limited by guarantee.",
+   "D": "Incorrect. The exemption from filing accounts for public disclosure belongs to unlimited companies."
+  },
+  "recap": "Correct. A private company limited by shares has shareholders with limited liability, but its shares may not be offered to the general public, and its shareholders are often bound to offer their shares to their fellow shareholders before selling them to a third party."
+ },
+ {
+  "cat": "Legal Forms",
+  "title": "Public Limited Company",
+  "question": "A company is publicly traded on a stock exchange and can raise money for expansion by selling stock or bonds. Which statement about this form is correct?",
+  "options": {
+   "A": "It is comparable to the U.S. Corporation and the German Aktiengesellschaft, and it has access to the financial markets.",
+   "B": "It cannot issue bonds, only shares.",
+   "C": "Its shareholders carry unlimited liability because the shares are publicly held.",
+   "D": "It is the same legal form as a company limited by guarantee, differing only in size."
   },
   "correct": "A",
   "expl": {
-   "A": "Correct. Held-to-maturity investments are nonderivative financial assets with fixed or determinable payments to be held to maturity: they are measured initially at fair value plus transaction costs and subsequently at amortized cost using the effective interest method.",
-   "B": "Incorrect. This is the treatment of financial assets at fair value through profit or loss, which covers assets held for trading rather than held to maturity.",
-   "C": "Incorrect. This mixes the available-for-sale destination for fair value variations with a cost-based initial measurement; held-to-maturity investments are not carried at fair value after acquisition.",
-   "D": "Incorrect. Nominal value is not a measurement basis here: the standard requires amortized cost with the effective interest method."
+   "A": "Correct. A public limited company can be publicly traded on a stock exchange, is similar to the U.S. Corporation (Corp.) and the German Aktiengesellschaft (AG), and has access to the financial markets, raising money for expansion and other projects by selling stock or bonds.",
+   "B": "Incorrect. Access to the financial markets explicitly includes raising money by selling bonds as well as stock.",
+   "C": "Incorrect. Being publicly traded does not remove limited liability; the public limited company is a limited form.",
+   "D": "Incorrect. A company limited by guarantee has no share capital and is not traded; the difference is one of legal structure, not size."
   },
-  "recap": "Correct. Held-to-maturity investments are nonderivative financial assets with fixed or determinable payments to be held to maturity: they are measured initially at fair value plus transaction costs and subsequently at amortized cost using the effective interest method."
+  "recap": "Correct. A public limited company can be publicly traded on a stock exchange, is similar to the U.S. Corporation (Corp.) and the German Aktiengesellschaft (AG), and has access to the financial markets, raising money for expansion and other projects by selling stock or bonds."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Measuring Inventories",
-  "question": "At year end a batch of finished goods has a cost of 50,000. Its estimated selling price in the ordinary course of business is 52,000, and the estimated costs necessary to complete and sell it amount to 6,000. At what value must the inventory be stated?",
+  "cat": "Ownership & Evolution",
+  "title": "Shareholders' Objectives",
+  "question": "Which pair of objectives does the course attribute to shareholders?",
   "options": {
-   "A": "50,000, because cost is always the reference for inventories.",
-   "B": "52,000, because the selling price represents the realizable amount.",
-   "C": "46,000, because inventories are stated at the lower of cost and net realizable value.",
-   "D": "56,000, adding the costs necessary to make the sale to the cost of the goods."
+   "A": "Maximising employment and maximising market share.",
+   "B": "Earning money by selling the stock when the share price appreciates, and having power and controlling the company.",
+   "C": "Minimising taxation and maximising disclosure.",
+   "D": "Guaranteeing the company's debts and managing its day-to-day operations."
+  },
+  "correct": "B",
+  "expl": {
+   "A": "Incorrect. Employment and market share may be consequences of company strategy, but they are not the objectives shareholders are described as pursuing.",
+   "B": "Correct. Shareholders pursue two distinct objectives: earning money by selling the stock when the share price appreciates, and having power and controlling the company.",
+   "C": "Incorrect. Taxation and disclosure are constraints set by authorities and regulation, not shareholder objectives.",
+   "D": "Incorrect. Guaranteeing debts and running operations are not shareholder functions; in limited companies shareholders are precisely shielded from the first."
+  },
+  "recap": "Correct. Shareholders pursue two distinct objectives: earning money by selling the stock when the share price appreciates, and having power and controlling the company."
+ },
+ {
+  "cat": "Ownership & Evolution",
+  "title": "Primary vs Secondary IPO",
+  "question": "In an IPO, what distinguishes the primary component from the secondary component?",
+  "options": {
+   "A": "In a primary IPO new shares are issued and the cash goes to the company; in a secondary IPO existing shareholders sell and the cash goes to the sellers.",
+   "B": "In a primary IPO existing shareholders sell their shares; in a secondary IPO new shares are issued.",
+   "C": "A primary IPO takes place on the domestic market and a secondary IPO on a foreign exchange.",
+   "D": "A primary IPO is friendly and a secondary IPO is hostile."
+  },
+  "correct": "A",
+  "expl": {
+   "A": "Correct. A primary IPO is a capital increase: new shares are issued and the cash goes to the company. A secondary IPO is the sale of shares of the current shareholders, so the cash goes to the sellers. A mixed IPO combines both.",
+   "B": "Incorrect. The two are inverted: issuing new shares is the primary component, selling existing ones is the secondary component.",
+   "C": "Incorrect. The distinction concerns who issues and who receives the proceeds, not the geography of the listing.",
+   "D": "Incorrect. Friendly and hostile describe takeovers, not the structure of an offering."
+  },
+  "recap": "Correct. A primary IPO is a capital increase: new shares are issued and the cash goes to the company. A secondary IPO is the sale of shares of the current shareholders, so the cash goes to the sellers. A mixed IPO combines both."
+ },
+ {
+  "cat": "Ownership & Evolution",
+  "title": "Friendly and Hostile Takeovers",
+  "question": "In 2021 EasyJet rejected an unsolicited takeover approach from Wizz Air; in 2026 it agreed to a cash takeover by Apollo Global Management. How are these two operations classified?",
+  "options": {
+   "A": "Both are hostile, since both involved an external bidder.",
+   "B": "The Wizz Air approach was a hostile one, rejected by the target, while the Apollo deal was agreed and therefore friendly.",
+   "C": "Both are friendly, since the second was eventually accepted.",
+   "D": "The classification depends only on the price offered per share."
+  },
+  "correct": "B",
+  "expl": {
+   "A": "Incorrect. Being an external bidder does not make an offer hostile; what matters is whether the target's board agrees to it.",
+   "B": "Correct. A takeover is hostile when it proceeds against the wishes of the target's board, as with the unsolicited approach EasyJet rejected, and friendly when it is agreed, as with the Apollo offer EasyJet accepted at £7.15 per share.",
+   "C": "Incorrect. The Wizz Air approach was unsolicited and rejected, so it cannot be reclassified as friendly because a different, later offer succeeded.",
+   "D": "Incorrect. Hostility refers to the board's position, not to the level of the price: a hostile bid can be generous and a friendly one modest."
+  },
+  "recap": "Correct. A takeover is hostile when it proceeds against the wishes of the target's board, as with the unsolicited approach EasyJet rejected, and friendly when it is agreed, as with the Apollo offer EasyJet accepted at £7.15 per share."
+ },
+ {
+  "cat": "Ownership & Evolution",
+  "title": "Stages of Evolution",
+  "question": "A company moves from foundation, through financing rounds, to an IPO. Beyond size, what else changes along this path?",
+  "options": {
+   "A": "Only the number of employees and the geographical footprint.",
+   "B": "Nothing structural: the company simply becomes larger and better capitalised.",
+   "C": "Its ownership structure, governance model and strategic priorities, in a transition from entrepreneurial control to shared ownership and public accountability.",
+   "D": "Its legal form necessarily changes from unlimited to limited at each stage."
   },
   "correct": "C",
   "expl": {
-   "A": "Incorrect. Cost is only one of the two terms of the comparison: inventories must be stated at the lower end between cost and net realizable value.",
-   "B": "Incorrect. The selling price is not the net realizable value: the estimated costs of completion and of making the sale must be deducted from it.",
-   "C": "Correct. Net realizable value is the estimated selling price less the estimated costs of completion and the estimated costs necessary to make the sale: 52,000 − 6,000 = 46,000. Since 46,000 is lower than the cost of 50,000, inventories are stated at 46,000.",
-   "D": "Incorrect. Selling costs are not added to the cost of inventories; they are subtracted from the selling price when computing net realizable value."
+   "A": "Incorrect. Headcount and footprint are effects of growth; the stages also reshape who owns the company and how decisions are made.",
+   "B": "Incorrect. Each stage changes the company structurally, which is precisely why governance requirements rise along the way.",
+   "C": "Correct. Each stage changes not only the company's size but also its ownership structure, governance model and strategic priorities. The overall evolution is a transition from entrepreneurial control to shared ownership and public accountability.",
+   "D": "Incorrect. Nothing requires an unlimited-to-limited transition at each stage; what changes is ownership and governance, and the listing at the IPO stage."
   },
-  "recap": "Correct. Net realizable value is the estimated selling price less the estimated costs of completion and the estimated costs necessary to make the sale: 52,000 − 6,000 = 46,000. Since 46,000 is lower than the cost of 50,000, inventories are stated at 46,000."
+  "recap": "Correct. Each stage changes not only the company's size but also its ownership structure, governance model and strategic priorities. The overall evolution is a transition from entrepreneurial control to shared ownership and public accountability."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "FIFO, Weighted Average and LIFO",
-  "question": "A company is choosing the cost formula for its inventories under IFRS. Which statement is correct?",
+  "cat": "Ownership & Evolution",
+  "title": "Ownership after a Series A",
+  "question": "Three founders hold 40%, 40% and 20% of a company. A Series A investor injects €5m at a €10m pre-money valuation. What is the post-money valuation and what percentage does the investor receive?",
   "options": {
-   "A": "FIFO and LIFO are both permitted, while the weighted average method is not.",
-   "B": "FIFO and weighted average are permitted, while LIFO is not permitted by IFRS.",
-   "C": "Only the weighted average method is permitted, since it ignores the physical flow of goods.",
-   "D": "All three methods are permitted, and the choice is free provided it is disclosed in the notes."
+   "A": "Post-money €10m; the investor receives 50%.",
+   "B": "Post-money €15m; the investor receives 33.33%.",
+   "C": "Post-money €15m; the investor receives 50%.",
+   "D": "Post-money €5m; the investor receives 100%."
   },
   "correct": "B",
   "expl": {
-   "A": "Incorrect. This reverses the rule: LIFO is the method IFRS does not permit, while the weighted average method is explicitly allowed.",
-   "B": "Correct. IFRS allows two methods, FIFO — where the goods leaving the firm are those that have been in inventory the longest, so the inventory on hand is the latest — and weighted average, where each unit is valued at total costs divided by quantity. LIFO is not permitted because its logic is considered unrealistic.",
-   "C": "Incorrect. FIFO is permitted as well; the weighted average method is not the only option available.",
-   "D": "Incorrect. The choice is not free across all three: disclosure in the notes does not make LIFO acceptable under IFRS."
+   "A": "Incorrect. The post-money valuation must include the cash injected: €10m pre-money plus €5m is €15m, not €10m.",
+   "B": "Correct. Post-money valuation = pre-money valuation + new capital injected = €10m + €5m = €15m. New investor ownership = investment / post-money valuation = 5/15 = 33.33%.",
+   "C": "Incorrect. The post-money figure is right but the percentage is not: €5m out of €15m is one third, not one half.",
+   "D": "Incorrect. The pre-money value of the existing company does not disappear; the investor buys a share of the enlarged company."
   },
-  "recap": "Correct. IFRS allows two methods, FIFO — where the goods leaving the firm are those that have been in inventory the longest, so the inventory on hand is the latest — and weighted average, where each unit is valued at total costs divided by quantity. LIFO is not permitted because its logic is considered unrealistic."
+  "recap": "Correct. Post-money valuation = pre-money valuation + new capital injected = €10m + €5m = €15m. New investor ownership = investment / post-money valuation = 5/15 = 33.33%."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Recording a Partly Paid Sale",
-  "question": "In December of Year X a company sells products for 100,000. Half of the amount is paid immediately, while the remaining half will be collected next year. How is the operation reflected in the financial statements of Year X?",
+  "cat": "Ownership & Evolution",
+  "title": "Founder Dilution after a Round",
+  "question": "Continuing the same case: Founder A held 40% before a Series A of €5m injected at a €10m pre-money valuation. What is Founder A's stake after the round?",
   "options": {
-   "A": "Revenues 50,000 in the income statement, cash 50,000 under assets.",
-   "B": "Revenues 100,000 in the income statement, trade receivables 50,000 and cash 50,000 under assets.",
-   "C": "Revenues 100,000 in the income statement and cash 100,000 under assets.",
-   "D": "Revenues 100,000 in the income statement and trade receivables 100,000 under assets."
-  },
-  "correct": "B",
-  "expl": {
-   "A": "Incorrect. This applies cash logic to revenue. Under the accrual principle the whole sale of 100,000 is revenue of Year X, regardless of how much has been collected.",
-   "B": "Correct. Revenues of 100,000 are recorded in the income statement, while the balance sheet shows cash of 50,000 for the amount already collected and trade receivables of 50,000 for the amount still to be received.",
-   "C": "Incorrect. Only half of the amount has actually been collected, so cash cannot be 100,000; the uncollected half is a receivable.",
-   "D": "Incorrect. Half of the amount was paid immediately, so 50,000 is cash and only the remaining 50,000 is a trade receivable."
-  },
-  "recap": "Correct. Revenues of 100,000 are recorded in the income statement, while the balance sheet shows cash of 50,000 for the amount already collected and trade receivables of 50,000 for the amount still to be received."
- },
- {
-  "cat": "Balance Sheet",
-  "title": "Valuing Trade Receivables",
-  "question": "How are trade receivables measured in the balance sheet, given that some customers may not pay?",
-  "options": {
-   "A": "At their full nominal amount, since the contractual claim is for the entire sum.",
-   "B": "At net realizable value, estimating potential losses with statistical methods based on historical values.",
-   "C": "At fair value through profit or loss, with variations credited to the income statement each year.",
-   "D": "At the amount actually collected after the balance sheet date."
-  },
-  "correct": "B",
-  "expl": {
-   "A": "Incorrect. Carrying receivables at their full nominal amount would ignore the probability that some customers will not pay, which the measurement is required to reflect.",
-   "B": "Correct. Trade receivables are calculated at the net realizable value, considering the probability that some customers will not pay in the future. Since a precise calculation cannot be performed, enterprises use statistical methods based on historical values to determine the potential loss.",
-   "C": "Incorrect. Trade receivables belong to the loans and receivables category, which is measured at amortized cost, not at fair value through profit or loss.",
-   "D": "Incorrect. The balance sheet reflects an estimate made at the reporting date; it does not wait for subsequent collections to determine the value."
-  },
-  "recap": "Correct. Trade receivables are calculated at the net realizable value, considering the probability that some customers will not pay in the future. Since a precise calculation cannot be performed, enterprises use statistical methods based on historical values to determine the potential loss."
- },
- {
-  "cat": "Balance Sheet",
-  "title": "Share Premium Reserve",
-  "question": "A company issues 100,000 new shares with a nominal value of 1 each, placing them on the market at 4 each and collecting 400,000 in cash. How is the operation reflected in equity?",
-  "options": {
-   "A": "400,000 entirely under capital.",
-   "B": "100,000 under capital and 300,000 under the share premium reserve.",
-   "C": "400,000 entirely under the share premium reserve.",
-   "D": "100,000 under capital and 300,000 recognized as revenue in the income statement."
-  },
-  "correct": "B",
-  "expl": {
-   "A": "Incorrect. Capital is reported at par (nominal) value, so only the nominal portion of 1 per share can be recorded there.",
-   "B": "Correct. Share premium reserves originate when enterprises sell shares at a price higher than the nominal value. The cash inflow of 400,000 is balanced in equity under two items: capital for the nominal portion (100,000 × 1 = 100,000) and the share premium reserve for the exceeding portion (100,000 × 3 = 300,000).",
-   "C": "Incorrect. The nominal portion must be recorded under capital; the share premium reserve only takes the amount exceeding nominal value.",
-   "D": "Incorrect. Issuing shares above par is a transaction with shareholders that increases equity; the premium is not revenue of the period."
-  },
-  "recap": "Correct. Share premium reserves originate when enterprises sell shares at a price higher than the nominal value. The cash inflow of 400,000 is balanced in equity under two items: capital for the nominal portion (100,000 × 1 = 100,000) and the share premium reserve for the exceeding portion (100,000 × 3 = 300,000)."
- },
- {
-  "cat": "Balance Sheet",
-  "title": "Recognizing a Provision",
-  "question": "A company is facing a lawsuit. Which combination of conditions must hold for a provision to be recognized in the balance sheet?",
-  "options": {
-   "A": "A present obligation from a past event, a probable cash outflow, and an amount that can be estimated reliably.",
-   "B": "A possible future obligation, a certain cash outflow, and an exact amount already agreed with the counterparty.",
-   "C": "A present obligation from a past event and a probable cash outflow, even when the amount cannot be estimated.",
-   "D": "Management's intention to settle the matter, regardless of whether an obligating event has occurred."
-  },
-  "correct": "A",
-  "expl": {
-   "A": "Correct. Provisions are liabilities with uncertain timing or amount, and their recognition requires all three conditions together: a present obligation arising from a past (obligating) event, a cash outflow that is probable (more likely than not), and an amount that can be estimated reliably.",
-   "B": "Incorrect. The standard requires a present obligation rather than a merely possible one, and a probable rather than certain outflow; an exact agreed amount is not required, since provisions are by nature uncertain in timing or amount.",
-   "C": "Incorrect. Reliable estimation of the amount is one of the necessary conditions; without it, the provision cannot be recognized.",
-   "D": "Incorrect. An intention is not sufficient: a liability requires a present obligation arising from a past event."
-  },
-  "recap": "Correct. Provisions are liabilities with uncertain timing or amount, and their recognition requires all three conditions together: a present obligation arising from a past (obligating) event, a cash outflow that is probable (more likely than not), and an amount that can be estimated reliably."
- },
- {
-  "cat": "Balance Sheet",
-  "title": "Measuring One-off and Recurring Provisions",
-  "question": "A company must set up two provisions: one for the settlement of a single lawsuit, and one for product warranties that recur every year across thousands of items. How are the two amounts measured?",
-  "options": {
-   "A": "Both at the most likely amount, undiscounted.",
-   "B": "The lawsuit at a probability-weighted expected value, the warranties at the most likely amount.",
-   "C": "The lawsuit at the most likely amount, the warranties at a probability-weighted expected value, both at discounted present value.",
-   "D": "Both at the maximum possible exposure, to respect prudence."
+   "A": "40%, since the founder sold no shares.",
+   "B": "20%, since the investor took half the company.",
+   "C": "26.67%, since existing shareholders retain the pre-money over post-money proportion.",
+   "D": "13.33%, the same as the founder who held 20% before."
   },
   "correct": "C",
   "expl": {
-   "A": "Incorrect on two counts: recurring obligations such as warranties use a probability-weighted expected value, and both types of provision are calculated at a discounted present value.",
-   "B": "Incorrect. The two measurement bases are inverted: the most likely amount applies to one-off events, while the probability-weighted expected value applies to recurring ones.",
-   "C": "Correct. For one-off events such as the settlement of a lawsuit, provisions are measured at the most likely amount. For recurring events such as warranties or customer refunds, they are measured at a probability-weighted expected value, triangulating historical data with future forecasts. Both calculations are made at a discounted present value, using a pretax discount rate reflecting the time value of money and the risks specific to the liability.",
-   "D": "Incorrect. The standard points to the most likely amount or the probability-weighted expected value, not to the worst-case exposure."
+   "A": "Incorrect. Dilution does not require selling shares: new shares issued to the investor reduce every existing holder's percentage of the enlarged company.",
+   "B": "Incorrect. The investor receives one third, not one half, so Founder A cannot fall to half of the previous stake.",
+   "C": "Correct. Existing shareholders' retention = pre-money / post-money = 10/15 = two thirds. Founder A therefore moves from 40% to 40% × 2/3 = 26.67%. Equivalently, 40% of €10m is €4m, and €4m / €15m = 26.67%.",
+   "D": "Incorrect. 13.33% is the post-round stake of the founder who previously held 20%; the same retention factor applied to 40% gives 26.67%."
   },
-  "recap": "Correct. For one-off events such as the settlement of a lawsuit, provisions are measured at the most likely amount. For recurring events such as warranties or customer refunds, they are measured at a probability-weighted expected value, triangulating historical data with future forecasts. Both calculations are made at a discounted present value, using a pretax discount rate reflecting the time value of money and the risks specific to the liability."
+  "recap": "Correct. Existing shareholders' retention = pre-money / post-money = 10/15 = two thirds. Founder A therefore moves from 40% to 40% × 2/3 = 26.67%. Equivalently, 40% of €10m is €4m, and €4m / €15m = 26.67%."
  },
  {
-  "cat": "Balance Sheet",
-  "title": "Defined Contribution vs Defined Benefit",
-  "question": "Two companies run different postemployment plans. Company X pays fixed contributions into a fund and has no obligation to pay more if the fund cannot cover all employees' claims. Company Y guarantees a determined benefit level to its employees. How do the two plans differ in accounting terms?",
+  "cat": "Ownership & Evolution",
+  "title": "A Second Financing Round",
+  "question": "After Series A the company raises a Series B: an investor injects €15m at a €45m pre-money valuation. What percentage does the Series B investor obtain, and what happens to the Series A investor's 33.33% stake?",
   "options": {
-   "A": "X has a defined contribution plan; Y has a defined benefit plan and must calculate the present value of future obligations using actuarial assumptions.",
-   "B": "X has a defined benefit plan; Y has a defined contribution plan, since Y's benefits are fixed in advance.",
-   "C": "Both are defined contribution plans, since both involve payments to employees after employment.",
-   "D": "Neither generates any liability, since postemployment benefits are always handled outside the balance sheet."
+   "A": "Series B obtains 25%, and the Series A investor is diluted to 25%.",
+   "B": "Series B obtains 33.33%, and the Series A investor keeps 33.33%.",
+   "C": "Series B obtains 25%, and the Series A investor keeps 33.33%.",
+   "D": "Series B obtains 15%, and the Series A investor is diluted to 20%."
   },
   "correct": "A",
   "expl": {
-   "A": "Correct. Under a defined contribution plan the enterprise pays fixed contributions into a fund and has no obligation to make further payments if the fund lacks the capacity to pay all employees' claims, which is Company X. Companies adopting a defined benefit plan, like Company Y, calculate the present value of future obligations, using actuarial assumptions to assess the value.",
-   "B": "Incorrect. The labels are inverted: what is fixed under a defined contribution plan is the contribution paid in, while under a defined benefit plan it is the benefit owed to the employee.",
-   "C": "Incorrect. IAS/IFRS explicitly distinguishes the two types precisely because the obligation carried by the company is different.",
-   "D": "Incorrect. Pensions and similar obligations are reported among liabilities, and defined benefit plans in particular require measuring the present value of future obligations."
+   "A": "Correct. Post-money = €45m + €15m = €60m, so the Series B investor receives 15/60 = 25%. Existing shareholders retain 45/60 = three quarters of their stake, so the Series A investor moves from 33.33% to 25%, and the founders move from 26.67% to 20% and from 13.33% to 10%.",
+   "B": "Incorrect. €15m out of a €60m post-money valuation is 25%, and existing holders cannot keep their percentage unchanged when new shares are issued.",
+   "C": "Incorrect. The Series B percentage is right, but the Series A investor is diluted like every other existing shareholder, by the same retention factor.",
+   "D": "Incorrect. Those figures do not follow from the round: 15/60 is 25%, and applying the 45/60 retention to 33.33% gives 25%."
   },
-  "recap": "Correct. Under a defined contribution plan the enterprise pays fixed contributions into a fund and has no obligation to make further payments if the fund lacks the capacity to pay all employees' claims, which is Company X. Companies adopting a defined benefit plan, like Company Y, calculate the present value of future obligations, using actuarial assumptions to assess the value."
+  "recap": "Correct. Post-money = €45m + €15m = €60m, so the Series B investor receives 15/60 = 25%. Existing shareholders retain 45/60 = three quarters of their stake, so the Series A investor moves from 33.33% to 25%, and the founders move from 26.67% to 20% and from 13.33% to 10%."
  },
  {
-  "cat": "Income Statement",
-  "title": "By Nature vs By Function",
-  "question": "An income statement lists, under continuing operations: revenue, other operating income, raw materials and consumables used, employee benefits expense, depreciation and amortization expense, other operating expenses, then operating profit. Which format is being used?",
+  "cat": "Ownership & Evolution",
+  "title": "Dilution at the IPO",
+  "question": "A company carries out a primary IPO raising €160m at a €240m pre-money valuation. A shareholder held 20% before the offering. What share of the company do public shareholders receive, and what is that shareholder's stake afterwards?",
   "options": {
-   "A": "By function, because costs are grouped according to where they are used.",
-   "B": "By nature, because costs are aggregated on the basis of what they are.",
-   "C": "Neither, because a compliant income statement must always show gross profit.",
-   "D": "By nature for costs and by function for revenues, as IFRS requires a mixed presentation."
+   "A": "Public shareholders receive 40%; the shareholder moves from 20% to 12%.",
+   "B": "Public shareholders receive 40%; the shareholder keeps 20%.",
+   "C": "Public shareholders receive 67%; the shareholder moves from 20% to 6.6%.",
+   "D": "Public shareholders receive 160%; the calculation cannot be completed."
+  },
+  "correct": "A",
+  "expl": {
+   "A": "Correct. Post-money valuation = €240m + €160m = €400m, so public shareholders receive 160/400 = 40%. All existing shareholders are diluted by 40%, retaining 240/400 = 60% of their previous stake, so a 20% holder moves to 12%.",
+   "B": "Incorrect. The public share is right, but existing shareholders cannot keep their percentages unchanged once 40% of the company is issued to new investors.",
+   "C": "Incorrect. The €160m raised is measured against the €400m post-money valuation, not against the €240m pre-money figure.",
+   "D": "Incorrect. The percentage is the investment over the post-money valuation, which is well defined here at 40%."
+  },
+  "recap": "Correct. Post-money valuation = €240m + €160m = €400m, so public shareholders receive 160/400 = 40%. All existing shareholders are diluted by 40%, retaining 240/400 = 60% of their previous stake, so a 20% holder moves to 12%."
+ },
+ {
+  "cat": "Ownership & Evolution",
+  "title": "Interpreting Dilution",
+  "question": "Across two financing rounds a founder's stake falls from 40% to 20%, while the company's valuation rises from €10m pre-money to €60m post-money. How should this be interpreted?",
+  "options": {
+   "A": "The founder has lost half of their wealth in the company.",
+   "B": "Dilution is not necessarily negative: the founder owns a smaller percentage of a potentially much more valuable company.",
+   "C": "The rounds destroyed value, since the founder's percentage decreased.",
+   "D": "The founder's stake in percent is the only meaningful measure of their position."
   },
   "correct": "B",
   "expl": {
-   "A": "Incorrect. The by-function format would show items such as cost of sales, distribution costs and administrative expenses, classifying costs by their use in company activities.",
-   "B": "Correct. The format by nature aggregates costs on the basis of their nature — raw materials, staffing costs, depreciation and so on — which is exactly the list presented here.",
-   "C": "Incorrect. Gross profit is a feature of the by-function format; its absence does not make a by-nature income statement non-compliant.",
-   "D": "Incorrect. IFRS does not require a mixed presentation: the company presents its costs either by nature or by function."
+   "A": "Incorrect. A smaller percentage of a much larger valuation is not automatically less value: 40% of €10m is €4m, while 20% of €60m is €12m.",
+   "B": "Correct. Dilution is not necessarily negative. Founders own a smaller percentage, but potentially of a much more valuable company, which is why percentages must always be read together with the valuation behind them.",
+   "C": "Incorrect. The decrease in percentage is a mechanical effect of issuing new shares and says nothing on its own about value creation or destruction.",
+   "D": "Incorrect. Reading the percentage in isolation is exactly the error the case is designed to expose."
   },
-  "recap": "Correct. The format by nature aggregates costs on the basis of their nature — raw materials, staffing costs, depreciation and so on — which is exactly the list presented here."
+  "recap": "Correct. Dilution is not necessarily negative. Founders own a smaller percentage, but potentially of a much more valuable company, which is why percentages must always be read together with the valuation behind them."
  },
  {
-  "cat": "Income Statement",
-  "title": "Where Gross Profit Appears",
-  "question": "A reader wants to find the gross profit line in a company's income statement but cannot see it. What is the most likely explanation?",
+  "cat": "Value & Objectives",
+  "title": "The Shareholder Value Formula",
+  "question": "Shareholder value is computed as the discounted sum of the net cash flows to shareholders. What does the net cash flow of a given year contain, and at what rate is it discounted?",
   "options": {
-   "A": "The company reports its income statement by nature, a format in which gross profit is not presented.",
-   "B": "The company has made a presentation error, since gross profit is compulsory in every format.",
-   "C": "The company has no continuing operations during the period.",
-   "D": "Gross profit only appears when the company is loss-making."
+   "A": "Revenues less operating costs, discounted at the risk-free rate.",
+   "B": "Dividends plus the share price at the time of sale minus capital injections, discounted at the cost of equity capital.",
+   "C": "Dividends only, discounted at the weighted average cost of capital.",
+   "D": "Enterprise value less net debt, discounted at the cost of debt."
   },
-  "correct": "A",
+  "correct": "B",
   "expl": {
-   "A": "Correct. Gross profit arises in the by-function format, as revenue less cost of sales. In the format by nature, costs are aggregated as raw materials, employee benefits, depreciation and other operating expenses, and the statement proceeds to operating profit without a gross profit subtotal.",
-   "B": "Incorrect. Gross profit is not compulsory in both formats: its presence depends on whether costs are presented by function or by nature.",
-   "C": "Incorrect. The presence of continuing operations does not determine whether a gross profit subtotal is shown; the chosen cost classification does.",
-   "D": "Incorrect. Gross profit has nothing to do with whether the result is positive or negative; it depends on the presentation format."
+   "A": "Incorrect. That is closer to an operating result; shareholder value is built on the cash flows accruing to shareholders, not on the company's operating margin.",
+   "B": "Correct. Shareholder value is the sum over time of NCF_t / (1 + re)^t, where NCF_t is the net cash flow at year t for the shareholders, equal to dividends plus the share price at the time of sale minus capital injections, and re is the cost of equity capital.",
+   "C": "Incorrect. Dividends alone omit both the proceeds from selling the shares and the capital shareholders put in, and the relevant rate is the cost of equity.",
+   "D": "Incorrect. Enterprise value less net debt is the relation between EV and SV, not the definition of the annual cash flow being discounted."
   },
-  "recap": "Correct. Gross profit arises in the by-function format, as revenue less cost of sales. In the format by nature, costs are aggregated as raw materials, employee benefits, depreciation and other operating expenses, and the statement proceeds to operating profit without a gross profit subtotal."
+  "recap": "Correct. Shareholder value is the sum over time of NCF_t / (1 + re)^t, where NCF_t is the net cash flow at year t for the shareholders, equal to dividends plus the share price at the time of sale minus capital injections, and re is the cost of equity capital."
  },
  {
-  "cat": "Income Statement",
-  "title": "Conditions for Recognizing Revenue on Goods",
-  "question": "A manufacturer has shipped goods but retains effective control over them and continues to manage them as if they were its own. Can revenue be recognized?",
+  "cat": "Value & Objectives",
+  "title": "From Enterprise Value to Shareholder Value",
+  "question": "A company has an enterprise value of €850m, debt of €300m and cash of €70m. What is its shareholder value?",
   "options": {
-   "A": "Yes, because the legal property has been transferred to the buyer.",
-   "B": "Yes, because the goods have physically left the company's warehouse.",
-   "C": "No, because one of the conditions requires the seller to have no managerial involvement or control over the goods sold.",
-   "D": "No, but only if the customer has not yet paid the invoice."
+   "A": "€1,220m",
+   "B": "€480m",
+   "C": "€620m",
+   "D": "€550m"
   },
   "correct": "C",
   "expl": {
-   "A": "Incorrect. Under IFRS, property rights are explicitly not a sufficient condition for recognizing revenue.",
-   "B": "Incorrect. Physical shipment alone does not satisfy the recognition conditions if the seller keeps managerial involvement and control over the goods.",
-   "C": "Correct. For sales of goods all the conditions must be satisfied, including that the seller has transferred the significant risks and rights over the goods and has no managerial involvement or control over them, alongside reliable measurement of revenue and costs and the likelihood that economic benefits will flow to the seller.",
-   "D": "Incorrect. Payment timing is a cash matter; revenue recognition follows the accrual conditions, not the settlement of the invoice."
+   "A": "Incorrect. This adds the debt instead of subtracting it; debt is a claim ahead of shareholders, so it reduces the value left to them.",
+   "B": "Incorrect. This subtracts the cash as well as the debt. Cash reduces net debt, so it works in the shareholders' favour.",
+   "C": "Correct. Shareholder value equals enterprise value less net debt, and net debt is debt less cash, so SV = EV − debt + cash = 850 − 300 + 70 = €620m.",
+   "D": "Incorrect. This subtracts the debt but ignores the cash entirely, which is the most common slip in the formula."
   },
-  "recap": "Correct. For sales of goods all the conditions must be satisfied, including that the seller has transferred the significant risks and rights over the goods and has no managerial involvement or control over them, alongside reliable measurement of revenue and costs and the likelihood that economic benefits will flow to the seller."
+  "recap": "Correct. Shareholder value equals enterprise value less net debt, and net debt is debt less cash, so SV = EV − debt + cash = 850 − 300 + 70 = €620m."
  },
  {
-  "cat": "Income Statement",
-  "title": "Revenue on Services",
-  "question": "A consulting firm signs a multi-year project spanning two accounting years. How are revenues recognized?",
+  "cat": "Value & Objectives",
+  "title": "Market Value as a Proxy",
+  "question": "Why is the stock market value of a listed company described as a proxy of shareholder value rather than a measure of it?",
   "options": {
-   "A": "Entirely in the year the contract is signed.",
-   "B": "Entirely in the final year, when the project is completed and accepted.",
-   "C": "By reference to the stage of completion of the transaction at the balance sheet date.",
-   "D": "In the year in which the client actually pays each instalment."
+   "A": "Because stock prices are published with a delay.",
+   "B": "Because the stock market is affected by bubbles, fads and speculation.",
+   "C": "Because market value includes debt, while shareholder value does not.",
+   "D": "Because only unlisted companies have a shareholder value."
+  },
+  "correct": "B",
+  "expl": {
+   "A": "Incorrect. Publication delays are a practical detail and are not the reason the figure is approximate.",
+   "B": "Correct. The stock market value is used as a proxy of shareholder value precisely because the market is affected by bubbles, fads and speculation, so the quoted value can depart from the underlying value created for shareholders.",
+   "C": "Incorrect. Market capitalization is the value of the equity, not of the whole enterprise; the figure that includes debt is enterprise value.",
+   "D": "Incorrect. Shareholder value is defined for any company; listing simply provides an observable price to compare it with."
+  },
+  "recap": "Correct. The stock market value is used as a proxy of shareholder value precisely because the market is affected by bubbles, fads and speculation, so the quoted value can depart from the underlying value created for shareholders."
+ },
+ {
+  "cat": "Value & Objectives",
+  "title": "The Stakeholder Perspective",
+  "question": "The course argues that the shareholder perspective looks incomplete. What does the stakeholder perspective add, and where does it matter most?",
+  "options": {
+   "A": "That companies should serve the broader public interest as well as the shareholder interest, which holds particularly for public limited companies.",
+   "B": "That shareholder value should be abandoned as an objective.",
+   "C": "That stakeholders always share the same objectives, which simplifies decision-making.",
+   "D": "That only privately held companies need to consider stakeholders."
+  },
+  "correct": "A",
+  "expl": {
+   "A": "Correct. Under the stakeholder perspective corporations should be socially responsible and serve the broader public interest as well as the shareholder interest. This holds particularly true for public limited companies, which live in the most complicated ecosystem, involving a huge number of shareholders and stakeholders.",
+   "B": "Incorrect. The argument is that shareholder value is not sufficient as the whole objective, not that it should be dropped.",
+   "C": "Incorrect. Stakeholders can have different objectives, in some cases even in contrast with each other, which is what makes the analysis necessary.",
+   "D": "Incorrect. The point is the opposite: the ecosystem is most complex, and the stakeholder question most pressing, for public limited companies."
+  },
+  "recap": "Correct. Under the stakeholder perspective corporations should be socially responsible and serve the broader public interest as well as the shareholder interest. This holds particularly true for public limited companies, which live in the most complicated ecosystem, involving a huge number of shareholders and stakeholders."
+ },
+ {
+  "cat": "Value & Objectives",
+  "title": "Long-Term Interdependence",
+  "question": "How does the course describe the long-term relationship between shareholder value and stakeholder value?",
+  "options": {
+   "A": "They are independent: pursuing one has no effect on the other.",
+   "B": "Stakeholder value must be maximised first, and shareholder value follows automatically.",
+   "C": "They are mutually dependent: stakeholders are vulnerable when management fails to create shareholder value, and without stakeholder value there can be no shareholder value in the long term.",
+   "D": "Shareholder value in the short term is the only reliable objective."
   },
   "correct": "C",
   "expl": {
-   "A": "Incorrect. Signing the contract does not by itself deliver the service; recognizing everything upfront would not reflect the stage of the work performed.",
-   "B": "Incorrect. Deferring all revenue to completion would ignore the portion of the service already rendered at the reporting date.",
-   "C": "Correct. For services, conditions similar to those for goods apply, but revenues are recognized by reference to the stage of completion of the transaction at the balance sheet date.",
-   "D": "Incorrect. This applies cash logic. Revenue recognition follows the accrual principle, independently of when instalments are collected."
+   "A": "Incorrect. The argument is explicitly about the dependence running in both directions over a long horizon.",
+   "B": "Incorrect. There is no automatic sequence: the two are presented as a partnership of value creation, not as one preceding the other.",
+   "C": "Correct. Stakeholders are vulnerable when management fails to create shareholder value, and without stakeholder value there can be no shareholder value in the long term. This is why the emphasis falls on the maximisation of long-term cash flows.",
+   "D": "Incorrect. The emphasis is placed on long-term cash flows precisely because a short-term focus can damage the relationships the firm depends on."
   },
-  "recap": "Correct. For services, conditions similar to those for goods apply, but revenues are recognized by reference to the stage of completion of the transaction at the balance sheet date."
+  "recap": "Correct. Stakeholders are vulnerable when management fails to create shareholder value, and without stakeholder value there can be no shareholder value in the long term. This is why the emphasis falls on the maximisation of long-term cash flows."
  },
  {
-  "cat": "Income Statement",
-  "title": "Building the Income Statement Down to Profit",
-  "question": "A company reports: revenues 800,000; operating costs 620,000; financial incomes 15,000; financial expenses and adjustments 40,000; taxes 45,000; no discontinued operations. What are the EBIT, the profit before taxes and the profit after taxes from continuing operations?",
+  "cat": "Value & Objectives",
+  "title": "Why Stakeholder Analysis Gained Weight",
+  "question": "Which set of events is cited as having eroded public trust in business and reinforced the role of stakeholders?",
   "options": {
-   "A": "EBIT 180,000; profit before taxes 155,000; profit after taxes 110,000.",
-   "B": "EBIT 180,000; profit before taxes 195,000; profit after taxes 150,000.",
-   "C": "EBIT 155,000; profit before taxes 180,000; profit after taxes 135,000.",
-   "D": "EBIT 140,000; profit before taxes 155,000; profit after taxes 110,000."
+   "A": "Accounting scandals such as Enron, Arthur Andersen, WorldCom, Tyco and Parmalat, the Global Financial Crisis, and black swan events.",
+   "B": "The introduction of IFRS and the harmonisation of accounting standards.",
+   "C": "The growth of e-commerce and the digitalisation of retail.",
+   "D": "The creation of the euro and the enlargement of the European Union."
   },
   "correct": "A",
   "expl": {
-   "A": "Correct. EBIT is revenues less operating costs: 800,000 − 620,000 = 180,000. Adding financial incomes and subtracting financial expenses gives profit before taxes from continuing operations: 180,000 + 15,000 − 40,000 = 155,000. Subtracting taxes gives profit after taxes: 155,000 − 45,000 = 110,000.",
-   "B": "Incorrect. This adds the financial expenses instead of subtracting them, or nets the financial items with the wrong sign; the correct profit before taxes is 155,000.",
-   "C": "Incorrect. The two subtotals are swapped: EBIT stops before any financial item, so it is 180,000, and only afterwards do financial incomes and expenses lead to 155,000.",
-   "D": "Incorrect. EBIT must not include financial items at all; deducting part of them before EBIT understates it, since revenues less operating costs gives 180,000."
+   "A": "Correct. Accounting scandals (Enron, Arthur Andersen, WorldCom, Tyco, Parmalat), the Global Financial Crisis and other black swan events such as 9/11, Fukushima, the fall of the Berlin wall with the collapse of the Soviet Union and the pandemic eroded the public's trust in business and capitalism, making relationships with stakeholders more critical.",
+   "B": "Incorrect. Accounting harmonisation is a response to reporting needs, not one of the trust-eroding events cited.",
+   "C": "Incorrect. Digitalisation reshaped competition but is not presented as a cause of the loss of trust in business.",
+   "D": "Incorrect. Monetary and political integration are not among the events the course points to."
   },
-  "recap": "Correct. EBIT is revenues less operating costs: 800,000 − 620,000 = 180,000. Adding financial incomes and subtracting financial expenses gives profit before taxes from continuing operations: 180,000 + 15,000 − 40,000 = 155,000. Subtracting taxes gives profit after taxes: 155,000 − 45,000 = 110,000."
+  "recap": "Correct. Accounting scandals (Enron, Arthur Andersen, WorldCom, Tyco, Parmalat), the Global Financial Crisis and other black swan events such as 9/11, Fukushima, the fall of the Berlin wall with the collapse of the Soviet Union and the pandemic eroded the public's trust in business and capitalism, making relationships with stakeholders more critical."
  },
  {
-  "cat": "Income Statement",
-  "title": "Assets Held for Sale",
-  "question": "Management states that it would like to dispose of a division at some point, but no buyer search has started and no plan has been approved. Can the division be presented among discontinued operations as held for sale?",
+  "cat": "Governance & ESG",
+  "title": "Defining Corporate Governance",
+  "question": "How is corporate governance defined?",
   "options": {
-   "A": "Yes, management's stated intention is sufficient.",
-   "B": "No: the criteria require a committed plan, immediate availability for sale, an active program to locate a buyer and a highly probable sale, normally within 12 months.",
-   "C": "Yes, provided the division is loss-making.",
-   "D": "No, because a division can never be classified as held for sale, only individual assets can."
+   "A": "The set of accounting standards a company must apply when preparing its financial statements.",
+   "B": "The set of systems, principles and processes by which a company is governed, guiding how it is directed or controlled to fulfill its goals, add value and benefit all stakeholders in the long term.",
+   "C": "The organisational chart describing reporting lines between managers.",
+   "D": "The procedure for issuing new shares and admitting new shareholders."
   },
   "correct": "B",
   "expl": {
-   "A": "Incorrect. An intention is far weaker than the criteria set by IFRS, which require concrete steps and a high probability of sale.",
-   "B": "Correct. An asset is held for sale when management is committed to a plan to sell, the asset is available for immediate sale, an active program to locate a buyer is initiated, the sale is highly probable (within 12 months of classification, subject to limited exceptions), the asset is actively marketed at a price reasonable in relation to fair value, and it is unlikely that the plan will be significantly changed or withdrawn.",
-   "C": "Incorrect. Profitability is irrelevant to the classification: what matters is whether the held-for-sale criteria are met.",
-   "D": "Incorrect. Discontinuing operations typically concern entire business units held for sale, not only individual assets."
+   "A": "Incorrect. Accounting standards govern how results are measured and reported; governance concerns how the company is directed and controlled.",
+   "B": "Correct. Corporate governance is the set of systems, principles and processes by which a company is governed. They provide the guidelines as to how the company can be directed or controlled in order to fulfill its goals and objectives, add value and be beneficial for all stakeholders in the long term.",
+   "C": "Incorrect. Reporting lines are a matter of organisational design, a narrower question than the systems and principles that direct and control the firm.",
+   "D": "Incorrect. Issuing shares is one specific decision, in fact reserved to the shareholders assembly, not the definition of governance."
   },
-  "recap": "Correct. An asset is held for sale when management is committed to a plan to sell, the asset is available for immediate sale, an active program to locate a buyer is initiated, the sale is highly probable (within 12 months of classification, subject to limited exceptions), the asset is actively marketed at a price reasonable in relation to fair value, and it is unlikely that the plan will be significantly changed or withdrawn."
+  "recap": "Correct. Corporate governance is the set of systems, principles and processes by which a company is governed. They provide the guidelines as to how the company can be directed or controlled in order to fulfill its goals and objectives, add value and be beneficial for all stakeholders in the long term."
  },
  {
-  "cat": "Income Statement",
-  "title": "Materials: Purchases vs Consumption",
-  "question": "During the year a company purchases raw materials for 500,000. Inventories of raw materials increase by 30,000 over the same period. What figure appears among operating costs in an income statement by nature?",
+  "cat": "Governance & ESG",
+  "title": "Extraordinary Decisions",
+  "question": "Which decisions are reserved to the extraordinary shareholders assembly rather than being taken by the board?",
   "options": {
-   "A": "500,000, the amount purchased during the year.",
-   "B": "530,000, adding the increase in inventories to the purchases.",
-   "C": "470,000, the consumption obtained as purchases less the increase in inventories.",
-   "D": "30,000, the variation in inventories alone."
+   "A": "Approving the financial statement and deciding upon dividends.",
+   "B": "Hiring and firing company executives.",
+   "C": "Bond issue, capital increase and change of the statute.",
+   "D": "Checking that decisions comply with normative and statutory requirements."
   },
   "correct": "C",
   "expl": {
-   "A": "Incorrect. The income statement lists the consumption of materials, not the amount purchased: part of what was bought is still in stock at year end.",
-   "B": "Incorrect. Adding the inventory increase moves in the wrong direction: materials that went into stock have not been consumed, so they must be deducted.",
-   "C": "Correct. The income statement lists the consumption of materials, computed as materials purchased less the changes in inventory: 500,000 − 30,000 = 470,000.",
-   "D": "Incorrect. The inventory variation is only the adjustment applied to purchases, not the operating cost itself."
+   "A": "Incorrect. Approving the financial statement and deciding on dividends are functions of the board of directors in the traditional model.",
+   "B": "Incorrect. Appointing and dismissing executives is a board function, carried out by the board of directors or, in a two-tier system, by the supervisory board.",
+   "C": "Correct. The extraordinary decisions of the shareholders assembly are the bond issue, the capital increase and the change of the statute: precisely the decisions that alter the capital structure or the constitution of the company.",
+   "D": "Incorrect. That compliance check is the role of the board of supervisors made of independent members."
   },
-  "recap": "Correct. The income statement lists the consumption of materials, computed as materials purchased less the changes in inventory: 500,000 − 30,000 = 470,000."
+  "recap": "Correct. The extraordinary decisions of the shareholders assembly are the bond issue, the capital increase and the change of the statute: precisely the decisions that alter the capital structure or the constitution of the company."
  },
  {
-  "cat": "Cash Flow",
-  "title": "Direct vs Indirect Method",
-  "question": "A company prepares its cash flow statement starting from net profit and adjusting it for the effects of noncash transactions such as depreciation. Which method is being applied, and how does the alternative work?",
+  "cat": "Governance & ESG",
+  "title": "Two-Tier and One-Tier Systems",
+  "question": "A company in Germany separates a Supervisory Board from a Management Board made of the CEO and executives. A company in the United States has a single Board of Directors where non-executives outnumber executives and some act as supervisors. How are these two models named?",
   "options": {
-   "A": "The indirect method; the direct method would instead show each major class of gross cash receipts and gross cash payments.",
-   "B": "The direct method; the indirect method would instead list gross receipts and payments one by one.",
-   "C": "The accrual method; the alternative would be the cash method.",
-   "D": "Neither: IFRS requires the cash flow statement to start from EBITDA in all cases."
-  },
-  "correct": "A",
-  "expl": {
-   "A": "Correct. The indirect method obtains generated cash starting from accrual results, usually operating profit or net profit, adjusting for noncash effects. The direct method, which IAS/IFRS encourages, shows each major class of gross cash receipts and gross cash payments.",
-   "B": "Incorrect. The two are inverted: starting from net profit and adjusting for noncash items is precisely the indirect method.",
-   "C": "Incorrect. Accrual and cash are the two accounting logics behind the statements, not the two presentation methods of the cash flow statement.",
-   "D": "Incorrect. IFRS permits both the direct and the indirect method; there is no mandatory single starting point such as EBITDA."
-  },
-  "recap": "Correct. The indirect method obtains generated cash starting from accrual results, usually operating profit or net profit, adjusting for noncash effects. The direct method, which IAS/IFRS encourages, shows each major class of gross cash receipts and gross cash payments."
- },
- {
-  "cat": "Cash Flow",
-  "title": "Classifying Cash Flows",
-  "question": "During the year a company: (1) collects cash from customers, (2) buys a new production plant, (3) issues new shares. How are these three flows classified in the cash flow statement?",
-  "options": {
-   "A": "(1) operating, (2) investing, (3) financing.",
-   "B": "(1) operating, (2) operating, (3) investing.",
-   "C": "(1) investing, (2) financing, (3) operating.",
-   "D": "(1) financing, (2) investing, (3) operating."
-  },
-  "correct": "A",
-  "expl": {
-   "A": "Correct. Operating activities refer to cash flows generated or employed in the current activities of the company, such as cash received from customers. Investing activities are the acquisition and disposal of long-term assets, such as a production plant. Financing activities are those altering the equity capital and borrowing structure, such as a share issue.",
-   "B": "Incorrect. Buying a production plant is the acquisition of a long-term asset, which belongs to investing activities rather than operating ones.",
-   "C": "Incorrect. Collecting cash from customers is the clearest example of an operating flow, and a share issue alters equity capital, making it a financing flow.",
-   "D": "Incorrect. Cash received from customers is operating, not financing, and a share issue is financing, not operating."
-  },
-  "recap": "Correct. Operating activities refer to cash flows generated or employed in the current activities of the company, such as cash received from customers. Investing activities are the acquisition and disposal of long-term assets, such as a production plant. Financing activities are those altering the equity capital and borrowing structure, such as a share issue."
- },
- {
-  "cat": "Cash Flow",
-  "title": "The Logic behind the Statement",
-  "question": "Why can a company report a solid profit in its income statement and still show weak cash generation in its cash flow statement?",
-  "options": {
-   "A": "Because the income statement is prepared with cash logic while the cash flow statement uses accrual logic.",
-   "B": "Because the income statement follows accrual logic, recognizing revenues and costs when they occur, while the cash flow statement is prepared with cash logic.",
-   "C": "Because the two documents must always show the same result, so a difference signals an accounting error.",
-   "D": "Because the cash flow statement only covers financing activities."
+   "A": "The German company uses a one-tier system; the U.S. company uses a two-tier system.",
+   "B": "The German company uses a two-tier system; the U.S. company uses a one-tier system.",
+   "C": "Both use the traditional model, differing only in board size.",
+   "D": "The German company uses the traditional model; the U.S. company uses a two-tier system."
   },
   "correct": "B",
   "expl": {
-   "A": "Incorrect. The logics are inverted: the income statement is one of the statements built on the accrual principle, not on cash.",
-   "B": "Correct. The accrual principle is the underlying logic of the income statement and the balance sheet, so revenues and costs are recognized when transactions occur. The cash flow statement, contrary to those two, is prepared with cash logic, which is why profit and cash generation can diverge, for example when sales are made on credit.",
-   "C": "Incorrect. The two documents answer different questions and are not expected to coincide; a divergence is normal rather than an error.",
-   "D": "Incorrect. The cash flow statement covers operating, investing and financing activities, not financing alone."
+   "A": "Incorrect. The labels are inverted: having two separate boards is what defines the two-tier system.",
+   "B": "Correct. The two-tier system, found in the Netherlands and Germany, splits a Supervisory Board from a Management Board of the CEO and executives. The one-tier system, found in the U.S. and the U.K., places everything in a single Board of Directors where non-executives are more numerous than executives and some act as supervisors.",
+   "C": "Incorrect. The difference is structural, not a matter of size: one model uses two distinct boards, the other a single one.",
+   "D": "Incorrect. The German arrangement described, with two separate boards, is the two-tier system, and the U.S. arrangement is the one-tier system."
   },
-  "recap": "Correct. The accrual principle is the underlying logic of the income statement and the balance sheet, so revenues and costs are recognized when transactions occur. The cash flow statement, contrary to those two, is prepared with cash logic, which is why profit and cash generation can diverge, for example when sales are made on credit."
+  "recap": "Correct. The two-tier system, found in the Netherlands and Germany, splits a Supervisory Board from a Management Board of the CEO and executives. The one-tier system, found in the U.S. and the U.K., places everything in a single Board of Directors where non-executives are more numerous than executives and some act as supervisors."
  },
  {
-  "cat": "Notes & Reporting",
-  "title": "What the Notes Must Disclose",
-  "question": "A company had the option to measure a class of assets either at cost or at fair value. Where does a reader find out which model was actually adopted?",
+  "cat": "Governance & ESG",
+  "title": "Supervision and Audit",
+  "question": "In the traditional governance model, which body checks that the decisions undertaken by the company's management comply with normative and statutory requirements, and which one checks the financial statements?",
   "options": {
-   "A": "In the notes, which must disclose the basis of preparation and the specific accounting policies used.",
-   "B": "In the statement of changes in equity, which lists all measurement choices.",
-   "C": "Nowhere: the choice of measurement model is internal information and is not disclosed.",
-   "D": "In the cash flow statement, under investing activities."
+   "A": "The board of supervisors, made of independent members, checks compliance; the committee of independent auditors checks the financial statements.",
+   "B": "The board of directors checks compliance; the shareholders meeting checks the financial statements.",
+   "C": "The committee of independent auditors checks compliance; the board of supervisors checks the financial statements.",
+   "D": "The CEO performs both checks, reporting to the shareholders meeting."
   },
   "correct": "A",
   "expl": {
-   "A": "Correct. The notes must include information about the basis of preparation of the financial statements and the specific accounting policies used; they highlight, for instance, the measurement method adopted when a choice between the cost model and the fair value model is available.",
-   "B": "Incorrect. The statement of changes in equity details the variations occurred in equity during the year, not the full set of accounting policy choices.",
-   "C": "Incorrect. Disclosure of accounting policies is compulsory precisely so that readers can interpret the figures correctly.",
-   "D": "Incorrect. The cash flow statement reports cash flows by category; it does not disclose measurement policies."
+   "A": "Correct. The board of supervisors, made of independent members, checks that the decisions undertaken by the company's management are compliant with the normative and statutory requirements, while the committee of independent auditors checks the financial statements.",
+   "B": "Incorrect. The board of directors is a body that directs the company and approves the financial statement; the compliance check is assigned to the supervisors.",
+   "C": "Incorrect. The two roles are inverted: auditors examine the financial statements, supervisors examine compliance of management's decisions.",
+   "D": "Incorrect. The point of both bodies is independence from the management being checked, so the CEO cannot perform these functions."
   },
-  "recap": "Correct. The notes must include information about the basis of preparation of the financial statements and the specific accounting policies used; they highlight, for instance, the measurement method adopted when a choice between the cost model and the fair value model is available."
+  "recap": "Correct. The board of supervisors, made of independent members, checks that the decisions undertaken by the company's management are compliant with the normative and statutory requirements, while the committee of independent auditors checks the financial statements."
  },
  {
-  "cat": "Notes & Reporting",
-  "title": "Segmental Reporting",
-  "question": "The Volkswagen Group 2012 annual report presents its income statement split into the Automotive and Financial Services divisions, each with its own sales revenue, operating profit and profit after tax. What does this represent?",
+  "cat": "Governance & ESG",
+  "title": "The Volkswagen Governance Failure",
+  "question": "Commentators argued that the Volkswagen diesel cheating was predictable. On what governance grounds?",
   "options": {
-   "A": "A voluntary marketing disclosure with no basis in IFRS.",
-   "B": "Segmental reporting, required by IFRS for reportable segments defined by business or geographical area.",
-   "C": "The statement of changes in equity, broken down by division.",
-   "D": "A consolidation adjustment required only for automotive companies."
+   "A": "The company had no supervisory board at all.",
+   "B": "Lax boardroom controls and a peculiar corporate culture, with a supervisory board short of independent voices and relevant expertise.",
+   "C": "The supervisory board was entirely composed of external investors.",
+   "D": "The company was unlisted, so no external scrutiny applied."
   },
   "correct": "B",
   "expl": {
-   "A": "Incorrect. Segmental information is not left to marketing discretion: IFRS requires enterprises to report financial and descriptive information about their reportable segments.",
-   "B": "Correct. IFRS requires financial and descriptive information about reportable segments, which are operating segments or aggregations of them referred either to specific businesses (business segments) or to specific geographical areas (geographical segments). Such reporting must include information such as sales, results, assets, liabilities and depreciation, exactly as in the Volkswagen split between Automotive and Financial Services.",
-   "C": "Incorrect. What is split by division here is the income statement, and the requirement comes from segmental reporting rules, not from the statement of changes in equity.",
-   "D": "Incorrect. Segmental reporting applies across industries wherever reportable segments exist; it is not an automotive-specific rule."
+   "A": "Incorrect. VW did have a 20-member supervisory board; the problem was its composition and the weakness of its controls, not its absence.",
+   "B": "Correct. Governance experts argued the cheating was predictable because of VW's lax boardroom controls and peculiar corporate culture. The supervisory board had only one truly independent voice, 17 of its 20 members were German or Austrian, many directors represented the three largest shareholders, and external investors held only 12% of the voting shares. Even before the scandal, VW shares traded at a discount to other carmakers partly because of governance concerns.",
+   "C": "Incorrect. The opposite was true: external investors held only 12% of the voting shares and therefore could not change anything.",
+   "D": "Incorrect. VW was listed, and its shares already traded at a governance-related discount before the scandal broke."
   },
-  "recap": "Correct. IFRS requires financial and descriptive information about reportable segments, which are operating segments or aggregations of them referred either to specific businesses (business segments) or to specific geographical areas (geographical segments). Such reporting must include information such as sales, results, assets, liabilities and depreciation, exactly as in the Volkswagen split between Automotive and Financial Services."
+  "recap": "Correct. Governance experts argued the cheating was predictable because of VW's lax boardroom controls and peculiar corporate culture. The supervisory board had only one truly independent voice, 17 of its 20 members were German or Austrian, many directors represented the three largest shareholders, and external investors held only 12% of the voting shares. Even before the scandal, VW shares traded at a discount to other carmakers partly because of governance concerns."
+ },
+ {
+  "cat": "Governance & ESG",
+  "title": "The Three Pillars of ESG",
+  "question": "A company reports on greenhouse gas emissions and water management, on diversity and employee engagement, and on board composition and executive compensation. How do these three groups map onto the ESG framework?",
+  "options": {
+   "A": "Environmental, social and governance respectively.",
+   "B": "Social, governance and environmental respectively.",
+   "C": "Governance, environmental and social respectively.",
+   "D": "They all belong to the environmental pillar, since ESG is a sustainability framework."
+  },
+  "correct": "A",
+  "expl": {
+   "A": "Correct. The environmental aspect focuses on preserving the natural world, including greenhouse gas emissions and water management; the social aspect focuses on people and relationships, including diversity, equity and inclusion and employee engagement; the governance aspect focuses on enhancing corporate governance, including board composition and executive compensation.",
+   "B": "Incorrect. Emissions and water management are environmental matters, not social ones, and board composition is governance rather than environmental.",
+   "C": "Incorrect. The order is wrong: emissions belong to the environmental pillar and board composition to the governance pillar.",
+   "D": "Incorrect. ESG explicitly separates three aspects, and only the first concerns the natural environment."
+  },
+  "recap": "Correct. The environmental aspect focuses on preserving the natural world, including greenhouse gas emissions and water management; the social aspect focuses on people and relationships, including diversity, equity and inclusion and employee engagement; the governance aspect focuses on enhancing corporate governance, including board composition and executive compensation."
  }
 ];
