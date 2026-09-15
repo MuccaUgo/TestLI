@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">Financial Accounting Study Hub</title>
+  <desc id="description">Stacked balance sheet bars on a teal background</desc>
+  <rect width="512" height="512" rx="112" fill="#0f4c5c"/>
+  <rect x="112" y="132" width="288" height="62" rx="16" fill="#ffffff" opacity=".95"/>
+  <rect x="112" y="225" width="176" height="62" rx="16" fill="#2a9d8f"/>
+  <rect x="112" y="318" width="240" height="62" rx="16" fill="#ffffff" opacity=".55"/>
+</svg>

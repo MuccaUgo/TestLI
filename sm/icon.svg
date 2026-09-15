@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title description">
+  <title id="title">Strategy &amp; Marketing Study Hub</title>
+  <desc id="description">Rising steps on an indigo background</desc>
+  <rect width="512" height="512" rx="112" fill="#312e81"/>
+  <rect x="104" y="300" width="80" height="92" rx="14" fill="#ffffff" opacity=".55"/>
+  <rect x="216" y="228" width="80" height="164" rx="14" fill="#6366f1"/>
+  <rect x="328" y="140" width="80" height="252" rx="14" fill="#ffffff" opacity=".95"/>
+</svg>

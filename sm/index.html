@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Strategy &amp; Marketing Study Hub</title>
+<meta name="description" content="Concepts and practice questions on Strategy and Marketing: the company, legal forms, ownership and evolution, value, governance and ESG." />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="icon.svg" type="image/svg+xml" />
+<link rel="apple-touch-icon" href="icon.svg" />
+<meta name="theme-color" content="#312e81" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<script>(function(){try{var t=localStorage.getItem('polimi_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header>
+  <div class="header-inner">
+    <div class="topbar">
+      <div>
+        <a class="backlink" href="../index.html">← All courses</a>
+        <h1>Strategy &amp; Marketing <span class="badge" id="versionBadge">v1.0</span></h1>
+        <div class="small" id="count"></div>
+      </div>
+      <div class="topbar-actions">
+        <button class="theme-toggle" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+        <button class="hamb" id="hambBtn" aria-label="Menu">Menu</button>
+      </div>
+    </div>
+    <nav class="nav" id="mainNav" aria-label="Sections">
+      <button id="homeBtn" data-section="home" class="active">Home</button>
+      <button id="conceptsBtn" data-section="concepts">Concepts</button>
+      <button id="fullBtn" data-mode="full">Full Test</button>
+      <button id="practiceBtn" data-mode="practice10">Practice 10</button>
+      <button id="examBtn" data-mode="exam">Exam Test</button>
+      <button id="mistakesBtn" data-section="mistakes">Mistakes</button>
+    </nav>
+    <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+  </div>
+</header>
+
+<main>
+  <section id="home" class="app-section card hero">
+    <h2>Study menu</h2>
+    <p>Introduction to Strategy and Marketing: what a company is, the legal forms it can take, how ownership evolves from foundation to IPO, how value is defined for shareholders and stakeholders, and how the company is governed. Concept cards for the theory, three test modes for practice.</p>
+    <div class="stats-row" id="homeStats"></div>
+    <div class="grid">
+      <div class="topic">
+        <div class="kicker">Concepts</div>
+        <strong>Course recap</strong>
+        <p class="mini">Company scope and size, legal forms, shareholders and takeovers, financing rounds and dilution, IPO, shareholder and enterprise value, the stakeholder perspective, corporate governance models and ESG.</p>
+        <button class="pill" data-section="concepts">Open Concepts</button>
+      </div>
+      <div class="topic">
+        <div class="kicker">Tests</div>
+        <strong>Three modes</strong>
+        <p class="mini">Full Test in order with Start From and Jump To, Practice 10 random questions with instant feedback, and Exam Test with 10 questions and no feedback until the recap.</p>
+        <button class="pill" id="continueBtn" data-mode="full">Start Full Test</button>
+      </div>
+    </div>
+    <div class="callout"><strong>Recommended use:</strong> read the concept cards one area at a time, then run Practice 10 filtered on that area. Use the Full Test in order once you have covered everything, and the Exam Test to simulate the real thing. The dilution and valuation questions reward doing the arithmetic rather than recognising the wording.</div>
+  </section>
+
+  <section id="concepts" class="app-section hidden">
+    <div class="card">
+      <h2>Concepts</h2>
+      <p class="small">Each card gives the meaning, how the rule works in practice, and the typical exam trap.</p>
+      <div class="pillrow" id="conceptPills"></div>
+      <input class="searchbox" id="conceptSearch" placeholder="Search concepts..." aria-label="Search concepts" />
+      <div class="topic-grid concepts-grid" id="conceptsGrid"></div>
+      <div class="callout warn">
+        <strong>High-frequency traps</strong>
+        <div class="topic-grid">
+          <div class="topic"><div class="kicker">Trap</div><strong>Percentages need a valuation</strong><p>A stake falling from 40% to 20% can be worth far more if the company grew from €10m to €60m. Never read dilution without the valuation behind it.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Post-money, not pre-money</strong><p>An investor's share is the investment divided by the post-money valuation, which already includes the cash injected.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Primary ≠ secondary IPO</strong><p>In a primary the cash goes to the company; in a secondary it goes to the selling shareholders.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>SV = EV − debt + cash</strong><p>Cash reduces net debt, so it raises shareholder value. Dropping the cash term is the usual slip.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Hostile refers to the board</strong><p>A takeover is hostile when the target's board opposes it, whatever the price offered.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Unlimited ≠ unregulated</strong><p>Unlimited companies lack limited liability but are exempted from filing accounts for public disclosure.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>One-tier still supervises</strong><p>A single board is not an absence of supervision: non-executives outnumber executives and some act as supervisors.</p></div>
+          <div class="topic"><div class="kicker">Trap</div><strong>Stakeholder view adds, not replaces</strong><p>The argument is that shareholder value alone is insufficient over the long term, not that it should be abandoned.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testSection" class="app-section hidden">
+    <section class="card" id="setup">
+      <h2 id="testTitle">Test</h2>
+      <p class="small" id="setupDesc">Choose a test mode.</p>
+      <div class="controls">
+        <div id="categoryWrap">
+          <label class="small" for="category">Area</label>
+          <select id="category"></select>
+        </div>
+        <div id="startWrap">
+          <label class="small" for="startFrom">Start from question</label>
+          <input id="startFrom" type="number" min="1" value="1" />
+        </div>
+        <div id="orderWrap">
+          <label class="small" for="orderMode">Order</label>
+          <select id="orderMode">
+            <option value="ordered">Original order</option>
+            <option value="shuffle">Shuffle</option>
+          </select>
+        </div>
+      </div>
+      <button class="primary" id="startBtn">Start</button>
+    </section>
+    <section class="card hidden" id="quiz"></section>
+    <section class="card hidden" id="summary"></section>
+  </section>
+
+  <section id="mistakes" class="app-section hidden">
+    <div class="card">
+      <h2>Mistakes Review</h2>
+      <p class="small">Wrong answers are saved in this browser.</p>
+      <div id="mistakeList"></div>
+      <button class="ghost" id="clearMistakesBtn">Reset mistakes</button>
+    </div>
+  </section>
+</main>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

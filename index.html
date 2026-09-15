@@ -3,124 +3,85 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Financial Accounting Study Hub</title>
-<meta name="description" content="Concepts and practice questions on IFRS financial accounting: balance sheet, income statement, cash flow statement and notes." />
+<title>POLIMI Study Hubs</title>
+<meta name="description" content="Personal revision sites for my Management Engineering courses: concept cards and practice questions, one hub per course." />
 <link rel="manifest" href="manifest.json" />
 <link rel="icon" href="icon.svg" type="image/svg+xml" />
 <link rel="apple-touch-icon" href="icon.svg" />
-<meta name="theme-color" content="#0f4c5c" />
+<meta name="theme-color" content="#1f3a5f" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
-<script>(function(){try{var t=localStorage.getItem('fa_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
-<link rel="stylesheet" href="styles.css" />
+<script>(function(){try{var t=localStorage.getItem('polimi_theme');if(!t){t=(window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<link rel="stylesheet" href="portal.css" />
 </head>
 <body>
 <header>
   <div class="header-inner">
-    <div class="topbar">
-      <div>
-        <h1>Financial Accounting <span class="badge" id="versionBadge">v1.0</span></h1>
-        <div class="small" id="count"></div>
-      </div>
-      <div class="topbar-actions">
-        <button class="theme-toggle" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
-        <button class="hamb" id="hambBtn" aria-label="Menu">Menu</button>
-      </div>
+    <div>
+      <h1>POLIMI <span class="tag">Study Hubs</span></h1>
+      <p class="small">Personal revision sites for my Management Engineering courses.</p>
     </div>
-    <nav class="nav" id="mainNav" aria-label="Sections">
-      <button id="homeBtn" data-section="home" class="active">Home</button>
-      <button id="conceptsBtn" data-section="concepts">Concepts</button>
-      <button id="fullBtn" data-mode="full">Full Test</button>
-      <button id="practiceBtn" data-mode="practice10">Practice 10</button>
-      <button id="examBtn" data-mode="exam">Exam Test</button>
-      <button id="mistakesBtn" data-section="mistakes">Mistakes</button>
-    </nav>
-    <div class="progress-wrap"><div class="progress" id="progress"></div></div>
+    <button class="theme-toggle" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
   </div>
 </header>
 
 <main>
-  <section id="home" class="app-section card hero">
-    <h2>Study menu</h2>
-    <p>IFRS financial reporting: the accrual principle, the balance sheet, the income statement, the cash flow statement and the notes. Concept cards for the theory, three test modes for practice.</p>
-    <div class="stats-row" id="homeStats"></div>
-    <div class="grid">
-      <div class="topic">
-        <div class="kicker">Concepts</div>
-        <strong>Course recap</strong>
-        <p class="mini">Accrual vs cash, fair value, impairment, assets and depreciation, financial instruments, inventories, equity and provisions, EBIT, cash flow methods, notes and segmental reporting.</p>
-        <button class="pill" data-section="concepts">Open Concepts</button>
-      </div>
-      <div class="topic">
-        <div class="kicker">Tests</div>
-        <strong>Three modes</strong>
-        <p class="mini">Full Test in order with Start From and Jump To, Practice 10 random questions with instant feedback, and Exam Test with 10 questions and no feedback until the recap.</p>
-        <button class="pill" id="continueBtn" data-mode="full">Start Full Test</button>
-      </div>
-    </div>
-    <div class="callout"><strong>Recommended use:</strong> read the concept cards for one statement at a time, then run Practice 10 filtered on that area. Use the Full Test in order once you have covered everything, and the Exam Test to simulate the real thing.</div>
+  <section class="intro">
+    <h2>Courses</h2>
+    <p>Each hub holds the concept cards for the theory and a bank of practice questions, with three test modes, a mistakes review and offline support. Progress is kept separately per course.</p>
   </section>
 
-  <section id="concepts" class="app-section hidden">
-    <div class="card">
-      <h2>Concepts</h2>
-      <p class="small">Each card gives the meaning, how the rule works in practice, and the typical exam trap.</p>
-      <div class="pillrow" id="conceptPills"></div>
-      <input class="searchbox" id="conceptSearch" placeholder="Search concepts..." aria-label="Search concepts" />
-      <div class="topic-grid concepts-grid" id="conceptsGrid"></div>
-      <div class="callout warn">
-        <strong>High-frequency traps</strong>
-        <div class="topic-grid">
-          <div class="topic"><div class="kicker">Trap</div><strong>Accrual ≠ cash</strong><p>Revenue belongs to the year the transaction takes effect; the cash inflow can fall in a different year.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>FVTPL ≠ Available-for-sale</strong><p>Both are measured at fair value, but the variation goes to the income statement for FVTPL and to the revaluation reserve for available-for-sale.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>Impairment ≠ depreciation</strong><p>Depreciation allocates cost across useful life; impairment captures a durable, unrecoverable loss of value.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>Land is never depreciated</strong><p>Every other item of PPE is, and depreciation continues even while an asset sits idle.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>LIFO is not allowed</strong><p>IFRS permits FIFO and weighted average only; LIFO logic is considered unrealistic.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>Inventories: lower of the two</strong><p>Cost versus net realizable value, where NRV is the selling price less completion and selling costs.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>Gross profit only by function</strong><p>The by-nature format runs from revenue straight to operating profit with no gross profit subtotal.</p></div>
-          <div class="topic"><div class="kicker">Trap</div><strong>Goodwill is tested, not amortized</strong><p>Indefinite life means an impairment test every year, with the loss credited to the income statement.</p></div>
-        </div>
+  <div class="course-grid">
+    <a class="course" href="fa/index.html">
+      <span class="swatch fa" aria-hidden="true"></span>
+      <div class="course-body">
+        <span class="kicker">Financial Accounting</span>
+        <strong>IFRS financial reporting</strong>
+        <p>The accrual principle and fair value, the balance sheet, the income statement, the cash flow statement, and the notes with segmental reporting.</p>
+        <span class="counts">44 concepts · 33 questions</span>
+      </div>
+    </a>
+
+    <a class="course" href="sm/index.html">
+      <span class="swatch sm" aria-hidden="true"></span>
+      <div class="course-body">
+        <span class="kicker">Strategy &amp; Marketing</span>
+        <strong>Company, ownership and governance</strong>
+        <p>What a company is and the legal forms it can take, ownership from foundation to IPO with dilution, shareholder and stakeholder value, governance models and ESG.</p>
+        <span class="counts">39 concepts · 31 questions</span>
+      </div>
+    </a>
+
+    <div class="course upcoming">
+      <span class="swatch next" aria-hidden="true"></span>
+      <div class="course-body">
+        <span class="kicker">Cost Accounting</span>
+        <strong>Planned</strong>
+        <p>Cost classification, assigning costs to cost objects, and the allocation methods: process, job order, operation and activity-based costing.</p>
+        <span class="counts">Not built yet</span>
       </div>
     </div>
-  </section>
+  </div>
 
-  <section id="testSection" class="app-section hidden">
-    <section class="card" id="setup">
-      <h2 id="testTitle">Test</h2>
-      <p class="small" id="setupDesc">Choose a test mode.</p>
-      <div class="controls">
-        <div id="categoryWrap">
-          <label class="small" for="category">Area</label>
-          <select id="category"></select>
-        </div>
-        <div id="startWrap">
-          <label class="small" for="startFrom">Start from question</label>
-          <input id="startFrom" type="number" min="1" value="1" />
-        </div>
-        <div id="orderWrap">
-          <label class="small" for="orderMode">Order</label>
-          <select id="orderMode">
-            <option value="ordered">Original order</option>
-            <option value="shuffle">Shuffle</option>
-          </select>
-        </div>
-      </div>
-      <button class="primary" id="startBtn">Start</button>
-    </section>
-    <section class="card hidden" id="quiz"></section>
-    <section class="card hidden" id="summary"></section>
-  </section>
-
-  <section id="mistakes" class="app-section hidden">
-    <div class="card">
-      <h2>Mistakes Review</h2>
-      <p class="small">Wrong answers are saved in this browser.</p>
-      <div id="mistakeList"></div>
-      <button class="ghost" id="clearMistakesBtn">Reset mistakes</button>
-    </div>
-  </section>
+  <p class="foot">Static sites, no backend. Open a hub once while online to make it available offline and installable on a phone.</p>
 </main>
 
-<script src="data.js"></script>
-<script src="app.js"></script>
+<script>
+(function () {
+  var btn = document.getElementById("themeToggle");
+  function sync() {
+    btn.textContent = document.documentElement.getAttribute("data-theme") === "dark" ? "☀️" : "🌙";
+  }
+  btn.addEventListener("click", function () {
+    var cur = document.documentElement.getAttribute("data-theme") || "light";
+    var next = cur === "dark" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", next);
+    try { localStorage.setItem("polimi_theme", next); } catch (e) {}
+    var meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = next === "dark" ? "#0b0f14" : "#1f3a5f";
+    sync();
+  });
+  sync();
+})();
+</script>
 </body>
 </html>

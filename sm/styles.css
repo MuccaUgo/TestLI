@@ -1,5 +1,5 @@
-:root{--bg:#f5f7f8;--card:#fff;--text:#0f1b21;--muted:#5f7480;--line:#dfe6e9;--accent:#0f4c5c;--accent2:#2a9d8f;--soft:#eef3f5;--text2:#33474f;--ok:#0b6b45;--ok-bg:#eafaf1;--ok-line:#a8e6c8;--ok-border:#10b981;--bad:#b42318;--bad-bg:#fef3f2;--bad-line:#fecdca;--bad-border:#f04438;--warn:#b54708;--shadow:0 1px 2px rgba(15,27,33,.05);--shadow-md:0 10px 26px rgba(15,27,33,.09)}
-[data-theme="dark"]{--bg:#0a0f12;--card:#141c21;--text:#e6ecef;--muted:#8fa3ad;--line:#22303a;--accent:#4fb3c8;--accent2:#46c8b5;--soft:#18232a;--text2:#c2cfd6;--ok:#4ade80;--ok-bg:#0f2a1d;--ok-line:#1f5c3a;--ok-border:#22c55e;--bad:#ff8a8a;--bad-bg:#2a1618;--bad-line:#5c2327;--bad-border:#f04438;--warn:#f0a35c;--shadow:0 1px 2px rgba(0,0,0,.4);--shadow-md:0 10px 30px rgba(0,0,0,.5)}
+:root{--bg:#f6f6fa;--card:#fff;--text:#16161d;--muted:#65657a;--line:#e3e3ee;--accent:#312e81;--accent2:#6366f1;--soft:#f0f0f7;--text2:#3b3b4d;--ok:#0b6b45;--ok-bg:#eafaf1;--ok-line:#a8e6c8;--ok-border:#10b981;--bad:#b42318;--bad-bg:#fef3f2;--bad-line:#fecdca;--bad-border:#f04438;--warn:#b54708;--shadow:0 1px 2px rgba(22,22,29,.05);--shadow-md:0 10px 26px rgba(22,22,29,.09)}
+[data-theme="dark"]{--bg:#0c0c12;--card:#17171f;--text:#e9e9f0;--muted:#9a9ab0;--line:#2a2a38;--accent:#8b8bf5;--accent2:#a5a5fb;--soft:#1d1d28;--text2:#c8c8d8;--ok:#4ade80;--ok-bg:#0f2a1d;--ok-line:#1f5c3a;--ok-border:#22c55e;--bad:#ff8a8a;--bad-bg:#2a1618;--bad-line:#5c2327;--bad-border:#f04438;--warn:#f0a35c;--shadow:0 1px 2px rgba(0,0,0,.4);--shadow-md:0 10px 30px rgba(0,0,0,.5)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55;transition:background .25s ease,color .25s ease}
@@ -10,6 +10,8 @@ h2{font-size:23px;margin:0 0 10px}
 h3{font-size:18px;margin:18px 0 8px}
 p{margin:8px 0}
 .small{font-size:13px;color:var(--muted)}
+.backlink{display:inline-block;font-size:12px;font-weight:700;color:var(--muted);text-decoration:none;margin-bottom:2px}
+.backlink:hover{color:var(--accent)}
 .topbar{display:flex;align-items:center;justify-content:space-between;gap:10px}
 .topbar-actions{display:flex;gap:8px;align-items:center}
 .hamb{display:none;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:12px;padding:9px 11px;font-weight:800;cursor:pointer}
