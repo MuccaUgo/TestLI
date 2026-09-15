@@ -34,7 +34,7 @@
     var cur = document.documentElement.getAttribute("data-theme") || "light";
     var next = cur === "dark" ? "light" : "dark";
     document.documentElement.setAttribute("data-theme", next);
-    lsSet("fa_theme", next);
+    lsSet("polimi_theme", next);
     var meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.content = next === "dark" ? "#0a0f12" : "#0f4c5c";
     syncThemeButton();
