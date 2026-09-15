@@ -14,20 +14,24 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+<a class="skip-link" href="#mainContent">Skip to content</a>
 <header>
   <div class="header-inner">
     <div class="topbar">
-      <div>
-        <h1>Financial Accounting <span class="badge" id="versionBadge">v1.0</span></h1>
-        <div class="small" id="count"></div>
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">fa<span>.</span></span>
+        <div>
+          <h1>Financial Accounting <span class="badge" id="versionBadge">Study Hub</span></h1>
+          <div class="small" id="count"></div>
+        </div>
       </div>
       <div class="topbar-actions">
         <button class="theme-toggle" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
-        <button class="hamb" id="hambBtn" aria-label="Menu">Menu</button>
+        <button class="hamb" id="hambBtn" aria-label="Menu" aria-controls="mainNav" aria-expanded="false">Menu</button>
       </div>
     </div>
     <nav class="nav" id="mainNav" aria-label="Sections">
-      <button id="homeBtn" data-section="home" class="active">Home</button>
+      <button id="homeBtn" data-section="home" class="active" aria-current="page">Home</button>
       <button id="conceptsBtn" data-section="concepts">Concepts</button>
       <button id="fullBtn" data-mode="full">Full Test</button>
       <button id="practiceBtn" data-mode="practice10">Practice 10</button>
@@ -38,26 +42,59 @@
   </div>
 </header>
 
-<main>
-  <section id="home" class="app-section card hero">
-    <h2>Study menu</h2>
-    <p>IFRS financial reporting: the accrual principle, the balance sheet, the income statement, the cash flow statement and the notes. Concept cards for the theory, three test modes for practice.</p>
-    <div class="stats-row" id="homeStats"></div>
-    <div class="grid">
-      <div class="topic">
-        <div class="kicker">Concepts</div>
-        <strong>Course recap</strong>
-        <p class="mini">Accrual vs cash, fair value, impairment, assets and depreciation, financial instruments, inventories, equity and provisions, EBIT, cash flow methods, notes and segmental reporting.</p>
-        <button class="pill" data-section="concepts">Open Concepts</button>
+<main id="mainContent" tabindex="-1">
+  <section id="home" class="app-section">
+    <div class="hero">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Your accounting study space</div>
+        <h2>A little practice.<br>A clearer picture.</h2>
+        <p>Make sense of financial accounting, one concept at a time. Review the theory, test your understanding and learn from your mistakes.</p>
+        <div class="hero-actions">
+          <button class="primary" data-mode="practice10">Start practicing <span aria-hidden="true">↗</span></button>
+          <button class="ghost" data-section="concepts">Explore concepts</button>
+        </div>
+        <div class="hero-note">10 questions · Instant feedback · Go at your own pace</div>
       </div>
-      <div class="topic">
-        <div class="kicker">Tests</div>
-        <strong>Three modes</strong>
-        <p class="mini">Full Test in order with Start From and Jump To, Practice 10 random questions with instant feedback, and Exam Test with 10 questions and no feedback until the recap.</p>
-        <button class="pill" id="continueBtn" data-mode="full">Start Full Test</button>
-      </div>
+      <aside class="study-path" aria-label="Suggested study routine">
+        <div class="eyebrow">A simple study routine</div>
+        <ol>
+          <li><span class="step-number">01</span><div><strong>Get the idea</strong><p>Read a concept and spot the exam trap.</p></div></li>
+          <li><span class="step-number">02</span><div><strong>Put it into practice</strong><p>Try a short quiz on the area you’re studying.</p></div></li>
+          <li><span class="step-number">03</span><div><strong>Close the gaps</strong><p>Revisit mistakes, then check yourself in an exam.</p></div></li>
+        </ol>
+        <div class="path-footer"><span aria-hidden="true">↺</span> Small sessions. Steady progress.</div>
+      </aside>
     </div>
-    <div class="callout"><strong>Recommended use:</strong> read the concept cards for one statement at a time, then run Practice 10 filtered on that area. Use the Full Test in order once you have covered everything, and the Exam Test to simulate the real thing.</div>
+    <div class="section-heading"><h3>Your progress</h3><span class="small">From completed tests · Saved in this browser</span></div>
+    <div class="stats-row" id="homeStats"></div>
+    <div class="section-heading"><h3>How would you like to study?</h3><span class="small">Pick up wherever you are</span></div>
+    <div class="mode-grid">
+      <article class="mode-card">
+        <div class="mode-top"><span class="mode-symbol" aria-hidden="true">Aa</span><span class="small">Theory</span></div>
+        <h4>Concepts</h4>
+        <p>Clear explanations, practical examples and the traps to watch for. Find exactly what you need.</p>
+        <button class="ghost" data-section="concepts">Open concepts <span aria-hidden="true">→</span></button>
+      </article>
+      <article class="mode-card featured">
+        <div class="mode-top"><span class="mode-symbol" aria-hidden="true">↗</span><span class="small">Quick practice</span></div>
+        <h4>Practice 10</h4>
+        <p>A fresh set of questions with feedback after every answer. Focus on one area or mix them all.</p>
+        <button class="primary" data-mode="practice10">Start practice <span aria-hidden="true">→</span></button>
+      </article>
+      <article class="mode-card">
+        <div class="mode-top"><span class="mode-symbol" aria-hidden="true">≡</span><span class="small">Complete review</span></div>
+        <h4>Full Test</h4>
+        <p>Work through the question bank at your pace. Choose your order and resume a saved session.</p>
+        <button class="ghost" id="continueBtn" data-mode="full">Start Full Test</button>
+      </article>
+      <article class="mode-card">
+        <div class="mode-top"><span class="mode-symbol" aria-hidden="true">◎</span><span class="small">Check yourself</span></div>
+        <h4>Exam Test</h4>
+        <p>Ten mixed questions. Make your choices, then see your score and explanations at the end.</p>
+        <button class="ghost" data-mode="exam">Start exam <span aria-hidden="true">→</span></button>
+      </article>
+    </div>
+    <div class="review-prompt"><div><strong>Every mistake is a place to start.</strong><p class="small">Your saved mistakes bring the explanations back into focus.</p></div><button class="ghost" data-section="mistakes">Review mistakes <span aria-hidden="true">→</span></button></div>
   </section>
 
   <section id="concepts" class="app-section hidden">
@@ -66,6 +103,8 @@
       <p class="small">Each card gives the meaning, how the rule works in practice, and the typical exam trap.</p>
       <div class="pillrow" id="conceptPills"></div>
       <input class="searchbox" id="conceptSearch" placeholder="Search concepts..." aria-label="Search concepts" />
+      <p class="small result-count" id="conceptResultCount" role="status" aria-live="polite"></p>
+      <div class="empty-state hidden" id="conceptEmpty"><h3>No matching concepts</h3><p>Try a different search or browse all areas.</p><button class="ghost" data-reset-concepts>Clear filters</button></div>
       <div class="topic-grid concepts-grid" id="conceptsGrid"></div>
       <div class="callout warn">
         <strong>High-frequency traps</strong>
@@ -119,6 +158,7 @@
     </div>
   </section>
 </main>
+<footer class="site-footer"><span>Financial Accounting <span aria-hidden="true">/</span> Study Hub</span><span>Your progress stays in this browser.</span></footer>
 
 <script src="data.js"></script>
 <script src="app.js"></script>
